@@ -27,8 +27,8 @@ Open http://localhost:8501. **Warm up** by opening any clip and pressing play on
 | 5 | Incidents | Click the **No helmet · W1** card | Inspector: evidence frame (W1 VIOLATION, confidence 0.814), start and end about 1 s apart, status Closed | No face recognition; IDs are temporary |
 | 6 | Top | **All sources**, then **Jackhammer crew, night**, then **Play** | Zone alerts W1, W2, W3 in *Breaking area*; passer-by **W8 · No helmet** near the end; 4 incidents; 6 confirmed tracks of 8 IDs | Zones use the worker's foot point; helmeted workers stay green |
 | 7 | Player | **Gear** | Settings: Detection, Safety alerts, Restricted zones, Model | Model tab shows a **Verified** checksum and no-helmet 0.60 |
-| 8 | History | Scroll, or click **History** in the top bar | All-session totals, trends, incident log | Every figure comes from the database |
-| 9 | History › Incident log | **Export CSV** | `safesight_incidents.csv`, one row per incident | Ready for a safety officer's records |
+| 8 | Results | Click **Results** in the top bar, or the **Results** tab in Sources | All-session totals, trends, incident log | Every figure comes from the database |
+| 9 | Results › Incident log | **Export CSV** | `safesight_incidents.csv`, one row per incident | Ready for a safety officer's records |
 
 **Optional false-alert control:** play **Ballast train, moving camera** (about 14 s). The expected result is 0 incidents: helmeted workers are not flagged.
 

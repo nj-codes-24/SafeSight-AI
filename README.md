@@ -281,7 +281,7 @@ Then open **http://localhost:8501**.
 3. **Watch the session figures and alerts.** Active tracks, confirmed tracks, compliant, violation and uncertain counts, compliance and FPS.
 4. **Inspect incidents.** Click a card to see the evidence frame and details, and set a review status.
 5. **Review analytics.** Session charts below the player, and all-session history further down.
-6. **Export** the incident log as CSV from the History section.
+6. **Export** the incident log as CSV from the Results tab.
 
 The **gear icon** inside the player opens the settings: detection thresholds, alert confirmation time and cooldown, restricted-zone polygons, and model information. Saved settings apply from the next run.
 

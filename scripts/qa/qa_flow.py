@@ -175,7 +175,9 @@ async def main():
             await asyncio.sleep(1)
         await scroll_to(a, "[class*=st-key-inc_s_]", 360)
         await a.shot("09_session_analytics")
-        await scroll_to(a, "#history", -40)
+        await click_key(a, "nav_results")  # the top-bar link opens the gallery's Results tab
+        await a.wait_for("!!document.querySelector('#results')", 15)
+        await scroll_to(a, "#results", -40)
         await a.shot("10_history")
         hist = await a.js("[...document.querySelectorAll('.ss-metrics.five .ss-m')].map(e => e.innerText.replace(/\\n/g,' '))")
         d.log(f"history metrics: {hist}")
@@ -186,9 +188,9 @@ async def main():
         csvs = sorted((d.OUT / "download").glob("*.csv"), key=lambda p: p.stat().st_mtime)
         d.log(f"CSV export: {csvs[-1].name if csvs else None}, {len(csvs[-1].read_text(encoding='utf-8').splitlines()) - 1 if csvs else 0} rows")
 
-        # 6 back to the gallery
+        # 6 back to the gallery's source cards (Results is already in the gallery)
         await a.js("(document.querySelector('[data-testid=stMain]') || window).scrollTo(0, 0)")
-        await click_key(a, "back")
+        await a.click("[data-testid=stButtonGroup] button", "Demo footage")
         await a.wait_for("!location.search.includes('source')", 15)
         await asyncio.sleep(2)
         back = await a.js("!!document.querySelector('[class*=st-key-card_]')")

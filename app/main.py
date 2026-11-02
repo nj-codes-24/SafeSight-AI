@@ -32,7 +32,7 @@ with st.container(key="topbar", horizontal=True, vertical_alignment="center", ga
     st.button("Sources", type="tertiary", key="nav_sources", on_click=player.go_gallery, disabled=running_here or src is None)
     if src is not None:
         st.markdown(f'<div class="ss-crumb">/ <b>{theme.esc(src.title)}</b></div>', unsafe_allow_html=True, width="content")
-        st.markdown('<a class="ss-navlink" href="#history" target="_self">History</a>', unsafe_allow_html=True, width="content")
+        st.button("Results", type="tertiary", key="nav_results", on_click=player.go_results, disabled=running_here)
     st.markdown("", width="stretch")
     h = runlock.holder()
     if h or running_here:

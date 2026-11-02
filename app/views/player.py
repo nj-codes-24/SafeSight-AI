@@ -29,8 +29,29 @@ class Slot:
             self.last = body
 
 
+class Off:
+    """Stands in for a hidden section: any attribute, call or `with` block does nothing."""
+
+    def __getattr__(self, name):
+        return self
+
+    def __call__(self, *a, **k):
+        return self
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+
 def go_gallery():
     st.query_params.clear()
+
+
+def go_results():
+    st.query_params.clear()
+    st.session_state["srctype"] = "Results"
 
 
 def starting():
@@ -125,16 +146,21 @@ def render(src, db):
                                       else ("Finished in this tab" if run else "Ready"))
     st.markdown(info_html(src, info, cfg, status, last), unsafe_allow_html=True)
 
-    session_head = Slot()
-    session_metrics = Slot()
-    theme.h2("Incidents", "raised in this session · select one to inspect the evidence")
-    feed = st.empty()
-    theme.h2("Session analytics", "this session only")
-    analytics = st.empty()
+    stats = src.kind != "webcam"  # no figures under the webcam; its sessions are in the gallery's Results tab
+    if not stats:
+        session_head = session_metrics = feed = analytics = Off()
+    else:
+        session_head = Slot()
+        session_metrics = Slot()
+        theme.h2("Incidents", "raised in this session · select one to inspect the evidence")
+        feed = st.empty()
+        theme.h2("Session analytics", "this session only")
+        analytics = st.empty()
 
     # The session shown below the player: the run made in this tab, else the last recorded session of this source.
+    # Not for the webcam: incident cards and session analytics draw directly to the page, so they cannot go to Off.
     row, srows, end, timeline, label = None, [], None, [], ""
-    if run:
+    if run and stats:
         row = next((s for s in db.sessions() if s["session_id"] == run["session_id"]), None)
         end, timeline = run["summary"], run["timeline"]
         label = f"Run in this tab · {run['session_id']} · {theme.when(run['ended'], False)}"
@@ -175,7 +201,6 @@ def render(src, db):
             theme.empty("Press play to run the model on this source. Live figures appear here.", "Not run yet", target=session_metrics.ph)
             theme.empty("Incidents raised during the run appear here.", target=feed)
             theme.empty("Charts for the session appear when a run finishes.", target=analytics)
-        insights.history(db)
         return
 
     # ------------------------------------------------------------ monitoring run
@@ -191,7 +216,6 @@ def render(src, db):
     session_metrics.markdown(f'<div class="ss-metrics">{"".join(theme.metric(*m) for m in insights.live_metrics(zero))}</div>')
     theme.empty("Violations and zone entries appear here as they are confirmed.", target=feed)
     theme.empty("Charts for the session appear when the run finishes.", target=analytics)
-    insights.history(db)
 
     if not runlock.acquire(src.name):
         h = runlock.holder()

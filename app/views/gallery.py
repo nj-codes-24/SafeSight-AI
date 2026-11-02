@@ -4,8 +4,9 @@ from pathlib import Path
 import streamlit as st
 
 from app import runlock, sources, theme
+from app.views import insights
 
-TYPES = ["Demo footage", "Upload video", "Webcam"]
+TYPES = ["Demo footage", "Upload video", "Webcam", "Results"]  # Results: figures across every recorded session
 
 
 def open_source(key):
@@ -80,6 +81,8 @@ def render(db):
             grid(ups, "u", last)
         else:
             theme.empty("Uploaded videos are kept in data/demo/uploads and appear here.", "No uploads yet")
+    elif kind == "Results":
+        insights.history(db)
     else:
         with st.container(horizontal=True, key="grid_w", gap=None):
             card(sources.WEBCAM, "w0")

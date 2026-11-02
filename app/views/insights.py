@@ -1,4 +1,4 @@
-"""Everything under the player: session figures, the session's incidents, session analytics and history.
+"""Session figures, the session's incidents and session analytics (under the player), and history (the gallery's Results tab).
 All figures come from the incident database or from the run in this browser tab; nothing is estimated."""
 from datetime import datetime
 from pathlib import Path
@@ -162,7 +162,7 @@ def session_analytics(row, rows, timeline):
 def history(db):
     rows = pd.DataFrame(db.rows())
     sessions = pd.DataFrame(db.sessions())
-    theme.h2("History", "all recorded sessions · every source", anchor="history")
+    theme.h2("Results", "all recorded sessions · every source", anchor="results")
     if sessions.empty:
         theme.empty("Recorded sessions appear here after the first run.", "No history yet")
         return
