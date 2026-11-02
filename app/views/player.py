@@ -93,6 +93,7 @@ def render(src, db):
     no_model = not model_ready()
     busy = bool(holder and not holder["mine"]) or no_model
     go_req = starting()
+    open_error = st.session_state.pop("open_error", {}).get(src.key)  # set by a Start whose source would not open
     total = info.get("frames", 0)
     fps_src = info.get("fps") or 25.0
 
@@ -156,7 +157,7 @@ def render(src, db):
             img = f'<img src="{uri}" alt="">' if uri else ""
             msg = ("No model weights at models/best.pt. See models/README.md, then reload this page." if no_model
                    else "Monitoring is running in another browser tab. Stop it there first." if busy
-                   else "Press play to start monitoring. The model processes the video on this computer.")
+                   else open_error or "Press play to start monitoring. The model processes the video on this computer.")
             view.markdown(f'<div class="ss-poster{"" if uri else " blank"}">{img}<div class="msg">{msg}</div></div>', unsafe_allow_html=True)
             prog.markdown(progress_html(0, fps_src, total))
         if row:
@@ -204,10 +205,9 @@ def render(src, db):
     if not cap.isOpened():
         runlock.release()
         msg = "No webcam is available on this computer." if src.kind == "webcam" else "This file could not be opened."
-        view.markdown(f'<div class="ss-poster blank"><div class="msg" style="bottom:46%">{msg}</div></div>', unsafe_allow_html=True)
-        ptop.markdown(ptop_html("ready", src, cfg))
-        st.toast(msg, icon=":material/error:")
-        return
+        # Rerun so the header, navigation and controls leave the Monitoring state; the message is shown on the poster.
+        st.session_state["open_error"] = {src.key: msg}
+        st.rerun()
     fps = cap.get(cv2.CAP_PROP_FPS) or 25.0
     total = int(cap.get(cv2.CAP_PROP_FRAME_COUNT) or 0) if src.path else 0
     det = get_detector()
