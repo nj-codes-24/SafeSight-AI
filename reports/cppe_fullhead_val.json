@@ -1,0 +1,164 @@
+{
+ "m2": {
+  "map50": 0.406,
+  "map": 0.171,
+  "per_class": {
+   "person": {
+    "P": 0.841,
+    "R": 0.856,
+    "F1": 0.848,
+    "AP50": 0.873,
+    "AP50_95": 0.439
+   },
+   "helmet": {
+    "P": 0.407,
+    "R": 0.411,
+    "F1": 0.409,
+    "AP50": 0.253,
+    "AP50_95": 0.058
+   },
+   "no_helmet": {
+    "P": 0.158,
+    "R": 0.2,
+    "F1": 0.176,
+    "AP50": 0.091,
+    "AP50_95": 0.017
+   }
+  },
+  "at_conf_0_3": {
+   "person": {
+    "TP": 179,
+    "FN_missed": 29,
+    "FP_background": 19,
+    "confused": 0,
+    "recall": 0.861,
+    "precision": 0.895
+   },
+   "helmet": {
+    "TP": 82,
+    "FN_missed": 68,
+    "FP_background": 57,
+    "confused": 2,
+    "recall": 0.539,
+    "precision": 0.59
+   },
+   "no_helmet": {
+    "TP": 4,
+    "FN_missed": 41,
+    "FP_background": 19,
+    "confused": 0,
+    "recall": 0.089,
+    "precision": 0.174
+   }
+  },
+  "ms_per_image": 5.88
+ },
+ "m4": {
+  "map50": 0.702,
+  "map": 0.308,
+  "per_class": {
+   "person": {
+    "P": 0.886,
+    "R": 0.784,
+    "F1": 0.832,
+    "AP50": 0.851,
+    "AP50_95": 0.403
+   },
+   "helmet": {
+    "P": 0.826,
+    "R": 0.724,
+    "F1": 0.772,
+    "AP50": 0.695,
+    "AP50_95": 0.318
+   },
+   "no_helmet": {
+    "P": 0.662,
+    "R": 0.6,
+    "F1": 0.629,
+    "AP50": 0.56,
+    "AP50_95": 0.202
+   }
+  },
+  "at_conf_0_3": {
+   "person": {
+    "TP": 172,
+    "FN_missed": 36,
+    "FP_background": 19,
+    "confused": 0,
+    "recall": 0.827,
+    "precision": 0.901
+   },
+   "helmet": {
+    "TP": 113,
+    "FN_missed": 39,
+    "FP_background": 25,
+    "confused": 0,
+    "recall": 0.743,
+    "precision": 0.819
+   },
+   "no_helmet": {
+    "TP": 30,
+    "FN_missed": 15,
+    "FP_background": 19,
+    "confused": 0,
+    "recall": 0.667,
+    "precision": 0.612
+   }
+  },
+  "ms_per_image": 5.13
+ },
+ "m5": {
+  "map50": 0.649,
+  "map": 0.286,
+  "per_class": {
+   "person": {
+    "P": 0.846,
+    "R": 0.837,
+    "F1": 0.841,
+    "AP50": 0.881,
+    "AP50_95": 0.425
+   },
+   "helmet": {
+    "P": 0.732,
+    "R": 0.697,
+    "F1": 0.714,
+    "AP50": 0.66,
+    "AP50_95": 0.291
+   },
+   "no_helmet": {
+    "P": 0.443,
+    "R": 0.512,
+    "F1": 0.475,
+    "AP50": 0.405,
+    "AP50_95": 0.142
+   }
+  },
+  "at_conf_0_3": {
+   "person": {
+    "TP": 179,
+    "FN_missed": 28,
+    "FP_background": 28,
+    "confused": 1,
+    "recall": 0.861,
+    "precision": 0.852
+   },
+   "helmet": {
+    "TP": 110,
+    "FN_missed": 38,
+    "FP_background": 41,
+    "confused": 4,
+    "recall": 0.724,
+    "precision": 0.724
+   },
+   "no_helmet": {
+    "TP": 26,
+    "FN_missed": 19,
+    "FP_background": 30,
+    "confused": 0,
+    "recall": 0.578,
+    "precision": 0.456
+   }
+  },
+  "ms_per_image": 4.95
+ }
+}

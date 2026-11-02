@@ -1,0 +1,498 @@
+[
+ {
+  "track_buffer": 60,
+  "match_thresh": 0.8,
+  "new_track_thresh": 0.45,
+  "stitch": false,
+  "ids": 33,
+  "confirmed_1s": 18,
+  "track_frames": 4063,
+  "per_clip": {
+   "track_work_day.mp4": [
+    12,
+    7
+   ],
+   "roadworks_night.mp4": [
+    9,
+    5
+   ],
+   "ballast_train.mp4": [
+    9,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 60,
+  "match_thresh": 0.8,
+  "new_track_thresh": 0.45,
+  "stitch": true,
+  "ids": 31,
+  "confirmed_1s": 18,
+  "track_frames": 4063,
+  "per_clip": {
+   "track_work_day.mp4": [
+    12,
+    7
+   ],
+   "roadworks_night.mp4": [
+    9,
+    5
+   ],
+   "ballast_train.mp4": [
+    7,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 60,
+  "match_thresh": 0.8,
+  "new_track_thresh": 0.6,
+  "stitch": false,
+  "ids": 25,
+  "confirmed_1s": 18,
+  "track_frames": 3942,
+  "per_clip": {
+   "track_work_day.mp4": [
+    9,
+    7
+   ],
+   "roadworks_night.mp4": [
+    9,
+    5
+   ],
+   "ballast_train.mp4": [
+    4,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 60,
+  "match_thresh": 0.8,
+  "new_track_thresh": 0.6,
+  "stitch": true,
+  "ids": 24,
+  "confirmed_1s": 17,
+  "track_frames": 3942,
+  "per_clip": {
+   "track_work_day.mp4": [
+    8,
+    6
+   ],
+   "roadworks_night.mp4": [
+    9,
+    5
+   ],
+   "ballast_train.mp4": [
+    4,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 60,
+  "match_thresh": 0.9,
+  "new_track_thresh": 0.45,
+  "stitch": false,
+  "ids": 29,
+  "confirmed_1s": 19,
+  "track_frames": 4081,
+  "per_clip": {
+   "track_work_day.mp4": [
+    11,
+    7
+   ],
+   "roadworks_night.mp4": [
+    8,
+    6
+   ],
+   "ballast_train.mp4": [
+    7,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 60,
+  "match_thresh": 0.9,
+  "new_track_thresh": 0.45,
+  "stitch": true,
+  "ids": 29,
+  "confirmed_1s": 19,
+  "track_frames": 4081,
+  "per_clip": {
+   "track_work_day.mp4": [
+    11,
+    7
+   ],
+   "roadworks_night.mp4": [
+    8,
+    6
+   ],
+   "ballast_train.mp4": [
+    7,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 60,
+  "match_thresh": 0.9,
+  "new_track_thresh": 0.6,
+  "stitch": false,
+  "ids": 23,
+  "confirmed_1s": 19,
+  "track_frames": 3969,
+  "per_clip": {
+   "track_work_day.mp4": [
+    9,
+    7
+   ],
+   "roadworks_night.mp4": [
+    7,
+    6
+   ],
+   "ballast_train.mp4": [
+    4,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 60,
+  "match_thresh": 0.9,
+  "new_track_thresh": 0.6,
+  "stitch": true,
+  "ids": 22,
+  "confirmed_1s": 18,
+  "track_frames": 3969,
+  "per_clip": {
+   "track_work_day.mp4": [
+    8,
+    6
+   ],
+   "roadworks_night.mp4": [
+    7,
+    6
+   ],
+   "ballast_train.mp4": [
+    4,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 120,
+  "match_thresh": 0.8,
+  "new_track_thresh": 0.45,
+  "stitch": false,
+  "ids": 32,
+  "confirmed_1s": 18,
+  "track_frames": 4065,
+  "per_clip": {
+   "track_work_day.mp4": [
+    11,
+    7
+   ],
+   "roadworks_night.mp4": [
+    9,
+    5
+   ],
+   "ballast_train.mp4": [
+    9,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 120,
+  "match_thresh": 0.8,
+  "new_track_thresh": 0.45,
+  "stitch": true,
+  "ids": 30,
+  "confirmed_1s": 18,
+  "track_frames": 4065,
+  "per_clip": {
+   "track_work_day.mp4": [
+    11,
+    7
+   ],
+   "roadworks_night.mp4": [
+    9,
+    5
+   ],
+   "ballast_train.mp4": [
+    7,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 120,
+  "match_thresh": 0.8,
+  "new_track_thresh": 0.6,
+  "stitch": false,
+  "ids": 25,
+  "confirmed_1s": 18,
+  "track_frames": 3949,
+  "per_clip": {
+   "track_work_day.mp4": [
+    9,
+    7
+   ],
+   "roadworks_night.mp4": [
+    9,
+    5
+   ],
+   "ballast_train.mp4": [
+    4,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 120,
+  "match_thresh": 0.8,
+  "new_track_thresh": 0.6,
+  "stitch": true,
+  "ids": 24,
+  "confirmed_1s": 17,
+  "track_frames": 3949,
+  "per_clip": {
+   "track_work_day.mp4": [
+    8,
+    6
+   ],
+   "roadworks_night.mp4": [
+    9,
+    5
+   ],
+   "ballast_train.mp4": [
+    4,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 120,
+  "match_thresh": 0.9,
+  "new_track_thresh": 0.45,
+  "stitch": false,
+  "ids": 28,
+  "confirmed_1s": 19,
+  "track_frames": 4083,
+  "per_clip": {
+   "track_work_day.mp4": [
+    10,
+    7
+   ],
+   "roadworks_night.mp4": [
+    8,
+    6
+   ],
+   "ballast_train.mp4": [
+    7,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 120,
+  "match_thresh": 0.9,
+  "new_track_thresh": 0.45,
+  "stitch": true,
+  "ids": 28,
+  "confirmed_1s": 19,
+  "track_frames": 4083,
+  "per_clip": {
+   "track_work_day.mp4": [
+    10,
+    7
+   ],
+   "roadworks_night.mp4": [
+    8,
+    6
+   ],
+   "ballast_train.mp4": [
+    7,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 120,
+  "match_thresh": 0.9,
+  "new_track_thresh": 0.6,
+  "stitch": false,
+  "ids": 23,
+  "confirmed_1s": 19,
+  "track_frames": 3976,
+  "per_clip": {
+   "track_work_day.mp4": [
+    9,
+    7
+   ],
+   "roadworks_night.mp4": [
+    7,
+    6
+   ],
+   "ballast_train.mp4": [
+    4,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "track_buffer": 120,
+  "match_thresh": 0.9,
+  "new_track_thresh": 0.6,
+  "stitch": true,
+  "ids": 22,
+  "confirmed_1s": 18,
+  "track_frames": 3976,
+  "per_clip": {
+   "track_work_day.mp4": [
+    8,
+    6
+   ],
+   "roadworks_night.mp4": [
+    7,
+    6
+   ],
+   "ballast_train.mp4": [
+    4,
+    3
+   ],
+   "helmet_put_on.mp4": [
+    1,
+    1
+   ],
+   "framing_bare_head.mp4": [
+    2,
+    2
+   ]
+  }
+ }
+]

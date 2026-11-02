@@ -1,0 +1,18 @@
+{
+ "sh17_train_dropped": 200,
+ "sh17_val_dropped": 2,
+ "sh17_val_images": 1618,
+ "sh17_train_rejected_ambiguous": 13,
+ "sh17_train_images_used": 1829,
+ "helmet_images": 329,
+ "merged_h_sh17_train_instances": {
+  "person": 11569,
+  "helmet": 3364,
+  "no_helmet": 4111
+ },
+ "sh17_val_instances": {
+  "person": 2721,
+  "helmet": 152,
+  "no_helmet": 2291
+ }
+}

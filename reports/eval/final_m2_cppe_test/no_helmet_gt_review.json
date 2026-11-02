@@ -1,0 +1,322 @@
+[
+{
+"img": "cppe_image1120.jpg",
+"w": 283,
+"h": 288,
+"tag": "hit",
+"iou": 0.61,
+"conf": 0.89
+},
+{
+"img": "cppe_image1132.jpg",
+"w": 189,
+"h": 141,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1133.jpg",
+"w": 192,
+"h": 209,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1139.jpg",
+"w": 193,
+"h": 199,
+"tag": "hit",
+"iou": 0.64,
+"conf": 0.34
+},
+{
+"img": "cppe_image1145.jpg",
+"w": 68,
+"h": 29,
+"tag": "miss",
+"iou": 0.08,
+"conf": 0.65
+},
+{
+"img": "cppe_image1145.jpg",
+"w": 43,
+"h": 36,
+"tag": "miss",
+"iou": 0.17,
+"conf": 0.68
+},
+{
+"img": "cppe_image1145.jpg",
+"w": 59,
+"h": 32,
+"tag": "miss",
+"iou": 0.26,
+"conf": 0.35
+},
+{
+"img": "cppe_image1152.jpg",
+"w": 245,
+"h": 140,
+"tag": "hit",
+"iou": 0.68,
+"conf": 0.51
+},
+{
+"img": "cppe_image1178.jpg",
+"w": 73,
+"h": 128,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1205.jpg",
+"w": 150,
+"h": 103,
+"tag": "miss",
+"iou": 0.33,
+"conf": 0.31
+},
+{
+"img": "cppe_image1205.jpg",
+"w": 163,
+"h": 95,
+"tag": "miss",
+"iou": 0.09,
+"conf": 0.43
+},
+{
+"img": "cppe_image1205.jpg",
+"w": 199,
+"h": 114,
+"tag": "hit",
+"iou": 0.54,
+"conf": 0.43
+},
+{
+"img": "cppe_image1229.jpg",
+"w": 109,
+"h": 128,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1231.jpg",
+"w": 226,
+"h": 144,
+"tag": "hit",
+"iou": 0.79,
+"conf": 0.63
+},
+{
+"img": "cppe_image1231.jpg",
+"w": 305,
+"h": 194,
+"tag": "hit",
+"iou": 0.58,
+"conf": 0.5
+},
+{
+"img": "cppe_image1235.jpg",
+"w": 116,
+"h": 164,
+"tag": "miss",
+"iou": 0.42,
+"conf": 0.84
+},
+{
+"img": "cppe_image1235.jpg",
+"w": 135,
+"h": 181,
+"tag": "hit",
+"iou": 0.7,
+"conf": 0.46
+},
+{
+"img": "cppe_image1239.jpg",
+"w": 72,
+"h": 51,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1239.jpg",
+"w": 117,
+"h": 73,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1239.jpg",
+"w": 68,
+"h": 57,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1252.jpg",
+"w": 270,
+"h": 231,
+"tag": "hit",
+"iou": 0.73,
+"conf": 0.6
+},
+{
+"img": "cppe_image1256.jpg",
+"w": 126,
+"h": 179,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1256.jpg",
+"w": 111,
+"h": 177,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1256.jpg",
+"w": 106,
+"h": 157,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1264.jpg",
+"w": 121,
+"h": 116,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1264.jpg",
+"w": 86,
+"h": 77,
+"tag": "helmet",
+"iou": 0.32,
+"conf": 0.79
+},
+{
+"img": "cppe_image1264.jpg",
+"w": 88,
+"h": 114,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1264.jpg",
+"w": 126,
+"h": 87,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1270.jpg",
+"w": 174,
+"h": 109,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1270.jpg",
+"w": 174,
+"h": 109,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1270.jpg",
+"w": 89,
+"h": 39,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1276.jpg",
+"w": 163,
+"h": 116,
+"tag": "miss",
+"iou": 0.09,
+"conf": 0.31
+},
+{
+"img": "cppe_image1292.jpg",
+"w": 92,
+"h": 53,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1293.jpg",
+"w": 292,
+"h": 87,
+"tag": "miss",
+"iou": 0.31,
+"conf": 0.76
+},
+{
+"img": "cppe_image1306.jpg",
+"w": 86,
+"h": 111,
+"tag": "miss",
+"iou": 0.07,
+"conf": 0.51
+},
+{
+"img": "cppe_image1306.jpg",
+"w": 166,
+"h": 111,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1330.jpg",
+"w": 237,
+"h": 110,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1331.jpg",
+"w": 243,
+"h": 63,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1332.jpg",
+"w": 125,
+"h": 89,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+},
+{
+"img": "cppe_image1344.jpg",
+"w": 147,
+"h": 102,
+"tag": "miss",
+"iou": 0.0,
+"conf": 0.0
+}
+]

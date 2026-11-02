@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you refer to this work, please cite it as below, and cite the datasets listed in THIRD_PARTY_NOTICES.md."
+title: "SafeSight AI: industrial worker-safety monitoring through computer vision"
+abstract: >-
+  A research prototype for hard-hat (PPE) compliance monitoring, worker tracking, restricted-zone intrusion detection
+  and incident management from video, using a fine-tuned YOLO26n detector, ByteTrack and multi-frame state confirmation.
+type: software
+authors:
+  - name: "SafeSight AI contributors"
+repository-code: "https://github.com/nj-codes-24/SafeSight-AI"
+license: AGPL-3.0-only
+version: 0.1.0
+date-released: 2026-11-02
+keywords:
+  - computer vision
+  - PPE detection
+  - worker safety
+  - object detection
+  - multi-object tracking

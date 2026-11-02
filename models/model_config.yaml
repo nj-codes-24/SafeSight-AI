@@ -1,0 +1,17 @@
+# Frozen model record. Selected on validation data and worksite footage; the test set played no part.
+model: models/best.pt
+source_checkpoint: runs/m5_sh17_ft/checkpoints/best_good.pt
+sha256: E9B2583DCAE39613FFD94B907FB216A07C7039C304AC026700BCC364CC3C7534
+architecture: YOLO26n, fine-tuned from M4, which was fine-tuned from M2
+experiment: m5_sh17_ft
+imgsz: 640
+classes: {0: person, 1: helmet, 2: no_helmet}
+head_box_style: full head
+training_data: data/processed/merged_h_sh17 (Construction-PPE with full-head boxes, Mendeley PPE v6, audited SH17 subset)
+frozen_at: 2026-11-02
+runtime_thresholds: {person_conf: 0.35, ppe_conf: 0.30, no_helmet_conf: 0.60}
+licence_note: trained partly on SH17 (CC BY-NC-SA 4.0), so non-commercial use only; Ultralytics components are AGPL-3.0
+fallback:
+  weights: models/candidates/m2_fallback.pt
+  sha256: D894308A5A225A39C5AE97C1EA69FACCE0C55685817A1EA7338356F368C08CCC
+  no_helmet_conf: 0.30

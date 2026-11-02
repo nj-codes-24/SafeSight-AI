@@ -1,0 +1,12 @@
+{
+ "note": "Labelled by eye from raw frames (six per clip, first 1,500 frames) before any model was run for the M2/M3/M5 comparison. No threshold was tuned on these clips.",
+ "c00.webm": {"kind": "worksite, very distant", "violators": 0, "helmeted_only": false, "comment": "heads too small to judge; any alert is unsupported"},
+ "c01.webm": {"kind": "worksite", "violators": "1-2", "helmeted_only": false, "comment": "concrete pour; pink-suited worker in a dark soft cap, possibly a hooded worker; others in white hard hats"},
+ "c02.webm": {"kind": "worksite", "violators": 0, "helmeted_only": true, "comment": "all visible workers wear hard hats"},
+ "c03.ogv": {"kind": "worksite", "violators": 0, "helmeted_only": true, "comment": "one scaffolder in a yellow hard hat"},
+ "c09.ogv": {"kind": "worksite", "violators": "5-7", "helmeted_only": false, "comment": "rooftop concrete pour; no worker wears a hard hat; small, low quality"},
+ "c10.ogv": {"kind": "worksite", "violators": "5-7", "helmeted_only": false, "comment": "same site as c09; includes closer frames of bare-headed workers"},
+ "c12.ogv": {"kind": "worksite, no people", "violators": 0, "helmeted_only": false, "comment": "saw close-up"},
+ "c07.webm": {"kind": "not a worksite", "violators": 0, "helmeted_only": false, "comment": "indoor interview, bare-headed speaker; an alert is technically correct but not a site violation"},
+ "c11.ogv": {"kind": "not a worksite", "violators": 0, "helmeted_only": false, "comment": "archive film of a meeting"}
+}

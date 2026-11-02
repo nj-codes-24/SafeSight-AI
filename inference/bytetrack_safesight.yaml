@@ -1,0 +1,9 @@
+# ByteTrack tuned on the demo clips (reports/tracking_sweep). track_buffer holds an ID through about 2 s at 30 fps.
+# A higher new_track_thresh removes most false-start IDs; match_thresh 0.9 keeps IDs through fast movement.
+tracker_type: bytetrack
+track_high_thresh: 0.3
+track_low_thresh: 0.1
+new_track_thresh: 0.6
+track_buffer: 60
+match_thresh: 0.9
+fuse_score: true

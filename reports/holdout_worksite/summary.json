@@ -1,0 +1,222 @@
+{
+ "m2/c00.webm": {
+  "frames": 1500,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 0,
+  "compliant": 0,
+  "violation": 0,
+  "uncertain": 0,
+  "fps": 42.1
+ },
+ "m2/c01.webm": {
+  "frames": 1500,
+  "no_helmet": 3,
+  "evidence": [
+   "reports\\holdout_worksite\\m2\\S20261102-123154\\INC-20261102-A9D9AF38.jpg",
+   "reports\\holdout_worksite\\m2\\S20261102-123154\\INC-20261102-6E5AF38E.jpg",
+   "reports\\holdout_worksite\\m2\\S20261102-123154\\INC-20261102-C3C840C5.jpg"
+  ],
+  "confirmed": 9,
+  "compliant": 2,
+  "violation": 4,
+  "uncertain": 3,
+  "fps": 45.8
+ },
+ "m2/c02.webm": {
+  "frames": 1500,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 9,
+  "compliant": 9,
+  "violation": 0,
+  "uncertain": 0,
+  "fps": 46.2
+ },
+ "m2/c03.ogv": {
+  "frames": 793,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 2,
+  "compliant": 2,
+  "violation": 0,
+  "uncertain": 0,
+  "fps": 46.8
+ },
+ "m2/c07.webm": {
+  "frames": 1500,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 2,
+  "compliant": 0,
+  "violation": 0,
+  "uncertain": 2,
+  "fps": 50.0
+ },
+ "m2/c08.webm": {
+  "frames": 328,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 3,
+  "compliant": 0,
+  "violation": 0,
+  "uncertain": 3,
+  "fps": 46.4
+ },
+ "m2/c09.ogv": {
+  "frames": 390,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 0,
+  "compliant": 0,
+  "violation": 0,
+  "uncertain": 0,
+  "fps": 82.3
+ },
+ "m2/c10.ogv": {
+  "frames": 1500,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 0,
+  "compliant": 0,
+  "violation": 0,
+  "uncertain": 0,
+  "fps": 87.1
+ },
+ "m2/c11.ogv": {
+  "frames": 1500,
+  "no_helmet": 5,
+  "evidence": [
+   "reports\\holdout_worksite\\m2\\S20261102-123417\\INC-20261102-08FEE578.jpg",
+   "reports\\holdout_worksite\\m2\\S20261102-123417\\INC-20261102-E55768F5.jpg",
+   "reports\\holdout_worksite\\m2\\S20261102-123417\\INC-20261102-C37FBCCA.jpg",
+   "reports\\holdout_worksite\\m2\\S20261102-123417\\INC-20261102-0848E9B3.jpg",
+   "reports\\holdout_worksite\\m2\\S20261102-123417\\INC-20261102-832A14E4.jpg"
+  ],
+  "confirmed": 12,
+  "compliant": 2,
+  "violation": 9,
+  "uncertain": 1,
+  "fps": 71.5
+ },
+ "m2/c12.ogv": {
+  "frames": 1500,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 1,
+  "compliant": 0,
+  "violation": 0,
+  "uncertain": 1,
+  "fps": 65.1
+ },
+ "m5/c00.webm": {
+  "frames": 1500,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 1,
+  "compliant": 0,
+  "violation": 0,
+  "uncertain": 1,
+  "fps": 46.5
+ },
+ "m5/c01.webm": {
+  "frames": 1500,
+  "no_helmet": 2,
+  "evidence": [
+   "reports\\holdout_worksite\\m5\\S20261102-123534\\INC-20261102-EB6A0D10.jpg",
+   "reports\\holdout_worksite\\m5\\S20261102-123534\\INC-20261102-518EA7E2.jpg"
+  ],
+  "confirmed": 8,
+  "compliant": 5,
+  "violation": 0,
+  "uncertain": 3,
+  "fps": 44.0
+ },
+ "m5/c02.webm": {
+  "frames": 1500,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 7,
+  "compliant": 7,
+  "violation": 0,
+  "uncertain": 0,
+  "fps": 46.6
+ },
+ "m5/c03.ogv": {
+  "frames": 793,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 1,
+  "compliant": 1,
+  "violation": 0,
+  "uncertain": 0,
+  "fps": 47.0
+ },
+ "m5/c07.webm": {
+  "frames": 1500,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 2,
+  "compliant": 0,
+  "violation": 0,
+  "uncertain": 2,
+  "fps": 50.1
+ },
+ "m5/c08.webm": {
+  "frames": 328,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 5,
+  "compliant": 0,
+  "violation": 0,
+  "uncertain": 5,
+  "fps": 43.9
+ },
+ "m5/c09.ogv": {
+  "frames": 390,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 1,
+  "compliant": 0,
+  "violation": 0,
+  "uncertain": 1,
+  "fps": 79.8
+ },
+ "m5/c10.ogv": {
+  "frames": 1500,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 0,
+  "compliant": 0,
+  "violation": 0,
+  "uncertain": 0,
+  "fps": 85.9
+ },
+ "m5/c11.ogv": {
+  "frames": 1500,
+  "no_helmet": 6,
+  "evidence": [
+   "reports\\holdout_worksite\\m5\\S20261102-123759\\INC-20261102-BF7251BE.jpg",
+   "reports\\holdout_worksite\\m5\\S20261102-123759\\INC-20261102-96BAC9F4.jpg",
+   "reports\\holdout_worksite\\m5\\S20261102-123759\\INC-20261102-A422924D.jpg",
+   "reports\\holdout_worksite\\m5\\S20261102-123759\\INC-20261102-2E0F1708.jpg",
+   "reports\\holdout_worksite\\m5\\S20261102-123759\\INC-20261102-3C686049.jpg",
+   "reports\\holdout_worksite\\m5\\S20261102-123759\\INC-20261102-1E46CA4A.jpg"
+  ],
+  "confirmed": 16,
+  "compliant": 2,
+  "violation": 10,
+  "uncertain": 4,
+  "fps": 68.8
+ },
+ "m5/c12.ogv": {
+  "frames": 1500,
+  "no_helmet": 0,
+  "evidence": [],
+  "confirmed": 1,
+  "compliant": 0,
+  "violation": 0,
+  "uncertain": 1,
+  "fps": 65.4
+ }
+}

@@ -1,0 +1,19 @@
+# M5: M4 plus balanced SH17 subset. Question - do fully labelled, varied heads improve precision and recall?
+model: runs/m4_harmonised_ft/checkpoints/best_good.pt
+data: data/processed/merged_h_sh17/dataset.yaml
+optimizer: AdamW
+lr0: 0.0005
+lrf: 0.1
+warmup_epochs: 1
+epochs: 40
+patience: 15
+close_mosaic: 8
+imgsz: 640
+batch: 32
+workers: 8
+device: 0
+amp: true
+seed: 42
+cache: ram
+plots: true
+snapshot_every: 10

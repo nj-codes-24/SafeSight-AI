@@ -1,0 +1,88 @@
+{
+ "weights": "runs\\b0_cppe_y26n\\checkpoints\\best_good.pt",
+ "data": "data\\processed\\common_test\\mendeley\\d.yaml",
+ "split": "test",
+ "overall": {
+  "precision": 0.6906989661596995,
+  "recall": 0.25837088293197613,
+  "mAP50": 0.20875251699633662,
+  "mAP50_95": 0.04573196094533516
+ },
+ "speed_ms": {
+  "preprocess": 0.9505863887574783,
+  "inference": 3.2967722222060227,
+  "loss": 0.0004183336083466808,
+  "postprocess": 1.3512711110201459
+ },
+ "per_class": {
+  "helmet": {
+   "precision": 0.381397932319399,
+   "recall": 0.5167417658639523,
+   "f1": 0.4388721291861134,
+   "AP50": 0.31543563533066443,
+   "AP50_95": 0.07013986556384795
+  },
+  "no_helmet": {
+   "precision": 1.0,
+   "recall": 0.0,
+   "f1": 0.0,
+   "AP50": 0.10206939866200884,
+   "AP50_95": 0.02132405632682237
+  }
+ },
+ "operating_conf": 0.3,
+ "confusion_matrix": {
+  "labels": [
+   "person",
+   "helmet",
+   "no_helmet",
+   "background"
+  ],
+  "rows_pred_cols_true": [
+   [
+    0.0,
+    1.0,
+    0.0,
+    1243.0
+   ],
+   [
+    0.0,
+    298.0,
+    7.0,
+    657.0
+   ],
+   [
+    0.0,
+    1.0,
+    4.0,
+    6.0
+   ],
+   [
+    0.0,
+    83.0,
+    174.0,
+    0.0
+   ]
+  ]
+ },
+ "errors": {
+  "person": {
+   "false_negative_missed": 0.0,
+   "false_positive_background": 1243.0,
+   "confused_as_other_class": 0.0,
+   "true_positive": 0.0
+  },
+  "helmet": {
+   "false_negative_missed": 83.0,
+   "false_positive_background": 657.0,
+   "confused_as_other_class": 2.0,
+   "true_positive": 298.0
+  },
+  "no_helmet": {
+   "false_negative_missed": 174.0,
+   "false_positive_background": 6.0,
+   "confused_as_other_class": 7.0,
+   "true_positive": 4.0
+  }
+ }
+}

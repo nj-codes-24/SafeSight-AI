@@ -1,0 +1,15 @@
+# B0 baseline: YOLO26n, Construction-PPE only, leak-free split, 3 classes. Purpose: reference point for all later changes.
+model: models/pretrained/yolo26n.pt
+data: data/processed/cppe/dataset.yaml
+epochs: 120
+patience: 30
+imgsz: 640
+batch: 32
+workers: 8
+device: 0
+amp: true
+seed: 42
+cache: ram
+save: true
+plots: true
+snapshot_every: 10

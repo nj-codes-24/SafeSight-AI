@@ -1,0 +1,83 @@
+# SafeSight AI: what stays out of version control.
+# Rule of thumb: source code, configuration, documentation and small result files (JSON, charts) are tracked.
+# Weights, datasets, video, databases, evidence frames and machine-local state are not. See REPOSITORY_AUDIT.md.
+
+# ---- Python and tooling
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ---- Environments and machine-local state
+.venv/
+venv/
+env/
+.uv-python/
+.ultralytics/
+.claude/
+.qa/
+.idea/
+.vscode/
+*.log
+Thumbs.db
+.DS_Store
+
+# ---- Secrets (none are needed; never commit real values)
+.env
+.env.*
+!.env.example
+
+# ---- Model weights (licence-restricted; see models/README.md)
+/models/*
+!/models/README.md
+!/models/model_config.yaml
+!/models/runtime_config.json
+*.pt
+*.pth
+*.onnx
+*.engine
+*.safetensors
+
+# ---- Datasets, caches and demo footage (fetched by scripts; see data/README.md)
+/data/*
+!/data/README.md
+!/data/demo/
+/data/demo/*
+!/data/demo/demo_clips.json
+!/data/demo/candidates.json
+*.cache
+*.npz
+
+# ---- Training runs, logs, incident databases and evidence
+/runs/
+/logs/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+/safesight_incidents.csv
+
+# ---- Media: video and photographic frames (third-party footage and dataset images)
+*.mp4
+*.webm
+*.ogv
+*.avi
+*.mov
+*.mkv
+*.jpg
+*.jpeg
+*.zip
+
+# ---- Local working areas (QA captures, UI backups, demo audit outputs, unrelated notes)
+/demo_audit/
+/design/
+/research_notes/
+/presentation/deck_source/
+/reports/Footfall*

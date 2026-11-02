@@ -1,0 +1,142 @@
+{
+  "root": "data\\raw\\construction-ppe",
+  "splits": {
+    "train": {
+      "images": 1132,
+      "missing_labels": 0,
+      "empty_labels": 0,
+      "malformed_lines": 0,
+      "corrupt_images": 0,
+      "instances": {
+        "helmet": 1341,
+        "gloves": 1146,
+        "vest": 1269,
+        "boots": 1235,
+        "goggles": 419,
+        "none": 651,
+        "Person": 1770,
+        "no_helmet": 400,
+        "no_goggle": 337,
+        "no_gloves": 442,
+        "no_boots": 88
+      },
+      "images_with_class": {
+        "helmet": 830,
+        "gloves": 562,
+        "vest": 828,
+        "boots": 530,
+        "goggles": 385,
+        "none": 347,
+        "Person": 1067,
+        "no_helmet": 232,
+        "no_goggle": 216,
+        "no_gloves": 190,
+        "no_boots": 28
+      },
+      "small_boxes_lt32px": {
+        "helmet": 143,
+        "gloves": 82,
+        "vest": 16,
+        "boots": 69,
+        "goggles": 25,
+        "none": 37,
+        "no_helmet": 15,
+        "no_goggle": 95,
+        "no_gloves": 35
+      }
+    },
+    "val": {
+      "images": 143,
+      "missing_labels": 0,
+      "empty_labels": 0,
+      "malformed_lines": 0,
+      "corrupt_images": 0,
+      "instances": {
+        "helmet": 201,
+        "gloves": 136,
+        "vest": 171,
+        "boots": 151,
+        "goggles": 47,
+        "none": 81,
+        "Person": 239,
+        "no_helmet": 45,
+        "no_goggle": 41,
+        "no_gloves": 56,
+        "no_boots": 4
+      },
+      "images_with_class": {
+        "helmet": 107,
+        "gloves": 68,
+        "vest": 109,
+        "boots": 64,
+        "goggles": 44,
+        "none": 43,
+        "Person": 139,
+        "no_helmet": 27,
+        "no_goggle": 25,
+        "no_gloves": 23,
+        "no_boots": 2
+      },
+      "small_boxes_lt32px": {
+        "helmet": 19,
+        "gloves": 5,
+        "boots": 4,
+        "none": 1,
+        "no_goggle": 8
+      }
+    },
+    "test": {
+      "images": 141,
+      "missing_labels": 0,
+      "empty_labels": 0,
+      "malformed_lines": 0,
+      "corrupt_images": 0,
+      "instances": {
+        "helmet": 192,
+        "gloves": 163,
+        "vest": 178,
+        "boots": 211,
+        "goggles": 52,
+        "none": 65,
+        "Person": 236,
+        "no_helmet": 40,
+        "no_goggle": 33,
+        "no_gloves": 58,
+        "no_boots": 23
+      },
+      "images_with_class": {
+        "helmet": 110,
+        "gloves": 75,
+        "vest": 111,
+        "boots": 75,
+        "goggles": 51,
+        "none": 35,
+        "Person": 133,
+        "no_helmet": 24,
+        "no_goggle": 24,
+        "no_gloves": 23,
+        "no_boots": 6
+      },
+      "small_boxes_lt32px": {
+        "helmet": 9,
+        "gloves": 21,
+        "boots": 2,
+        "goggles": 3,
+        "none": 1,
+        "Person": 1,
+        "no_helmet": 1,
+        "no_goggle": 2,
+        "no_gloves": 8,
+        "no_boots": 5
+      }
+    }
+  },
+  "exact_phash_duplicate_groups": 11,
+  "cross_split_duplicate_groups": 1,
+  "cross_split_examples": [
+    [
+      "train/image833.jpg",
+      "test/image834.jpg"
+    ]
+  ]
+}

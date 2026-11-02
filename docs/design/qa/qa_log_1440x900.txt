@@ -1,0 +1,41 @@
+17:16:24  viewport 1440x900; DB at start (67, 134)
+17:16:27  screenshot design\BEFORE_AFTER\final\01_gallery.png
+17:16:27  gallery: 5 cards, 5 real thumbnails loaded, horizontal overflow=False
+17:16:28  screenshot design\BEFORE_AFTER\final\01b_gallery_hover.png
+17:16:32  screenshot design\BEFORE_AFTER\final\02_player_ready.png
+17:16:32  player opened: ?source=demo%3Aroadworks_night.mp4; poster img=True
+17:16:34  screenshot design\BEFORE_AFTER\final\03_settings_detection.png
+17:16:34  settings tabs: ['Detection', 'Safety alerts', 'Restricted zones', 'Model']
+17:16:35  screenshot design\BEFORE_AFTER\final\03b_settings_zones.png
+17:16:37  screenshot design\BEFORE_AFTER\final\03c_settings_model.png
+17:16:37  settings model tab: aved changes apply from the next monitoring run. | Detection | Safety alerts | Restricted zones | Model | Active model | M5 | Architecture | YOLO26n | Experiment | m5_sh17_ft | Weights | models/best.pt | SHA-256 | E9B2583DCA…3C7534 | Frozen record | Verified | Application threshold | no-helmet 0.60 | Tracker | ByteTrack · person boxes only | Classes | person · helmet · no_helmet | Licence | Non-commercial (SH17 data)
+17:16:38  Start pressed (big play)
+17:16:47  first frame after 8.7s; back button disabled during run: True
+17:16:48  screenshot design\BEFORE_AFTER\final\04_player_live.png
+17:16:48  live: 0:02 0:12 36 FPS
+17:16:53  screenshot design\BEFORE_AFTER\final\04b_player_live_controls_faded.png
+17:16:53  controls faded while idle: True
+17:16:58  run finished=True after 20.3s; DB (67, 134) -> (68, 138)
+17:17:01  screenshot design\BEFORE_AFTER\final\05_player_finished.png
+17:17:02  screenshot design\BEFORE_AFTER\final\06_info_and_session.png
+17:17:02  session metrics: ['Active tracks 4 in view at the end', 'Confirmed tracks 6 of 8 IDs · ≥ 1 s', 'Compliant 5 final state', 'Violation 1 final state', 'Uncertain 0 final state', 'Compliance 83.3% decided workers', 'Incidents 4 this session', 'Processing 40 FPS frames per second']
+17:17:04  screenshot design\BEFORE_AFTER\final\07_incidents.png
+17:17:04  incident cards for this session: 4
+17:17:06  screenshot design\BEFORE_AFTER\final\08_incident_inspector.png
+17:17:06  inspector: Incident | Evidence frame saved when the incident was confirmed · INC-20261102-A877E105.jpg | No helmet | Closed | No helmet | Worker | W8 temporary ID | Confidence | 0.776 | Video time | 11.18 s | Started | 2 Nov 17:16:57 | Ended | 2 Nov 17:16:58 | Duration | 1 s | Zone | — | Camera | roadworks_night | Session | S20261102-171643 | Incident ID | INC-20261102-A877E105 | Review status | Update statu
+17:17:09  screenshot design\BEFORE_AFTER\final\09_session_analytics.png
+17:17:10  screenshot design\BEFORE_AFTER\final\10_history.png
+17:17:10  history metrics: ['Sessions 68 23,545 frames processed', 'Confirmed tracks 279 seen ≥ 1 s · not a headcount', 'PPE incidents 51 no helmet', 'Zone incidents 87 restricted area', 'Compliance 86.4% decided workers']
+17:17:11  screenshot design\BEFORE_AFTER\final\11_history_log.png
+17:17:14  CSV export: safesight_incidents.csv, 138 rows
+17:17:17  back to gallery: True
+17:17:20  screenshot design\BEFORE_AFTER\final\12_upload.png
+17:17:20  upload accepted and saved: True; file on disk: True
+17:17:37  screenshot design\BEFORE_AFTER\final\13_upload_finished.png
+17:17:37  uploaded clip run finished=True; session: Session
+17:17:49  webcam: state=ready, frame shown=False, message='No webcam is available on this computer.'
+17:17:49  screenshot design\BEFORE_AFTER\final\14_webcam.png
+17:18:05  screenshot design\BEFORE_AFTER\final\15_second_tab_locked.png
+17:18:05  second tab while A runs: start disabled=True, player state=busy, top bar='SafeSight AI  Sources  / Ballast train, moving camera  History  Monitoring track_work_day  M5 · no-helmet 0.60  settings icon settings expand_more'
+17:18:21  after A finished: second tab start disabled=False
+17:18:22  Streamlit exceptions on pages: 0; DB at end (70, 141)

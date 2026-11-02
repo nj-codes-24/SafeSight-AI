@@ -1,0 +1,14 @@
+# M3: merged_clean plus selected SHWD in train only. Question: does more site data lift no_helmet recall?
+model: models/pretrained/yolo26n.pt
+data: data/processed/merged_shwd/dataset.yaml
+epochs: 120
+patience: 30
+imgsz: 640
+batch: 32
+workers: 8
+device: 0
+amp: true
+seed: 42
+cache: ram
+plots: true
+snapshot_every: 10

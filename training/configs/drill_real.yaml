@@ -1,0 +1,13 @@
+# Short real training run used only to prove kill-and-resume under the watchdog.
+model: models/pretrained/yolo26n.pt
+data: data/processed/cppe/dataset.yaml
+epochs: 8
+imgsz: 640
+batch: 32
+workers: 6
+device: 0
+amp: true
+seed: 42
+deterministic: false
+plots: false
+snapshot_every: 2

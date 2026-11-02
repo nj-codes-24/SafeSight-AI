@@ -1,0 +1,50 @@
+{
+ "threshold": 0.9,
+ "clusters": 2937,
+ "dropped": {
+  "cppe:train_linked_to_test": 449,
+  "cppe:val_linked_to_test": 47,
+  "cppe:train_linked_to_val": 13,
+  "mendeley:linked_to_cppe_test": 3
+ },
+ "stats": {
+  "cppe/train": {
+   "images": 670,
+   "helmet": 863,
+   "person": 1480,
+   "no_helmet": 400
+  },
+  "cppe/test": {
+   "images": 141,
+   "person": 236,
+   "helmet": 192,
+   "no_helmet": 40
+  },
+  "cppe/val": {
+   "images": 96,
+   "helmet": 152,
+   "person": 208,
+   "no_helmet": 45
+  },
+  "mendeley/train": {
+   "images": 1711,
+   "helmet": 1812,
+   "person": 6483,
+   "no_helmet": 858
+  },
+  "mendeley/test": {
+   "images": 360,
+   "helmet": 383,
+   "person": 1301,
+   "no_helmet": 185
+  },
+  "mendeley/val": {
+   "images": 212,
+   "helmet": 225,
+   "person": 802,
+   "no_helmet": 130
+  }
+ },
+ "images_with_masked_heads": 1201,
+ "masked_heads": 3575
+}

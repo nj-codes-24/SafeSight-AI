@@ -1,0 +1,52 @@
+[
+ {
+  "file": "track_work_day.mp4",
+  "title": "Track maintenance, day (3 workers)",
+  "frames": 373,
+  "fps": 50.0,
+  "source_page": "https://commons.wikimedia.org/wiki/File:Gen%C3%A8ve_Cornavin_travaux_voie_4,_2023-23.webm",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:MHM55\" title=\"User:MHM55\">MHM55</a>"
+ },
+ {
+  "file": "roadworks_night.mp4",
+  "title": "Jackhammer crew, night",
+  "frames": 373,
+  "fps": 29.97002997002997,
+  "source_page": "https://commons.wikimedia.org/wiki/File:Jackhammer-japan-july2013.ogv",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Nesnad\" title=\"User:Nesnad\">Nesnad</a>"
+ },
+ {
+  "file": "ballast_train.mp4",
+  "title": "Ballast train, moving camera",
+  "frames": 516,
+  "fps": 25.0,
+  "source_page": "https://commons.wikimedia.org/wiki/File:Nowe_tory_na_odcinku_%C5%81%C3%B3d%C5%BA_Fabr.-_Widzew.webm",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Stevenlodz&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Stevenlodz (page does not exist)\">Stevenlodz</a>"
+ },
+ {
+  "file": "helmet_put_on.mp4",
+  "title": "Worker puts helmet on (violation then compliant)",
+  "frames": 294,
+  "fps": 24.0,
+  "source_page": "https://mixkit.co/ (clip mixkit-1440.mp4)",
+  "license": "Mixkit Stock Video Free License (per clip page). Standalone redistribution unconfirmed: fetch, do not ship",
+  "license_url": "https://mixkit.co/license/",
+  "artist": "Mixkit"
+ },
+ {
+  "file": "framing_bare_head.mp4",
+  "title": "Bare-headed worker behind framing",
+  "frames": 216,
+  "fps": 24.0,
+  "source_page": "https://mixkit.co/ (clip mixkit-1459.mp4)",
+  "license": "Mixkit Stock Video Free License (per clip page). Standalone redistribution unconfirmed: fetch, do not ship",
+  "license_url": "https://mixkit.co/license/",
+  "artist": "Mixkit"
+ }
+]

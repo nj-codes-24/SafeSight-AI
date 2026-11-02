@@ -1,0 +1,409 @@
+{
+ "weights": "models/best.pt",
+ "no_helmet_conf": 0.6,
+ "person_conf": 0.35,
+ "ppe_conf": 0.3,
+ "gpu": "NVIDIA RTX 2000 Ada Generation",
+ "torch": "2.14.1+cu126",
+ "clips": {
+  "helmet_put_on.mp4": {
+   "runs": [
+    {
+     "frames": 294,
+     "pipeline_fps": 72.0,
+     "detect_track_ms_median": 12.01,
+     "detect_track_ms_p95": 18.42,
+     "model_ms_median": 9.44,
+     "track_ids": 1,
+     "confirmed_tracks": 1,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 1,
+      "violation": 0,
+      "uncertain": 0
+     },
+     "incidents": [
+      [
+       "NO_HELMET",
+       1,
+       0.46
+      ]
+     ]
+    },
+    {
+     "frames": 294,
+     "pipeline_fps": 81.6,
+     "detect_track_ms_median": 10.59,
+     "detect_track_ms_p95": 18.6,
+     "model_ms_median": 10.56,
+     "track_ids": 1,
+     "confirmed_tracks": 1,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 1,
+      "violation": 0,
+      "uncertain": 0
+     },
+     "incidents": [
+      [
+       "NO_HELMET",
+       1,
+       0.46
+      ]
+     ]
+    },
+    {
+     "frames": 294,
+     "pipeline_fps": 81.3,
+     "detect_track_ms_median": 11.27,
+     "detect_track_ms_p95": 15.94,
+     "model_ms_median": 10.5,
+     "track_ids": 1,
+     "confirmed_tracks": 1,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 1,
+      "violation": 0,
+      "uncertain": 0
+     },
+     "incidents": [
+      [
+       "NO_HELMET",
+       1,
+       0.46
+      ]
+     ]
+    }
+   ],
+   "repeats_identical": true
+  },
+  "roadworks_night.mp4": {
+   "runs": [
+    {
+     "frames": 373,
+     "pipeline_fps": 69.1,
+     "detect_track_ms_median": 11.95,
+     "detect_track_ms_p95": 16.51,
+     "model_ms_median": 9.51,
+     "track_ids": 8,
+     "confirmed_tracks": 6,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 5,
+      "violation": 1,
+      "uncertain": 0
+     },
+     "incidents": [
+      [
+       "NO_HELMET",
+       8,
+       11.18
+      ],
+      [
+       "ZONE_INTRUSION",
+       1,
+       0.43
+      ],
+      [
+       "ZONE_INTRUSION",
+       2,
+       0.43
+      ],
+      [
+       "ZONE_INTRUSION",
+       3,
+       0.67
+      ]
+     ]
+    },
+    {
+     "frames": 373,
+     "pipeline_fps": 60.3,
+     "detect_track_ms_median": 12.95,
+     "detect_track_ms_p95": 19.32,
+     "model_ms_median": 11.01,
+     "track_ids": 8,
+     "confirmed_tracks": 6,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 5,
+      "violation": 1,
+      "uncertain": 0
+     },
+     "incidents": [
+      [
+       "NO_HELMET",
+       8,
+       11.18
+      ],
+      [
+       "ZONE_INTRUSION",
+       1,
+       0.43
+      ],
+      [
+       "ZONE_INTRUSION",
+       2,
+       0.43
+      ],
+      [
+       "ZONE_INTRUSION",
+       3,
+       0.67
+      ]
+     ]
+    },
+    {
+     "frames": 373,
+     "pipeline_fps": 58.5,
+     "detect_track_ms_median": 13.31,
+     "detect_track_ms_p95": 19.99,
+     "model_ms_median": 11.74,
+     "track_ids": 8,
+     "confirmed_tracks": 6,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 5,
+      "violation": 1,
+      "uncertain": 0
+     },
+     "incidents": [
+      [
+       "NO_HELMET",
+       8,
+       11.18
+      ],
+      [
+       "ZONE_INTRUSION",
+       1,
+       0.43
+      ],
+      [
+       "ZONE_INTRUSION",
+       2,
+       0.43
+      ],
+      [
+       "ZONE_INTRUSION",
+       3,
+       0.67
+      ]
+     ]
+    }
+   ],
+   "repeats_identical": true
+  },
+  "track_work_day.mp4": {
+   "runs": [
+    {
+     "frames": 373,
+     "pipeline_fps": 60.2,
+     "detect_track_ms_median": 13.03,
+     "detect_track_ms_p95": 19.07,
+     "model_ms_median": 11.64,
+     "track_ids": 8,
+     "confirmed_tracks": 7,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 4,
+      "violation": 0,
+      "uncertain": 3
+     },
+     "incidents": [
+      [
+       "ZONE_INTRUSION",
+       2,
+       0.48
+      ]
+     ]
+    },
+    {
+     "frames": 373,
+     "pipeline_fps": 61.3,
+     "detect_track_ms_median": 12.98,
+     "detect_track_ms_p95": 18.21,
+     "model_ms_median": 13.5,
+     "track_ids": 8,
+     "confirmed_tracks": 7,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 4,
+      "violation": 0,
+      "uncertain": 3
+     },
+     "incidents": [
+      [
+       "ZONE_INTRUSION",
+       2,
+       0.48
+      ]
+     ]
+    },
+    {
+     "frames": 373,
+     "pipeline_fps": 60.0,
+     "detect_track_ms_median": 12.99,
+     "detect_track_ms_p95": 18.92,
+     "model_ms_median": 11.81,
+     "track_ids": 8,
+     "confirmed_tracks": 7,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 4,
+      "violation": 0,
+      "uncertain": 3
+     },
+     "incidents": [
+      [
+       "ZONE_INTRUSION",
+       2,
+       0.48
+      ]
+     ]
+    }
+   ],
+   "repeats_identical": true
+  },
+  "ballast_train.mp4": {
+   "runs": [
+    {
+     "frames": 516,
+     "pipeline_fps": 55.6,
+     "detect_track_ms_median": 15.76,
+     "detect_track_ms_p95": 27.4,
+     "model_ms_median": 11.32,
+     "track_ids": 4,
+     "confirmed_tracks": 3,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 3,
+      "violation": 0,
+      "uncertain": 0
+     },
+     "incidents": []
+    },
+    {
+     "frames": 516,
+     "pipeline_fps": 51.7,
+     "detect_track_ms_median": 17.01,
+     "detect_track_ms_p95": 29.69,
+     "model_ms_median": 10.99,
+     "track_ids": 4,
+     "confirmed_tracks": 3,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 3,
+      "violation": 0,
+      "uncertain": 0
+     },
+     "incidents": []
+    },
+    {
+     "frames": 516,
+     "pipeline_fps": 53.4,
+     "detect_track_ms_median": 16.34,
+     "detect_track_ms_p95": 29.33,
+     "model_ms_median": 10.93,
+     "track_ids": 4,
+     "confirmed_tracks": 3,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 3,
+      "violation": 0,
+      "uncertain": 0
+     },
+     "incidents": []
+    }
+   ],
+   "repeats_identical": true
+  },
+  "framing_bare_head.mp4": {
+   "runs": [
+    {
+     "frames": 216,
+     "pipeline_fps": 65.5,
+     "detect_track_ms_median": 13.01,
+     "detect_track_ms_p95": 19.35,
+     "model_ms_median": 11.65,
+     "track_ids": 2,
+     "confirmed_tracks": 2,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 0,
+      "violation": 2,
+      "uncertain": 0
+     },
+     "incidents": [
+      [
+       "NO_HELMET",
+       1,
+       0.71
+      ],
+      [
+       "NO_HELMET",
+       2,
+       0.46
+      ]
+     ]
+    },
+    {
+     "frames": 216,
+     "pipeline_fps": 74.1,
+     "detect_track_ms_median": 11.75,
+     "detect_track_ms_p95": 16.88,
+     "model_ms_median": 11.67,
+     "track_ids": 2,
+     "confirmed_tracks": 2,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 0,
+      "violation": 2,
+      "uncertain": 0
+     },
+     "incidents": [
+      [
+       "NO_HELMET",
+       1,
+       0.71
+      ],
+      [
+       "NO_HELMET",
+       2,
+       0.46
+      ]
+     ]
+    },
+    {
+     "frames": 216,
+     "pipeline_fps": 70.1,
+     "detect_track_ms_median": 12.16,
+     "detect_track_ms_p95": 18.51,
+     "model_ms_median": 11.51,
+     "track_ids": 2,
+     "confirmed_tracks": 2,
+     "max_in_frame": null,
+     "final": {
+      "compliant": 0,
+      "violation": 2,
+      "uncertain": 0
+     },
+     "incidents": [
+      [
+       "NO_HELMET",
+       1,
+       0.71
+      ],
+      [
+       "NO_HELMET",
+       2,
+       0.46
+      ]
+     ]
+    }
+   ],
+   "repeats_identical": true
+  }
+ },
+ "gpu_peak_allocated_mb": 64,
+ "gpu_peak_reserved_mb": 76
+}

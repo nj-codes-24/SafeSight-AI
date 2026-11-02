@@ -1,0 +1,19 @@
+# M4: fine-tune M2 on harmonised full-head boxes only. Question - does removing the box-style conflict help?
+model: runs/m2_merged_clean_y26n/checkpoints/best_good.pt
+data: data/processed/merged_h/dataset.yaml
+optimizer: AdamW
+lr0: 0.0005
+lrf: 0.1
+warmup_epochs: 1
+epochs: 40
+patience: 15
+close_mosaic: 8
+imgsz: 640
+batch: 32
+workers: 8
+device: 0
+amp: true
+seed: 42
+cache: ram
+plots: true
+snapshot_every: 10

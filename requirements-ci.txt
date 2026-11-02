@@ -1,0 +1,8 @@
+# Minimal CPU environment for continuous integration: unit tests, watchdog drills, lint and byte-compilation.
+# It deliberately omits PyTorch, Ultralytics and Streamlit; integration tests that need them skip themselves.
+numpy==2.4.6
+opencv-python-headless==5.0.0.93
+PyYAML==6.0.3
+psutil==7.2.2
+pytest==9.2.0
+ruff==0.15.4

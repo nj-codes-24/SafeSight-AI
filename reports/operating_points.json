@@ -1,0 +1,130 @@
+{
+ "m2@0.3 common_all": {
+  "TP": 123,
+  "FN": 52,
+  "FP": 100,
+  "helmet_as_no_helmet": 0,
+  "recall": 0.703,
+  "precision": 0.552
+ },
+ "m2@0.3 mendeley": {
+  "TP": 111,
+  "FN": 19,
+  "FP": 89,
+  "helmet_as_no_helmet": 0,
+  "recall": 0.854,
+  "precision": 0.555
+ },
+ "m2@0.3 cppe_fullhead": {
+  "TP": 4,
+  "FN": 41,
+  "FP": 19,
+  "helmet_as_no_helmet": 0,
+  "recall": 0.089,
+  "precision": 0.174
+ },
+ "m2@0.3 sh17_val": {
+  "TP": 835,
+  "FN": 1456,
+  "FP": 142,
+  "helmet_as_no_helmet": 3,
+  "recall": 0.364,
+  "precision": 0.855
+ },
+ "m5@0.3 common_all": {
+  "TP": 131,
+  "FN": 44,
+  "FP": 162,
+  "helmet_as_no_helmet": 1,
+  "recall": 0.749,
+  "precision": 0.447
+ },
+ "m5@0.3 mendeley": {
+  "TP": 116,
+  "FN": 14,
+  "FP": 121,
+  "helmet_as_no_helmet": 1,
+  "recall": 0.892,
+  "precision": 0.489
+ },
+ "m5@0.3 cppe_fullhead": {
+  "TP": 26,
+  "FN": 19,
+  "FP": 31,
+  "helmet_as_no_helmet": 1,
+  "recall": 0.578,
+  "precision": 0.456
+ },
+ "m5@0.3 sh17_val": {
+  "TP": 1738,
+  "FN": 553,
+  "FP": 244,
+  "helmet_as_no_helmet": 6,
+  "recall": 0.759,
+  "precision": 0.877
+ },
+ "m5@0.5 common_all": {
+  "TP": 121,
+  "FN": 54,
+  "FP": 114,
+  "helmet_as_no_helmet": 1,
+  "recall": 0.691,
+  "precision": 0.515
+ },
+ "m5@0.5 mendeley": {
+  "TP": 114,
+  "FN": 16,
+  "FP": 89,
+  "helmet_as_no_helmet": 1,
+  "recall": 0.877,
+  "precision": 0.562
+ },
+ "m5@0.5 cppe_fullhead": {
+  "TP": 11,
+  "FN": 34,
+  "FP": 20,
+  "helmet_as_no_helmet": 1,
+  "recall": 0.244,
+  "precision": 0.355
+ },
+ "m5@0.5 sh17_val": {
+  "TP": 1568,
+  "FN": 723,
+  "FP": 68,
+  "helmet_as_no_helmet": 4,
+  "recall": 0.684,
+  "precision": 0.958
+ },
+ "m5@0.6 common_all": {
+  "TP": 109,
+  "FN": 66,
+  "FP": 92,
+  "helmet_as_no_helmet": 1,
+  "recall": 0.623,
+  "precision": 0.542
+ },
+ "m5@0.6 mendeley": {
+  "TP": 105,
+  "FN": 25,
+  "FP": 75,
+  "helmet_as_no_helmet": 1,
+  "recall": 0.808,
+  "precision": 0.583
+ },
+ "m5@0.6 cppe_fullhead": {
+  "TP": 7,
+  "FN": 38,
+  "FP": 14,
+  "helmet_as_no_helmet": 1,
+  "recall": 0.156,
+  "precision": 0.333
+ },
+ "m5@0.6 sh17_val": {
+  "TP": 1409,
+  "FN": 882,
+  "FP": 27,
+  "helmet_as_no_helmet": 4,
+  "recall": 0.615,
+  "precision": 0.981
+ }
+}

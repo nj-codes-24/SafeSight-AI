@@ -1,0 +1,70 @@
+{
+ "killed_pid": 12408,
+ "killed_at_good_epoch": 2,
+ "kill_time": 1793548297.649553,
+ "resumed_at": 1793548821.995528,
+ "resume_delay_s": 524,
+ "resume_epoch": 3,
+ "new_pid": 23268,
+ "final_epoch": 7,
+ "events": [
+  {
+   "time": "2026-11-01 21:14:31",
+   "kind": "failure",
+   "msg": "process 24456 dead (heartbeat status=running)",
+   "exp": "drill_real",
+   "failures": 5,
+   "log_errors": [
+    "Traceback (most recent call last)"
+   ],
+   "last_good_epoch": -1
+  },
+  {
+   "time": "2026-11-01 21:20:15",
+   "kind": "launch",
+   "msg": "started drill_real pid=11396 resume=False attempt=0",
+   "cmd": [
+    ".venv\\Scripts\\python.exe",
+    "training/train.py",
+    "--exp",
+    "drill_real",
+    "--config",
+    "training/configs/drill_real.yaml",
+    "--batch",
+    "32"
+   ]
+  },
+  {
+   "time": "2026-11-01 21:29:58",
+   "kind": "failure",
+   "msg": "process 11396 dead (heartbeat status=running)",
+   "exp": "drill_real",
+   "failures": 0,
+   "log_errors": [],
+   "last_good_epoch": 2
+  },
+  {
+   "time": "2026-11-01 21:30:09",
+   "kind": "launch",
+   "msg": "started drill_real pid=7512 resume=True attempt=1",
+   "cmd": [
+    ".venv\\Scripts\\python.exe",
+    "training/train.py",
+    "--exp",
+    "drill_real",
+    "--config",
+    "training/configs/drill_real.yaml",
+    "--resume",
+    "--batch",
+    "32"
+   ]
+  },
+  {
+   "time": "2026-11-01 21:30:09",
+   "kind": "recovery",
+   "msg": "drill_real restarted from last good checkpoint",
+   "ladder_step": 0,
+   "resume_epoch": 2
+  }
+ ]
+}

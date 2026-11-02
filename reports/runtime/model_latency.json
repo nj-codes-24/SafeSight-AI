@@ -1,0 +1,32 @@
+{
+ "helmet_put_on.mp4": {
+  "preprocess": 0.83,
+  "inference": 9.86,
+  "postprocess": 1.27,
+  "size": "1280x720"
+ },
+ "roadworks_night.mp4": {
+  "preprocess": 0.83,
+  "inference": 10.04,
+  "postprocess": 1.27,
+  "size": "1280x720"
+ },
+ "track_work_day.mp4": {
+  "preprocess": 1.23,
+  "inference": 9.47,
+  "postprocess": 1.25,
+  "size": "1280x720"
+ },
+ "ballast_train.mp4": {
+  "preprocess": 0.86,
+  "inference": 9.49,
+  "postprocess": 1.23,
+  "size": "1280x720"
+ },
+ "framing_bare_head.mp4": {
+  "preprocess": 1.18,
+  "inference": 9.95,
+  "postprocess": 1.25,
+  "size": "1280x720"
+ }
+}

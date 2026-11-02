@@ -1,0 +1,52 @@
+{
+ "track_work_day.mp4": {
+  "frames": 373,
+  "ids": 8,
+  "max_concurrent": 5,
+  "median_concurrent": 3,
+  "short_ids_under_1s": 1,
+  "frames_with_overlap_iou_gt_0.7": 5,
+  "detect_track_fps": 44.5,
+  "gpu_peak_mb": 55
+ },
+ "roadworks_night.mp4": {
+  "frames": 373,
+  "ids": 8,
+  "max_concurrent": 5,
+  "median_concurrent": 3,
+  "short_ids_under_1s": 2,
+  "frames_with_overlap_iou_gt_0.7": 0,
+  "detect_track_fps": 76.2,
+  "gpu_peak_mb": 55
+ },
+ "ballast_train.mp4": {
+  "frames": 516,
+  "ids": 4,
+  "max_concurrent": 4,
+  "median_concurrent": 2,
+  "short_ids_under_1s": 1,
+  "frames_with_overlap_iou_gt_0.7": 0,
+  "detect_track_fps": 71.8,
+  "gpu_peak_mb": 55
+ },
+ "helmet_put_on.mp4": {
+  "frames": 294,
+  "ids": 1,
+  "max_concurrent": 1,
+  "median_concurrent": 1,
+  "short_ids_under_1s": 0,
+  "frames_with_overlap_iou_gt_0.7": 0,
+  "detect_track_fps": 73.3,
+  "gpu_peak_mb": 55
+ },
+ "framing_bare_head.mp4": {
+  "frames": 216,
+  "ids": 2,
+  "max_concurrent": 2,
+  "median_concurrent": 2,
+  "short_ids_under_1s": 0,
+  "frames_with_overlap_iou_gt_0.7": 0,
+  "detect_track_fps": 68.4,
+  "gpu_peak_mb": 55
+ }
+}

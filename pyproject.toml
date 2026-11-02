@@ -1,0 +1,55 @@
+[project]
+name = "safesight-ai"
+version = "0.1.0"
+description = "Computer-vision worker-safety monitoring: PPE (hard hat) compliance, worker tracking, restricted-zone intrusion and incident management. Research prototype."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+authors = [{ name = "SafeSight AI contributors" }]
+keywords = ["computer-vision", "ppe-detection", "worker-safety", "yolo", "bytetrack", "streamlit"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3.11",
+  "Operating System :: Microsoft :: Windows",
+  "Topic :: Scientific/Engineering :: Image Recognition",
+]
+license = "AGPL-3.0-only"   # covers this project's own code and docs only; see LICENSING_DECISION.md
+license-files = ["LICENSE"]
+# Runtime dependencies are pinned in requirements.txt (CUDA build of PyTorch); see docs/installation.md.
+
+[project.urls]
+Repository = "https://github.com/nj-codes-24/SafeSight-AI"
+Documentation = "https://github.com/nj-codes-24/SafeSight-AI/tree/main/docs"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = [
+  "integration: needs the trained weights (models/best.pt) and/or local data; skipped automatically when absent",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 140
+extend-exclude = [".venv", ".uv-python", "runs", "data", "design", "demo_audit", "research_notes", "presentation/deck_source"]
+
+[tool.ruff.lint]
+# Correctness-focused rule set: pyflakes, pycodestyle errors, import sorting, bugbear.
+select = ["E", "F", "I", "B"]
+ignore = [
+  "E402",  # several entry points set sys.path / environment before importing project modules
+  "E501",  # long lines are allowed up to the formatter's judgement; enforced loosely by line-length
+  "E731",  # small lambdas are used for format_func callbacks
+  "B008",  # function calls in defaults are deliberate (Path constants)
+  "B905",  # zip() without strict= is fine for these fixed-length pairs
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Research and evaluation scripts are written compactly; their style is accepted as recorded experiment code.
+# B023: the timing wrappers in these scripts are created and used within the same loop iteration.
+"training/**" = ["E701", "E702", "E741", "B007"]
+"scripts/**" = ["E701", "E702", "E741", "B007", "B023"]
+"tests/**" = ["E741"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app", "inference", "database", "watchdog_svc", "training"]

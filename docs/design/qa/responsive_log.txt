@@ -1,0 +1,25 @@
+17:15:31  screenshot design\BEFORE_AFTER\responsive\1920x1080_gallery.png
+17:15:31  1920x1080 gallery: overflow=False player_ratio=None cards_per_row=3
+17:15:35  screenshot design\BEFORE_AFTER\responsive\1920x1080_player.png
+17:15:35  1920x1080 player: overflow=False player_ratio=1.817 cards_per_row=None
+17:15:36  screenshot design\BEFORE_AFTER\responsive\1920x1080_player_info.png
+17:15:40  screenshot design\BEFORE_AFTER\responsive\1440x900_gallery.png
+17:15:40  1440x900 gallery: overflow=False player_ratio=None cards_per_row=3
+17:15:44  screenshot design\BEFORE_AFTER\responsive\1440x900_player.png
+17:15:44  1440x900 player: overflow=False player_ratio=1.817 cards_per_row=None
+17:15:45  screenshot design\BEFORE_AFTER\responsive\1440x900_player_info.png
+17:15:49  screenshot design\BEFORE_AFTER\responsive\1366x768_gallery.png
+17:15:49  1366x768 gallery: overflow=False player_ratio=None cards_per_row=3
+17:15:52  screenshot design\BEFORE_AFTER\responsive\1366x768_player.png
+17:15:52  1366x768 player: overflow=False player_ratio=1.825 cards_per_row=None
+17:15:53  screenshot design\BEFORE_AFTER\responsive\1366x768_player_info.png
+17:15:57  screenshot design\BEFORE_AFTER\responsive\1024x768_gallery.png
+17:15:57  1024x768 gallery: overflow=False player_ratio=None cards_per_row=2
+17:16:01  screenshot design\BEFORE_AFTER\responsive\1024x768_player.png
+17:16:01  1024x768 player: overflow=False player_ratio=1.829 cards_per_row=None
+17:16:02  screenshot design\BEFORE_AFTER\responsive\1024x768_player_info.png
+17:16:06  screenshot design\BEFORE_AFTER\responsive\768x1024_gallery.png
+17:16:06  768x1024 gallery: overflow=False player_ratio=None cards_per_row=2
+17:16:09  screenshot design\BEFORE_AFTER\responsive\768x1024_player.png
+17:16:09  768x1024 player: overflow=False player_ratio=1.844 cards_per_row=None
+17:16:11  screenshot design\BEFORE_AFTER\responsive\768x1024_player_info.png

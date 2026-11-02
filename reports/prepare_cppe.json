@@ -1,0 +1,30 @@
+{
+ "threshold": 0.9,
+ "clusters": 2937,
+ "dropped": {
+  "cppe:train_linked_to_test": 449,
+  "cppe:val_linked_to_test": 47,
+  "cppe:train_linked_to_val": 13,
+  "mendeley:linked_to_cppe_test": 3
+ },
+ "stats": {
+  "cppe/train": {
+   "images": 670,
+   "helmet": 863,
+   "person": 1293,
+   "no_helmet": 400
+  },
+  "cppe/test": {
+   "images": 141,
+   "person": 236,
+   "helmet": 192,
+   "no_helmet": 40
+  },
+  "cppe/val": {
+   "images": 96,
+   "helmet": 152,
+   "person": 190,
+   "no_helmet": 45
+  }
+ }
+}

@@ -1,0 +1,1256 @@
+{
+ "b0": {
+  "all": {
+   "map50": 0.45,
+   "map": 0.162,
+   "per_class": {
+    "person": {
+     "P": 0.648,
+     "R": 0.838,
+     "F1": 0.73,
+     "AP50": 0.811,
+     "AP50_95": 0.325
+    },
+    "helmet": {
+     "P": 0.267,
+     "R": 0.727,
+     "F1": 0.39,
+     "AP50": 0.406,
+     "AP50_95": 0.123
+    },
+    "no_helmet": {
+     "P": 0.278,
+     "R": 0.114,
+     "F1": 0.162,
+     "AP50": 0.133,
+     "AP50_95": 0.038
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 825,
+     "FN_missed": 183,
+     "FP_background": 208,
+     "confused": 2,
+     "recall": 0.817,
+     "precision": 0.799
+    },
+    "helmet": {
+     "TP": 304,
+     "FN_missed": 72,
+     "FP_background": 473,
+     "confused": 1,
+     "recall": 0.806,
+     "precision": 0.386
+    },
+    "no_helmet": {
+     "TP": 2,
+     "FN_missed": 164,
+     "FP_background": 2,
+     "confused": 9,
+     "recall": 0.011,
+     "precision": 0.4
+    }
+   },
+   "ms_per_image": 2.72
+  },
+  "cppe": {
+   "map50": 0.652,
+   "map": 0.303,
+   "per_class": {
+    "person": {
+     "P": 0.689,
+     "R": 0.841,
+     "F1": 0.757,
+     "AP50": 0.833,
+     "AP50_95": 0.411
+    },
+    "helmet": {
+     "P": 0.668,
+     "R": 0.796,
+     "F1": 0.727,
+     "AP50": 0.77,
+     "AP50_95": 0.37
+    },
+    "no_helmet": {
+     "P": 0.473,
+     "R": 0.359,
+     "F1": 0.409,
+     "AP50": 0.354,
+     "AP50_95": 0.128
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 168,
+     "FN_missed": 40,
+     "FP_background": 30,
+     "confused": 0,
+     "recall": 0.808,
+     "precision": 0.848
+    },
+    "helmet": {
+     "TP": 119,
+     "FN_missed": 33,
+     "FP_background": 33,
+     "confused": 0,
+     "recall": 0.783,
+     "precision": 0.778
+    },
+    "no_helmet": {
+     "TP": 1,
+     "FN_missed": 43,
+     "FP_background": 0,
+     "confused": 1,
+     "recall": 0.022,
+     "precision": 1.0
+    }
+   },
+   "ms_per_image": 5.37
+  },
+  "mendeley": {
+   "map50": 0.389,
+   "map": 0.127,
+   "per_class": {
+    "person": {
+     "P": 0.869,
+     "R": 0.677,
+     "F1": 0.761,
+     "AP50": 0.803,
+     "AP50_95": 0.306
+    },
+    "helmet": {
+     "P": 0.302,
+     "R": 0.618,
+     "F1": 0.405,
+     "AP50": 0.278,
+     "AP50_95": 0.054
+    },
+    "no_helmet": {
+     "P": 1.0,
+     "R": 0.0,
+     "F1": 0.0,
+     "AP50": 0.085,
+     "AP50_95": 0.021
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 657,
+     "FN_missed": 143,
+     "FP_background": 177,
+     "confused": 2,
+     "recall": 0.819,
+     "precision": 0.788
+    },
+    "helmet": {
+     "TP": 185,
+     "FN_missed": 39,
+     "FP_background": 436,
+     "confused": 1,
+     "recall": 0.822,
+     "precision": 0.293
+    },
+    "no_helmet": {
+     "TP": 1,
+     "FN_missed": 121,
+     "FP_background": 2,
+     "confused": 8,
+     "recall": 0.008,
+     "precision": 0.25
+    }
+   },
+   "ms_per_image": 3.04
+  },
+  "sh17_val": {
+   "map50": 0.329,
+   "map": 0.091,
+   "per_class": {
+    "person": {
+     "P": 0.616,
+     "R": 0.663,
+     "F1": 0.639,
+     "AP50": 0.634,
+     "AP50_95": 0.195
+    },
+    "helmet": {
+     "P": 0.098,
+     "R": 0.362,
+     "F1": 0.154,
+     "AP50": 0.188,
+     "AP50_95": 0.042
+    },
+    "no_helmet": {
+     "P": 0.352,
+     "R": 0.182,
+     "F1": 0.24,
+     "AP50": 0.166,
+     "AP50_95": 0.036
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 1792,
+     "FN_missed": 926,
+     "FP_background": 457,
+     "confused": 3,
+     "recall": 0.659,
+     "precision": 0.796
+    },
+    "helmet": {
+     "TP": 76,
+     "FN_missed": 74,
+     "FP_background": 123,
+     "confused": 2,
+     "recall": 0.5,
+     "precision": 0.29
+    },
+    "no_helmet": {
+     "TP": 68,
+     "FN_missed": 2160,
+     "FP_background": 43,
+     "confused": 63,
+     "recall": 0.03,
+     "precision": 0.602
+    }
+   },
+   "ms_per_image": 1.99
+  }
+ },
+ "m1": {
+  "all": {
+   "map50": 0.509,
+   "map": 0.306,
+   "per_class": {
+    "person": {
+     "P": 0.819,
+     "R": 0.162,
+     "F1": 0.271,
+     "AP50": 0.235,
+     "AP50_95": 0.11
+    },
+    "helmet": {
+     "P": 0.582,
+     "R": 0.742,
+     "F1": 0.652,
+     "AP50": 0.681,
+     "AP50_95": 0.403
+    },
+    "no_helmet": {
+     "P": 0.501,
+     "R": 0.711,
+     "F1": 0.588,
+     "AP50": 0.611,
+     "AP50_95": 0.405
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 147,
+     "FN_missed": 862,
+     "FP_background": 14,
+     "confused": 1,
+     "recall": 0.146,
+     "precision": 0.902
+    },
+    "helmet": {
+     "TP": 252,
+     "FN_missed": 121,
+     "FP_background": 132,
+     "confused": 4,
+     "recall": 0.668,
+     "precision": 0.648
+    },
+    "no_helmet": {
+     "TP": 108,
+     "FN_missed": 62,
+     "FP_background": 76,
+     "confused": 5,
+     "recall": 0.617,
+     "precision": 0.578
+    }
+   },
+   "ms_per_image": 3.11
+  },
+  "cppe": {
+   "map50": 0.617,
+   "map": 0.28,
+   "per_class": {
+    "person": {
+     "P": 0.811,
+     "R": 0.688,
+     "F1": 0.744,
+     "AP50": 0.752,
+     "AP50_95": 0.362
+    },
+    "helmet": {
+     "P": 0.797,
+     "R": 0.748,
+     "F1": 0.771,
+     "AP50": 0.733,
+     "AP50_95": 0.359
+    },
+    "no_helmet": {
+     "P": 0.357,
+     "R": 0.489,
+     "F1": 0.413,
+     "AP50": 0.367,
+     "AP50_95": 0.118
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 134,
+     "FN_missed": 74,
+     "FP_background": 13,
+     "confused": 0,
+     "recall": 0.644,
+     "precision": 0.899
+    },
+    "helmet": {
+     "TP": 103,
+     "FN_missed": 47,
+     "FP_background": 13,
+     "confused": 2,
+     "recall": 0.678,
+     "precision": 0.88
+    },
+    "no_helmet": {
+     "TP": 12,
+     "FN_missed": 32,
+     "FP_background": 8,
+     "confused": 1,
+     "recall": 0.267,
+     "precision": 0.6
+    }
+   },
+   "ms_per_image": 5.0
+  },
+  "mendeley": {
+   "map50": 0.489,
+   "map": 0.332,
+   "per_class": {
+    "person": {
+     "P": 0.848,
+     "R": 0.035,
+     "F1": 0.067,
+     "AP50": 0.128,
+     "AP50_95": 0.057
+    },
+    "helmet": {
+     "P": 0.469,
+     "R": 0.809,
+     "F1": 0.594,
+     "AP50": 0.636,
+     "AP50_95": 0.436
+    },
+    "no_helmet": {
+     "P": 0.52,
+     "R": 0.823,
+     "F1": 0.638,
+     "AP50": 0.702,
+     "AP50_95": 0.503
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 13,
+     "FN_missed": 788,
+     "FP_background": 1,
+     "confused": 1,
+     "recall": 0.016,
+     "precision": 0.929
+    },
+    "helmet": {
+     "TP": 149,
+     "FN_missed": 74,
+     "FP_background": 115,
+     "confused": 2,
+     "recall": 0.662,
+     "precision": 0.556
+    },
+    "no_helmet": {
+     "TP": 96,
+     "FN_missed": 30,
+     "FP_background": 67,
+     "confused": 4,
+     "recall": 0.738,
+     "precision": 0.578
+    }
+   },
+   "ms_per_image": 3.07
+  }
+ },
+ "m2": {
+  "all": {
+   "map50": 0.703,
+   "map": 0.489,
+   "per_class": {
+    "person": {
+     "P": 0.906,
+     "R": 0.887,
+     "F1": 0.896,
+     "AP50": 0.939,
+     "AP50_95": 0.721
+    },
+    "helmet": {
+     "P": 0.531,
+     "R": 0.844,
+     "F1": 0.651,
+     "AP50": 0.59,
+     "AP50_95": 0.36
+    },
+    "no_helmet": {
+     "P": 0.556,
+     "R": 0.695,
+     "F1": 0.618,
+     "AP50": 0.579,
+     "AP50_95": 0.384
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 905,
+     "FN_missed": 105,
+     "FP_background": 100,
+     "confused": 0,
+     "recall": 0.896,
+     "precision": 0.899
+    },
+    "helmet": {
+     "TP": 327,
+     "FN_missed": 48,
+     "FP_background": 276,
+     "confused": 2,
+     "recall": 0.867,
+     "precision": 0.537
+    },
+    "no_helmet": {
+     "TP": 123,
+     "FN_missed": 46,
+     "FP_background": 100,
+     "confused": 6,
+     "recall": 0.703,
+     "precision": 0.552
+    }
+   },
+   "ms_per_image": 2.6
+  },
+  "cppe": {
+   "map50": 0.63,
+   "map": 0.279,
+   "per_class": {
+    "person": {
+     "P": 0.855,
+     "R": 0.856,
+     "F1": 0.855,
+     "AP50": 0.873,
+     "AP50_95": 0.439
+    },
+    "helmet": {
+     "P": 0.771,
+     "R": 0.757,
+     "F1": 0.764,
+     "AP50": 0.728,
+     "AP50_95": 0.312
+    },
+    "no_helmet": {
+     "P": 0.364,
+     "R": 0.4,
+     "F1": 0.381,
+     "AP50": 0.29,
+     "AP50_95": 0.087
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 179,
+     "FN_missed": 29,
+     "FP_background": 19,
+     "confused": 0,
+     "recall": 0.861,
+     "precision": 0.895
+    },
+    "helmet": {
+     "TP": 118,
+     "FN_missed": 32,
+     "FP_background": 20,
+     "confused": 2,
+     "recall": 0.776,
+     "precision": 0.849
+    },
+    "no_helmet": {
+     "TP": 12,
+     "FN_missed": 32,
+     "FP_background": 11,
+     "confused": 1,
+     "recall": 0.267,
+     "precision": 0.522
+    }
+   },
+   "ms_per_image": 5.22
+  },
+  "mendeley": {
+   "map50": 0.741,
+   "map": 0.563,
+   "per_class": {
+    "person": {
+     "P": 0.95,
+     "R": 0.849,
+     "F1": 0.896,
+     "AP50": 0.954,
+     "AP50_95": 0.787
+    },
+    "helmet": {
+     "P": 0.484,
+     "R": 0.801,
+     "F1": 0.603,
+     "AP50": 0.609,
+     "AP50_95": 0.427
+    },
+    "no_helmet": {
+     "P": 0.611,
+     "R": 0.8,
+     "F1": 0.693,
+     "AP50": 0.659,
+     "AP50_95": 0.474
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 724,
+     "FN_missed": 78,
+     "FP_background": 80,
+     "confused": 0,
+     "recall": 0.903,
+     "precision": 0.9
+    },
+    "helmet": {
+     "TP": 210,
+     "FN_missed": 15,
+     "FP_background": 256,
+     "confused": 0,
+     "recall": 0.933,
+     "precision": 0.446
+    },
+    "no_helmet": {
+     "TP": 111,
+     "FN_missed": 14,
+     "FP_background": 89,
+     "confused": 5,
+     "recall": 0.854,
+     "precision": 0.555
+    }
+   },
+   "ms_per_image": 2.83
+  },
+  "sh17_val": {
+   "map50": 0.596,
+   "map": 0.311,
+   "per_class": {
+    "person": {
+     "P": 0.831,
+     "R": 0.762,
+     "F1": 0.795,
+     "AP50": 0.79,
+     "AP50_95": 0.429
+    },
+    "helmet": {
+     "P": 0.304,
+     "R": 0.673,
+     "F1": 0.419,
+     "AP50": 0.484,
+     "AP50_95": 0.297
+    },
+    "no_helmet": {
+     "P": 0.74,
+     "R": 0.408,
+     "F1": 0.526,
+     "AP50": 0.513,
+     "AP50_95": 0.207
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 2098,
+     "FN_missed": 621,
+     "FP_background": 289,
+     "confused": 2,
+     "recall": 0.771,
+     "precision": 0.877
+    },
+    "helmet": {
+     "TP": 103,
+     "FN_missed": 46,
+     "FP_background": 61,
+     "confused": 3,
+     "recall": 0.678,
+     "precision": 0.347
+    },
+    "no_helmet": {
+     "TP": 835,
+     "FN_missed": 1319,
+     "FP_background": 138,
+     "confused": 137,
+     "recall": 0.364,
+     "precision": 0.855
+    }
+   },
+   "ms_per_image": 1.88
+  }
+ },
+ "m3": {
+  "all": {
+   "map50": 0.665,
+   "map": 0.477,
+   "per_class": {
+    "person": {
+     "P": 0.922,
+     "R": 0.89,
+     "F1": 0.906,
+     "AP50": 0.953,
+     "AP50_95": 0.752
+    },
+    "helmet": {
+     "P": 0.428,
+     "R": 0.873,
+     "F1": 0.574,
+     "AP50": 0.497,
+     "AP50_95": 0.31
+    },
+    "no_helmet": {
+     "P": 0.462,
+     "R": 0.674,
+     "F1": 0.548,
+     "AP50": 0.545,
+     "AP50_95": 0.368
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 935,
+     "FN_missed": 73,
+     "FP_background": 134,
+     "confused": 2,
+     "recall": 0.926,
+     "precision": 0.874
+    },
+    "helmet": {
+     "TP": 343,
+     "FN_missed": 33,
+     "FP_background": 494,
+     "confused": 1,
+     "recall": 0.91,
+     "precision": 0.407
+    },
+    "no_helmet": {
+     "TP": 130,
+     "FN_missed": 40,
+     "FP_background": 172,
+     "confused": 5,
+     "recall": 0.743,
+     "precision": 0.429
+    }
+   },
+   "ms_per_image": 3.3
+  },
+  "cppe": {
+   "map50": 0.588,
+   "map": 0.27,
+   "per_class": {
+    "person": {
+     "P": 0.844,
+     "R": 0.87,
+     "F1": 0.857,
+     "AP50": 0.883,
+     "AP50_95": 0.418
+    },
+    "helmet": {
+     "P": 0.726,
+     "R": 0.803,
+     "F1": 0.762,
+     "AP50": 0.676,
+     "AP50_95": 0.317
+    },
+    "no_helmet": {
+     "P": 0.317,
+     "R": 0.356,
+     "F1": 0.335,
+     "AP50": 0.205,
+     "AP50_95": 0.074
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 183,
+     "FN_missed": 25,
+     "FP_background": 23,
+     "confused": 0,
+     "recall": 0.88,
+     "precision": 0.884
+    },
+    "helmet": {
+     "TP": 125,
+     "FN_missed": 26,
+     "FP_background": 32,
+     "confused": 1,
+     "recall": 0.822,
+     "precision": 0.791
+    },
+    "no_helmet": {
+     "TP": 11,
+     "FN_missed": 33,
+     "FP_background": 17,
+     "confused": 1,
+     "recall": 0.244,
+     "precision": 0.393
+    }
+   },
+   "ms_per_image": 4.18
+  },
+  "mendeley": {
+   "map50": 0.727,
+   "map": 0.558,
+   "per_class": {
+    "person": {
+     "P": 0.974,
+     "R": 0.831,
+     "F1": 0.896,
+     "AP50": 0.97,
+     "AP50_95": 0.828
+    },
+    "helmet": {
+     "P": 0.382,
+     "R": 0.836,
+     "F1": 0.524,
+     "AP50": 0.562,
+     "AP50_95": 0.383
+    },
+    "no_helmet": {
+     "P": 0.523,
+     "R": 0.8,
+     "F1": 0.633,
+     "AP50": 0.648,
+     "AP50_95": 0.464
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 752,
+     "FN_missed": 48,
+     "FP_background": 111,
+     "confused": 2,
+     "recall": 0.938,
+     "precision": 0.871
+    },
+    "helmet": {
+     "TP": 218,
+     "FN_missed": 7,
+     "FP_background": 462,
+     "confused": 0,
+     "recall": 0.969,
+     "precision": 0.318
+    },
+    "no_helmet": {
+     "TP": 118,
+     "FN_missed": 8,
+     "FP_background": 154,
+     "confused": 4,
+     "recall": 0.908,
+     "precision": 0.432
+    }
+   },
+   "ms_per_image": 3.06
+  },
+  "sh17_val": {
+   "map50": 0.698,
+   "map": 0.433,
+   "per_class": {
+    "person": {
+     "P": 0.868,
+     "R": 0.802,
+     "F1": 0.834,
+     "AP50": 0.833,
+     "AP50_95": 0.574
+    },
+    "helmet": {
+     "P": 0.297,
+     "R": 0.776,
+     "F1": 0.43,
+     "AP50": 0.536,
+     "AP50_95": 0.312
+    },
+    "no_helmet": {
+     "P": 0.912,
+     "R": 0.54,
+     "F1": 0.678,
+     "AP50": 0.723,
+     "AP50_95": 0.413
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 2217,
+     "FN_missed": 503,
+     "FP_background": 290,
+     "confused": 1,
+     "recall": 0.815,
+     "precision": 0.883
+    },
+    "helmet": {
+     "TP": 119,
+     "FN_missed": 33,
+     "FP_background": 81,
+     "confused": 0,
+     "recall": 0.783,
+     "precision": 0.301
+    },
+    "no_helmet": {
+     "TP": 1228,
+     "FN_missed": 863,
+     "FP_background": 127,
+     "confused": 200,
+     "recall": 0.536,
+     "precision": 0.906
+    }
+   },
+   "ms_per_image": 1.98
+  }
+ },
+ "m4": {
+  "all": {
+   "map50": 0.652,
+   "map": 0.449,
+   "per_class": {
+    "person": {
+     "P": 0.903,
+     "R": 0.853,
+     "F1": 0.877,
+     "AP50": 0.931,
+     "AP50_95": 0.709
+    },
+    "helmet": {
+     "P": 0.48,
+     "R": 0.675,
+     "F1": 0.561,
+     "AP50": 0.475,
+     "AP50_95": 0.275
+    },
+    "no_helmet": {
+     "P": 0.519,
+     "R": 0.68,
+     "F1": 0.589,
+     "AP50": 0.551,
+     "AP50_95": 0.363
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 888,
+     "FN_missed": 119,
+     "FP_background": 101,
+     "confused": 3,
+     "recall": 0.879,
+     "precision": 0.898
+    },
+    "helmet": {
+     "TP": 285,
+     "FN_missed": 91,
+     "FP_background": 264,
+     "confused": 1,
+     "recall": 0.756,
+     "precision": 0.513
+    },
+    "no_helmet": {
+     "TP": 123,
+     "FN_missed": 48,
+     "FP_background": 115,
+     "confused": 4,
+     "recall": 0.703,
+     "precision": 0.515
+    }
+   },
+   "ms_per_image": 3.07
+  },
+  "cppe": {
+   "map50": 0.425,
+   "map": 0.165,
+   "per_class": {
+    "person": {
+     "P": 0.885,
+     "R": 0.78,
+     "F1": 0.829,
+     "AP50": 0.851,
+     "AP50_95": 0.403
+    },
+    "helmet": {
+     "P": 0.494,
+     "R": 0.425,
+     "F1": 0.457,
+     "AP50": 0.296,
+     "AP50_95": 0.065
+    },
+    "no_helmet": {
+     "P": 0.249,
+     "R": 0.222,
+     "F1": 0.235,
+     "AP50": 0.128,
+     "AP50_95": 0.026
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 172,
+     "FN_missed": 34,
+     "FP_background": 19,
+     "confused": 2,
+     "recall": 0.827,
+     "precision": 0.901
+    },
+    "helmet": {
+     "TP": 91,
+     "FN_missed": 61,
+     "FP_background": 45,
+     "confused": 0,
+     "recall": 0.599,
+     "precision": 0.659
+    },
+    "no_helmet": {
+     "TP": 14,
+     "FN_missed": 31,
+     "FP_background": 35,
+     "confused": 0,
+     "recall": 0.311,
+     "precision": 0.286
+    }
+   },
+   "ms_per_image": 5.77
+  },
+  "mendeley": {
+   "map50": 0.739,
+   "map": 0.559,
+   "per_class": {
+    "person": {
+     "P": 0.9,
+     "R": 0.885,
+     "F1": 0.892,
+     "AP50": 0.948,
+     "AP50_95": 0.782
+    },
+    "helmet": {
+     "P": 0.471,
+     "R": 0.853,
+     "F1": 0.607,
+     "AP50": 0.597,
+     "AP50_95": 0.417
+    },
+    "no_helmet": {
+     "P": 0.582,
+     "R": 0.838,
+     "F1": 0.687,
+     "AP50": 0.672,
+     "AP50_95": 0.478
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 718,
+     "FN_missed": 83,
+     "FP_background": 83,
+     "confused": 1,
+     "recall": 0.895,
+     "precision": 0.896
+    },
+    "helmet": {
+     "TP": 194,
+     "FN_missed": 29,
+     "FP_background": 220,
+     "confused": 2,
+     "recall": 0.862,
+     "precision": 0.463
+    },
+    "no_helmet": {
+     "TP": 109,
+     "FN_missed": 17,
+     "FP_background": 78,
+     "confused": 4,
+     "recall": 0.838,
+     "precision": 0.577
+    }
+   },
+   "ms_per_image": 3.02
+  },
+  "sh17_val": {
+   "map50": 0.588,
+   "map": 0.329,
+   "per_class": {
+    "person": {
+     "P": 0.833,
+     "R": 0.748,
+     "F1": 0.788,
+     "AP50": 0.779,
+     "AP50_95": 0.424
+    },
+    "helmet": {
+     "P": 0.442,
+     "R": 0.645,
+     "F1": 0.524,
+     "AP50": 0.546,
+     "AP50_95": 0.336
+    },
+    "no_helmet": {
+     "P": 0.589,
+     "R": 0.373,
+     "F1": 0.457,
+     "AP50": 0.439,
+     "AP50_95": 0.225
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 2070,
+     "FN_missed": 644,
+     "FP_background": 304,
+     "confused": 7,
+     "recall": 0.761,
+     "precision": 0.869
+    },
+    "helmet": {
+     "TP": 95,
+     "FN_missed": 53,
+     "FP_background": 34,
+     "confused": 4,
+     "recall": 0.625,
+     "precision": 0.45
+    },
+    "no_helmet": {
+     "TP": 820,
+     "FN_missed": 1383,
+     "FP_background": 432,
+     "confused": 88,
+     "recall": 0.358,
+     "precision": 0.65
+    }
+   },
+   "ms_per_image": 1.92
+  }
+ },
+ "m5": {
+  "all": {
+   "map50": 0.656,
+   "map": 0.449,
+   "per_class": {
+    "person": {
+     "P": 0.925,
+     "R": 0.844,
+     "F1": 0.883,
+     "AP50": 0.942,
+     "AP50_95": 0.706
+    },
+    "helmet": {
+     "P": 0.475,
+     "R": 0.679,
+     "F1": 0.559,
+     "AP50": 0.482,
+     "AP50_95": 0.278
+    },
+    "no_helmet": {
+     "P": 0.507,
+     "R": 0.687,
+     "F1": 0.584,
+     "AP50": 0.545,
+     "AP50_95": 0.362
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 900,
+     "FN_missed": 108,
+     "FP_background": 127,
+     "confused": 2,
+     "recall": 0.891,
+     "precision": 0.874
+    },
+    "helmet": {
+     "TP": 301,
+     "FN_missed": 72,
+     "FP_background": 322,
+     "confused": 4,
+     "recall": 0.798,
+     "precision": 0.478
+    },
+    "no_helmet": {
+     "TP": 131,
+     "FN_missed": 39,
+     "FP_background": 161,
+     "confused": 5,
+     "recall": 0.749,
+     "precision": 0.447
+    }
+   },
+   "ms_per_image": 2.76
+  },
+  "cppe": {
+   "map50": 0.438,
+   "map": 0.171,
+   "per_class": {
+    "person": {
+     "P": 0.835,
+     "R": 0.851,
+     "F1": 0.843,
+     "AP50": 0.881,
+     "AP50_95": 0.425
+    },
+    "helmet": {
+     "P": 0.439,
+     "R": 0.441,
+     "F1": 0.44,
+     "AP50": 0.314,
+     "AP50_95": 0.061
+    },
+    "no_helmet": {
+     "P": 0.184,
+     "R": 0.241,
+     "F1": 0.209,
+     "AP50": 0.118,
+     "AP50_95": 0.026
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 178,
+     "FN_missed": 28,
+     "FP_background": 29,
+     "confused": 2,
+     "recall": 0.856,
+     "precision": 0.848
+    },
+    "helmet": {
+     "TP": 93,
+     "FN_missed": 56,
+     "FP_background": 56,
+     "confused": 3,
+     "recall": 0.612,
+     "precision": 0.612
+    },
+    "no_helmet": {
+     "TP": 15,
+     "FN_missed": 29,
+     "FP_background": 42,
+     "confused": 1,
+     "recall": 0.333,
+     "precision": 0.263
+    }
+   },
+   "ms_per_image": 5.37
+  },
+  "mendeley": {
+   "map50": 0.744,
+   "map": 0.56,
+   "per_class": {
+    "person": {
+     "P": 0.938,
+     "R": 0.852,
+     "F1": 0.893,
+     "AP50": 0.957,
+     "AP50_95": 0.779
+    },
+    "helmet": {
+     "P": 0.486,
+     "R": 0.876,
+     "F1": 0.625,
+     "AP50": 0.605,
+     "AP50_95": 0.425
+    },
+    "no_helmet": {
+     "P": 0.566,
+     "R": 0.877,
+     "F1": 0.688,
+     "AP50": 0.669,
+     "AP50_95": 0.477
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 721,
+     "FN_missed": 81,
+     "FP_background": 98,
+     "confused": 0,
+     "recall": 0.899,
+     "precision": 0.88
+    },
+    "helmet": {
+     "TP": 208,
+     "FN_missed": 16,
+     "FP_background": 264,
+     "confused": 1,
+     "recall": 0.924,
+     "precision": 0.437
+    },
+    "no_helmet": {
+     "TP": 116,
+     "FN_missed": 10,
+     "FP_background": 120,
+     "confused": 4,
+     "recall": 0.892,
+     "precision": 0.489
+    }
+   },
+   "ms_per_image": 3.01
+  },
+  "sh17_val": {
+   "map50": 0.77,
+   "map": 0.526,
+   "per_class": {
+    "person": {
+     "P": 0.891,
+     "R": 0.779,
+     "F1": 0.831,
+     "AP50": 0.859,
+     "AP50_95": 0.61
+    },
+    "helmet": {
+     "P": 0.543,
+     "R": 0.664,
+     "F1": 0.598,
+     "AP50": 0.623,
+     "AP50_95": 0.404
+    },
+    "no_helmet": {
+     "P": 0.944,
+     "R": 0.704,
+     "F1": 0.807,
+     "AP50": 0.827,
+     "AP50_95": 0.566
+    }
+   },
+   "at_conf_0_3": {
+    "person": {
+     "TP": 2237,
+     "FN_missed": 479,
+     "FP_background": 359,
+     "confused": 5,
+     "recall": 0.822,
+     "precision": 0.86
+    },
+    "helmet": {
+     "TP": 110,
+     "FN_missed": 36,
+     "FP_background": 77,
+     "confused": 6,
+     "recall": 0.724,
+     "precision": 0.423
+    },
+    "no_helmet": {
+     "TP": 1738,
+     "FN_missed": 475,
+     "FP_background": 233,
+     "confused": 78,
+     "recall": 0.759,
+     "precision": 0.877
+    }
+   },
+   "ms_per_image": 1.85
+  }
+ }
+}

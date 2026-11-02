@@ -1,0 +1,437 @@
+{
+ "m2@0.3": {
+  "roadworks_night": {
+   "no_helmet": [
+    [
+     6,
+     10.88,
+     0.807
+    ]
+   ],
+   "zone": 3,
+   "ids": 7,
+   "confirmed": 6,
+   "final": 1,
+   "fps": 38.2
+  },
+  "helmet_put_on": {
+   "no_helmet": [
+    [
+     1,
+     0.46,
+     0.723
+    ]
+   ],
+   "zone": 0,
+   "ids": 1,
+   "confirmed": 1,
+   "final": 0,
+   "fps": 58.8
+  },
+  "framing_bare_head": {
+   "no_helmet": [
+    [
+     1,
+     0.46,
+     0.628
+    ],
+    [
+     2,
+     1.12,
+     0.53
+    ]
+   ],
+   "zone": 0,
+   "ids": 2,
+   "confirmed": 2,
+   "final": 0,
+   "fps": 59.4
+  },
+  "track_work_day": {
+   "no_helmet": [],
+   "zone": 1,
+   "ids": 9,
+   "confirmed": 7,
+   "final": 4,
+   "fps": 55.1
+  },
+  "ballast_train": {
+   "no_helmet": [],
+   "zone": 0,
+   "ids": 4,
+   "confirmed": 3,
+   "final": 0,
+   "fps": 61.4
+  }
+ },
+ "m5@0.3": {
+  "roadworks_night": {
+   "no_helmet": [
+    [
+     8,
+     11.18,
+     0.776
+    ],
+    [
+     3,
+     3.17,
+     0.481
+    ]
+   ],
+   "zone": 3,
+   "ids": 8,
+   "confirmed": 6,
+   "final": 0,
+   "fps": 54.1
+  },
+  "helmet_put_on": {
+   "no_helmet": [
+    [
+     1,
+     0.46,
+     0.814
+    ]
+   ],
+   "zone": 0,
+   "ids": 1,
+   "confirmed": 1,
+   "final": 0,
+   "fps": 60.6
+  },
+  "framing_bare_head": {
+   "no_helmet": [
+    [
+     1,
+     0.46,
+     0.603
+    ],
+    [
+     2,
+     0.46,
+     0.693
+    ]
+   ],
+   "zone": 0,
+   "ids": 2,
+   "confirmed": 2,
+   "final": 0,
+   "fps": 59.4
+  },
+  "track_work_day": {
+   "no_helmet": [
+    [
+     3,
+     0.72,
+     0.569
+    ]
+   ],
+   "zone": 1,
+   "ids": 8,
+   "confirmed": 7,
+   "final": 2,
+   "fps": 52.4
+  },
+  "ballast_train": {
+   "no_helmet": [
+    [
+     1,
+     16.92,
+     0.491
+    ]
+   ],
+   "zone": 0,
+   "ids": 4,
+   "confirmed": 3,
+   "final": 0,
+   "fps": 60.3
+  }
+ },
+ "m5@0.4": {
+  "roadworks_night": {
+   "no_helmet": [
+    [
+     8,
+     11.18,
+     0.776
+    ],
+    [
+     3,
+     3.3,
+     0.506
+    ]
+   ],
+   "zone": 3,
+   "ids": 8,
+   "confirmed": 6,
+   "final": 0,
+   "fps": 54.2
+  },
+  "helmet_put_on": {
+   "no_helmet": [
+    [
+     1,
+     0.46,
+     0.814
+    ]
+   ],
+   "zone": 0,
+   "ids": 1,
+   "confirmed": 1,
+   "final": 0,
+   "fps": 58.0
+  },
+  "framing_bare_head": {
+   "no_helmet": [
+    [
+     1,
+     0.46,
+     0.603
+    ],
+    [
+     2,
+     0.46,
+     0.693
+    ]
+   ],
+   "zone": 0,
+   "ids": 2,
+   "confirmed": 2,
+   "final": 0,
+   "fps": 59.7
+  },
+  "track_work_day": {
+   "no_helmet": [
+    [
+     3,
+     0.74,
+     0.574
+    ]
+   ],
+   "zone": 1,
+   "ids": 8,
+   "confirmed": 7,
+   "final": 2,
+   "fps": 52.9
+  },
+  "ballast_train": {
+   "no_helmet": [
+    [
+     1,
+     16.92,
+     0.496
+    ]
+   ],
+   "zone": 0,
+   "ids": 4,
+   "confirmed": 3,
+   "final": 0,
+   "fps": 59.0
+  }
+ },
+ "m5@0.5": {
+  "roadworks_night": {
+   "no_helmet": [
+    [
+     8,
+     11.18,
+     0.776
+    ],
+    [
+     3,
+     3.67,
+     0.555
+    ]
+   ],
+   "zone": 3,
+   "ids": 8,
+   "confirmed": 6,
+   "final": 0,
+   "fps": 51.9
+  },
+  "helmet_put_on": {
+   "no_helmet": [
+    [
+     1,
+     0.46,
+     0.814
+    ]
+   ],
+   "zone": 0,
+   "ids": 1,
+   "confirmed": 1,
+   "final": 0,
+   "fps": 56.7
+  },
+  "framing_bare_head": {
+   "no_helmet": [
+    [
+     1,
+     0.46,
+     0.603
+    ],
+    [
+     2,
+     0.46,
+     0.693
+    ]
+   ],
+   "zone": 0,
+   "ids": 2,
+   "confirmed": 2,
+   "final": 0,
+   "fps": 55.9
+  },
+  "track_work_day": {
+   "no_helmet": [],
+   "zone": 1,
+   "ids": 8,
+   "confirmed": 7,
+   "final": 3,
+   "fps": 54.3
+  },
+  "ballast_train": {
+   "no_helmet": [
+    [
+     1,
+     17.68,
+     0.567
+    ]
+   ],
+   "zone": 0,
+   "ids": 4,
+   "confirmed": 3,
+   "final": 0,
+   "fps": 61.2
+  }
+ },
+ "m5@0.6": {
+  "roadworks_night": {
+   "no_helmet": [
+    [
+     8,
+     11.18,
+     0.776
+    ]
+   ],
+   "zone": 3,
+   "ids": 8,
+   "confirmed": 6,
+   "final": 0,
+   "fps": 53.2
+  },
+  "helmet_put_on": {
+   "no_helmet": [
+    [
+     1,
+     0.46,
+     0.814
+    ]
+   ],
+   "zone": 0,
+   "ids": 1,
+   "confirmed": 1,
+   "final": 0,
+   "fps": 59.5
+  },
+  "framing_bare_head": {
+   "no_helmet": [
+    [
+     2,
+     0.46,
+     0.693
+    ],
+    [
+     1,
+     0.71,
+     0.632
+    ]
+   ],
+   "zone": 0,
+   "ids": 2,
+   "confirmed": 2,
+   "final": 0,
+   "fps": 58.1
+  },
+  "track_work_day": {
+   "no_helmet": [],
+   "zone": 1,
+   "ids": 8,
+   "confirmed": 7,
+   "final": 3,
+   "fps": 54.8
+  },
+  "ballast_train": {
+   "no_helmet": [],
+   "zone": 0,
+   "ids": 4,
+   "confirmed": 3,
+   "final": 0,
+   "fps": 59.9
+  }
+ },
+ "m4@0.4": {
+  "roadworks_night": {
+   "no_helmet": [
+    [
+     6,
+     10.91,
+     0.722
+    ]
+   ],
+   "zone": 3,
+   "ids": 7,
+   "confirmed": 6,
+   "final": 1,
+   "fps": 51.5
+  },
+  "helmet_put_on": {
+   "no_helmet": [
+    [
+     1,
+     1.17,
+     0.831
+    ]
+   ],
+   "zone": 0,
+   "ids": 1,
+   "confirmed": 1,
+   "final": 0,
+   "fps": 58.9
+  },
+  "framing_bare_head": {
+   "no_helmet": [
+    [
+     2,
+     2.25,
+     0.514
+    ],
+    [
+     1,
+     0.46,
+     0.564
+    ]
+   ],
+   "zone": 0,
+   "ids": 2,
+   "confirmed": 2,
+   "final": 0,
+   "fps": 56.8
+  },
+  "track_work_day": {
+   "no_helmet": [],
+   "zone": 1,
+   "ids": 7,
+   "confirmed": 5,
+   "final": 2,
+   "fps": 50.9
+  },
+  "ballast_train": {
+   "no_helmet": [],
+   "zone": 0,
+   "ids": 5,
+   "confirmed": 3,
+   "final": 0,
+   "fps": 58.3
+  }
+ }
+}

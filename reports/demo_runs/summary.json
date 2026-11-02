@@ -1,0 +1,197 @@
+{
+ "track_work_day": {
+  "frames": 373,
+  "tracked_now": 4,
+  "compliant": 3,
+  "violation": 0,
+  "uncertain": 1,
+  "track_ids": 8,
+  "confirmed_tracks": 7,
+  "compliance_rate": 100.0,
+  "fps": 45.6,
+  "incidents": 1,
+  "session_id": "S20261102-134040",
+  "wall_s": 12.1,
+  "avg_fps": 30.8,
+  "incident_list": [
+   {
+    "incident_type": "ZONE_INTRUSION",
+    "worker_id": 2,
+    "zone": "Live rail",
+    "video_time_s": 0.48,
+    "confidence": 0.877
+   }
+  ],
+  "final_states": {
+   "session_id": "S20261102-134040",
+   "started_at": "2026-11-02T13:40:52",
+   "source": "track_work_day.mp4",
+   "frames": 373,
+   "unique_workers": 7,
+   "compliant": 4,
+   "violation": 0,
+   "uncertain": 3,
+   "avg_fps": 45.6
+  }
+ },
+ "roadworks_night": {
+  "frames": 373,
+  "tracked_now": 4,
+  "compliant": 4,
+  "violation": 0,
+  "uncertain": 0,
+  "track_ids": 8,
+  "confirmed_tracks": 6,
+  "compliance_rate": 100.0,
+  "fps": 47.0,
+  "incidents": 4,
+  "session_id": "S20261102-134053",
+  "wall_s": 9.0,
+  "avg_fps": 41.4,
+  "incident_list": [
+   {
+    "incident_type": "NO_HELMET",
+    "worker_id": 8,
+    "zone": null,
+    "video_time_s": 11.18,
+    "confidence": 0.776
+   },
+   {
+    "incident_type": "ZONE_INTRUSION",
+    "worker_id": 1,
+    "zone": "Breaking area",
+    "video_time_s": 0.43,
+    "confidence": 0.73
+   },
+   {
+    "incident_type": "ZONE_INTRUSION",
+    "worker_id": 2,
+    "zone": "Breaking area",
+    "video_time_s": 0.43,
+    "confidence": 0.857
+   },
+   {
+    "incident_type": "ZONE_INTRUSION",
+    "worker_id": 3,
+    "zone": "Breaking area",
+    "video_time_s": 0.67,
+    "confidence": 0.859
+   }
+  ],
+  "final_states": {
+   "session_id": "S20261102-134053",
+   "started_at": "2026-11-02T13:41:02",
+   "source": "roadworks_night.mp4",
+   "frames": 373,
+   "unique_workers": 6,
+   "compliant": 5,
+   "violation": 1,
+   "uncertain": 0,
+   "avg_fps": 47.0
+  }
+ },
+ "ballast_train": {
+  "frames": 516,
+  "tracked_now": 3,
+  "compliant": 2,
+  "violation": 0,
+  "uncertain": 1,
+  "track_ids": 4,
+  "confirmed_tracks": 3,
+  "compliance_rate": 100.0,
+  "fps": 49.8,
+  "incidents": 0,
+  "session_id": "S20261102-134102",
+  "wall_s": 11.2,
+  "avg_fps": 45.9,
+  "incident_list": [],
+  "final_states": {
+   "session_id": "S20261102-134102",
+   "started_at": "2026-11-02T13:41:13",
+   "source": "ballast_train.mp4",
+   "frames": 516,
+   "unique_workers": 3,
+   "compliant": 3,
+   "violation": 0,
+   "uncertain": 0,
+   "avg_fps": 49.8
+  }
+ },
+ "helmet_put_on": {
+  "frames": 294,
+  "tracked_now": 1,
+  "compliant": 1,
+  "violation": 0,
+  "uncertain": 0,
+  "track_ids": 1,
+  "confirmed_tracks": 1,
+  "compliance_rate": 100.0,
+  "fps": 52.2,
+  "incidents": 1,
+  "session_id": "S20261102-134113",
+  "wall_s": 6.0,
+  "avg_fps": 48.7,
+  "incident_list": [
+   {
+    "incident_type": "NO_HELMET",
+    "worker_id": 1,
+    "zone": null,
+    "video_time_s": 0.46,
+    "confidence": 0.814
+   }
+  ],
+  "final_states": {
+   "session_id": "S20261102-134113",
+   "started_at": "2026-11-02T13:41:19",
+   "source": "helmet_put_on.mp4",
+   "frames": 294,
+   "unique_workers": 1,
+   "compliant": 1,
+   "violation": 0,
+   "uncertain": 0,
+   "avg_fps": 52.2
+  }
+ },
+ "framing_bare_head": {
+  "frames": 216,
+  "tracked_now": 2,
+  "compliant": 0,
+  "violation": 2,
+  "uncertain": 0,
+  "track_ids": 2,
+  "confirmed_tracks": 2,
+  "compliance_rate": 0.0,
+  "fps": 52.8,
+  "incidents": 2,
+  "session_id": "S20261102-134120",
+  "wall_s": 4.5,
+  "avg_fps": 48.4,
+  "incident_list": [
+   {
+    "incident_type": "NO_HELMET",
+    "worker_id": 2,
+    "zone": null,
+    "video_time_s": 0.46,
+    "confidence": 0.693
+   },
+   {
+    "incident_type": "NO_HELMET",
+    "worker_id": 1,
+    "zone": null,
+    "video_time_s": 0.71,
+    "confidence": 0.632
+   }
+  ],
+  "final_states": {
+   "session_id": "S20261102-134120",
+   "started_at": "2026-11-02T13:41:24",
+   "source": "framing_bare_head.mp4",
+   "frames": 216,
+   "unique_workers": 2,
+   "compliant": 0,
+   "violation": 2,
+   "uncertain": 0,
+   "avg_fps": 52.8
+  }
+ }
+}

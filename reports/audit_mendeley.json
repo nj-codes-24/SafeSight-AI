@@ -1,0 +1,71 @@
+{
+  "root": "data\\processed\\_mendeley_view",
+  "splits": {
+    "train": {
+      "images": 1829,
+      "missing_labels": 0,
+      "empty_labels": 0,
+      "malformed_lines": 0,
+      "corrupt_images": 0,
+      "instances": {
+        "Helmet": 1970,
+        "NoHelmet": 960,
+        "NoVest": 836,
+        "Vest": 1096
+      },
+      "images_with_class": {
+        "Helmet": 1130,
+        "NoHelmet": 506,
+        "NoVest": 521,
+        "Vest": 636
+      },
+      "small_boxes_lt32px": {
+        "Helmet": 308,
+        "NoHelmet": 156,
+        "NoVest": 23,
+        "Vest": 27
+      }
+    },
+    "val": {
+      "images": 457,
+      "missing_labels": 0,
+      "empty_labels": 0,
+      "malformed_lines": 0,
+      "corrupt_images": 0,
+      "instances": {
+        "Helmet": 451,
+        "NoHelmet": 214,
+        "NoVest": 222,
+        "Vest": 289
+      },
+      "images_with_class": {
+        "Helmet": 260,
+        "NoHelmet": 116,
+        "NoVest": 140,
+        "Vest": 173
+      },
+      "small_boxes_lt32px": {
+        "Helmet": 90,
+        "NoHelmet": 36,
+        "NoVest": 4,
+        "Vest": 7
+      }
+    }
+  },
+  "exact_phash_duplicate_groups": 13,
+  "cross_split_duplicate_groups": 3,
+  "cross_split_examples": [
+    [
+      "train/00087_jpg.rf.6367621f76b66bc6ebb4381eaddddaf7.jpg",
+      "val/00472_jpg.rf.d60afe6757fa20700be65d043ed72bfd.jpg"
+    ],
+    [
+      "train/02944_jpg.rf.66db8b6bd52e58d40eba6cdb8c621baa.jpg",
+      "val/02476_jpg.rf.b7bc819fdd857d5f8232dce3a4404846.jpg"
+    ],
+    [
+      "train/02968_jpg.rf.8c129993ba2ee87732ccd8017052ba74.jpg",
+      "val/02969_jpg.rf.5e7edd065aa71cb17281df847afcb219.jpg"
+    ]
+  ]
+}

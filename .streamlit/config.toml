@@ -1,0 +1,29 @@
+# SafeSight AI theme. Tokens are documented in design/DESIGN_SYSTEM.md; app/theme.py adds the component CSS.
+# System fonts only, so the app works offline.
+[theme]
+base = "dark"
+primaryColor = "#EDEAE5"
+backgroundColor = "#0E0D0C"
+secondaryBackgroundColor = "#1E1D1B"
+textColor = "#EDEAE5"
+borderColor = "#34312E"
+showWidgetBorder = true
+baseRadius = "8px"
+buttonRadius = "8px"
+font = "'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, sans-serif"
+headingFont = "'Segoe UI Variable Display', 'Segoe UI', system-ui, sans-serif"
+codeFont = "'Cascadia Mono', Consolas, 'SF Mono', monospace"
+baseFontSize = 15
+redColor = "#EF4444"
+greenColor = "#22C55E"
+orangeColor = "#F59E0B"
+dataframeHeaderBackgroundColor = "#161514"
+dataframeHeaderTextColor = "#A9A39B"
+showSidebarBorder = false
+chartCategoricalColors = ["#EF4444", "#A78BFA", "#EDEAE5", "#22C55E", "#F59E0B"]
+
+[theme.sidebar]
+backgroundColor = "#0E0D0C"
+secondaryBackgroundColor = "#1E1D1B"
+textColor = "#EDEAE5"
+borderColor = "#262422"

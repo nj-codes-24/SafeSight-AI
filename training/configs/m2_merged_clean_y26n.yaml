@@ -1,0 +1,14 @@
+# M2: union plus teacher person labels and masked unlabelled heads. Question: does handling partial labels beat M1?
+model: models/pretrained/yolo26n.pt
+data: data/processed/merged_clean/dataset.yaml
+epochs: 120
+patience: 30
+imgsz: 640
+batch: 32
+workers: 8
+device: 0
+amp: true
+seed: 42
+cache: ram
+plots: true
+snapshot_every: 10

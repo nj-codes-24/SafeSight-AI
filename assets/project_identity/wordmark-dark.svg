@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="44" viewBox="0 0 300 44" role="img" aria-label="SafeSight AI">
+  <g fill="none" stroke="#12110F" stroke-width="3" stroke-linecap="square">
+    <path d="M4 13V4h9M31 4h9v9M40 31v9h-9M13 40H4v-9"/>
+  </g>
+  <path d="M13 24.5a9 9 0 0 1 18 0z" fill="#12110F"/>
+  <rect x="11" y="24.5" width="22" height="3" rx="1.5" fill="#12110F"/>
+  <text x="56" y="31" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="25" font-weight="600" fill="#12110F">SafeSight</text>
+  <text x="182" y="31" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="25" font-weight="400" fill="#77716A">AI</text>
+</svg>

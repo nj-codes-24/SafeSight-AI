@@ -1,0 +1,14 @@
+# M1: plain union of Construction-PPE and Mendeley. Question: does more data help even with partial labels?
+model: models/pretrained/yolo26n.pt
+data: data/processed/merged_raw/dataset.yaml
+epochs: 120
+patience: 30
+imgsz: 640
+batch: 32
+workers: 8
+device: 0
+amp: true
+seed: 42
+cache: ram
+plots: true
+snapshot_every: 10

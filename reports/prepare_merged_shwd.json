@@ -1,0 +1,13 @@
+{
+ "selected": 3719,
+ "dropped_near_val_test": 53,
+ "dropped_in_train": 34,
+ "kept": 3632,
+ "masked_heads": 88,
+ "train_images": 6013,
+ "train_instances": {
+  "person": 17911,
+  "helmet": 11433,
+  "no_helmet": 5737
+ }
+}
