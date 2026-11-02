@@ -201,10 +201,12 @@ def render(src, db):
 
     from inference.tracker import Pipeline  # noqa: E402  (imports torch, so only on Start)
 
-    cap = cv2.VideoCapture(src.capture)
-    if not cap.isOpened():
+    cap = sources.open_capture(src)
+    if cap is None:
         runlock.release()
-        msg = "No webcam is available on this computer." if src.kind == "webcam" else "This file could not be opened."
+        msg = ("No webcam could be opened on the computer running the app. Check that a camera is connected, not in use "
+               "by another app, and that Windows Settings › Privacy › Camera allows desktop apps."
+               if src.kind == "webcam" else "This file could not be opened.")
         # Rerun so the header, navigation and controls leave the Monitoring state; the message is shown on the poster.
         st.session_state["open_error"] = {src.key: msg}
         st.rerun()

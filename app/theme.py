@@ -120,8 +120,9 @@ p, li, td { font-feature-settings: "tnum" 1; }
 [class*="st-key-card_"]:hover .ss-card { transform: translateY(-3px); }
 [class*="st-key-card_"]:hover .ss-card .thumb img { transform: scale(1.035); filter: brightness(1) saturate(1); }
 [class*="st-key-card_"]:hover .ss-card .play { opacity: 1; transform: scale(1); }
-[class*="st-key-card_"] [class*="st-key-open_"] { position: absolute !important; inset: 0; z-index: 5; }
-[class*="st-key-card_"] [class*="st-key-open_"] .stButton, [class*="st-key-card_"] [class*="st-key-open_"] button { width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+[class*="st-key-card_"] [class*="st-key-open_"] { position: absolute !important; inset: 0; z-index: 5; width: 100% !important; height: 100% !important; }
+[class*="st-key-card_"] [class*="st-key-open_"] .stButton, [class*="st-key-card_"] [class*="st-key-open_"] .stButton > div,
+[class*="st-key-card_"] [class*="st-key-open_"] button { width: 100% !important; height: 100%; opacity: 0; cursor: pointer; }
 .ss-webcam { width: 100%; height: 100%; display: grid; place-items: center; background: radial-gradient(circle at 50% 40%, #24211e, #0b0a09); }
 .ss-webcam svg { width: 46px; height: 46px; stroke: var(--ink-3); fill: none; stroke-width: 1.4; }
 

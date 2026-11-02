@@ -74,6 +74,23 @@ def upload_sources():
 WEBCAM = Source("webcam:0", "webcam", "Webcam", None, {"device": 0})
 
 
+def open_capture(src):
+    """Open a source for monitoring; None if it cannot be opened or read.
+
+    Files use the default backend. The webcam tries DirectShow, then Media Foundation, then the default: on many Windows
+    laptops one of these fails or opens a camera that returns no frames, so a backend counts only if a frame can be read.
+    """
+    if src.path:
+        cap = cv2.VideoCapture(str(src.path))
+        return cap if cap.isOpened() else None
+    for api in (cv2.CAP_DSHOW, cv2.CAP_MSMF, cv2.CAP_ANY):
+        cap = cv2.VideoCapture(src.meta.get("device", 0), api)
+        if cap.isOpened() and cap.read()[0]:
+            return cap
+        cap.release()
+    return None
+
+
 def all_sources():
     return demo_sources() + upload_sources() + [WEBCAM]
 
