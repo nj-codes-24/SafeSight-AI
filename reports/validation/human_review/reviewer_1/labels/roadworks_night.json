@@ -1,0 +1,23 @@
+{
+ "schema": "safesight.labels/1.1",
+ "label_set": "m2-human-r1",
+ "clip_id": "roadworks_night",
+ "file": "data/demo/roadworks_night.mp4",
+ "sha256": "D51C814C654A0B383316505815456E941CD7CE6DCFDE0EFAC98F395DA9888CC7",
+ "fps": 29.97,
+ "frames": 373,
+ "duration_s": 12.45,
+ "status": "provisional",
+ "annotators": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "evaluated"
+ },
+ "zones": [],
+ "intervals": [],
+ "events": [],
+ "people": {},
+ "attributes": {},
+ "review_complete": false,
+ "reviewer_notes": ""
+}

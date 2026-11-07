@@ -80,9 +80,17 @@ def inspect(iid):
                   ("Incident ID", theme.esc(r["incident_id"]), True)])
         status = st.selectbox("Review status", STATUSES, index=STATUSES.index(r["status"]) if r["status"] in STATUSES else 0,
                               format_func=lambda s: s.replace("_", " ").title(), key=f"status_{iid}")
+        who = st.text_input("Reviewer (initials or role)", key=f"who_{iid}",
+                            help="Recorded with the decision in the review history; never a worker's name.")
+        why = st.text_input("Reason", key=f"why_{iid}", help="Why this decision (recorded with it).")
         if st.button("Update status", type="primary", width="stretch", disabled=status == r["status"], key=f"upd_{iid}"):
-            db.set_status(iid, status)
+            db.set_status(iid, status, reviewer=who.strip() or None, note=why.strip() or None)
             st.rerun()
+        history = db.reviews(iid)
+        if history:
+            st.caption("Review history: " + " · ".join(
+                f"{h['reviewed_utc'][:16].replace('T', ' ')} UTC {h['previous_status']}→{h['status']} by "
+                f"{h['reviewer'] or 'unnamed'}" + (f" ({h['note']})" if h["note"] else "") for h in history))
 
 
 def incident_cards(rows, prefix, per_row=3):
@@ -216,7 +224,9 @@ def history(db):
         fig.update_yaxes(title="Incidents", dtick=1)
         plot(fig, 220)
 
-    tabs = st.tabs(["Incident log", "Session records"])
+    tabs = st.tabs(["Incident log", "Session records", "Runtime cameras"])
+    with tabs[2]:
+        runtime_cameras()
     with tabs[0]:
         incident_log(db, rows)
     with tabs[1]:
@@ -226,6 +236,44 @@ def history(db):
         st.dataframe(hist, hide_index=True, width="stretch", height=min(40 + 35 * len(hist), 380),
                      column_config={"Recorded": st.column_config.DatetimeColumn(format="D MMM HH:mm:ss"),
                                     "FPS": st.column_config.NumberColumn(format="%.1f")})
+
+
+RUNTIME_STATUS = Path(__file__).resolve().parents[2] / "logs" / "runtime" / "status.json"
+
+
+def runtime_cameras(path=RUNTIME_STATUS):
+    """Read-only view of the headless runtime's status file (python -m runtime run): connection and camera view health
+    side by side. It reads no database; a camera that streams but whose view is blocked or unverified is not monitoring."""
+    import json
+
+    if not path.exists():
+        theme.empty("No headless runtime status yet. Start it with python -m runtime run --config <file>.")
+        return
+    try:
+        s = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        theme.empty("The runtime status file could not be read; it is rewritten every few seconds, try again.")
+        return
+    rt = s.get("runtime", {})
+    age = (pd.Timestamp.now(tz="UTC") - pd.Timestamp(rt.get("updated_utc"))).total_seconds() if rt.get("updated_utc") else None
+    stale = rt.get("state") == "running" and (age is None or age > 3 * rt.get("status_interval_s", 2))
+    rows = []
+    for cid, c in (s.get("cameras") or {}).items():
+        v = c.get("view") or {}
+        e = v.get("last_event") or {}
+        rows.append({"Camera": cid, "Connection": c.get("state"), "View": v.get("state", "—"),
+                     "Monitoring": "no (runtime not running)" if stale else c.get("monitoring"),
+                     "Zones": v.get("zones") or "—", "Reference": v.get("reference_revision"),
+                     "Last view event": f"{e.get('event_type')} · {e.get('cause')}" if e else "—",
+                     "Interrupted incidents": v.get("interrupted_incidents", 0),
+                     "Warnings": "; ".join(v.get("warnings") or []) or "—", "Reason": c.get("reason") or ""})
+    if not rows:
+        theme.empty("The runtime status lists no cameras.")
+        return
+    st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch", height=min(40 + 35 * len(rows), 380))
+    st.caption(f"Runtime {rt.get('state', '?')}{' (stale: not running)' if stale else ''} · status updated "
+               f"{'?' if age is None else f'{age:.0f} s'} ago · {path}. Connection and view are separate: a camera can "
+               "stream while its lens is covered. Revalidate a view with python -m runtime view.")
 
 
 def incident_log(db, rows):

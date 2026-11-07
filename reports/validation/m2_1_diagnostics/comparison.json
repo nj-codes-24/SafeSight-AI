@@ -1,0 +1,822 @@
+{
+ "WARNING": "DIAGNOSTIC ONLY: provisional AI labels; not a validated measurement; no improvement is claimed",
+ "labels": {
+  "m2-provisional-v1": "5FA81F00505093219FDBED3ED716F1E7B2F6417D9A8FA653CA428D79A084BAB2",
+  "m2-provisional-v1.2": "34F4633D356E7AA497C0225839CFC9241265F656B776814E4D3680460DD890AF"
+ },
+ "variants": {
+  "A": {
+   "logic": "legacy",
+   "ppe_policy": "n/a (M2 logic)",
+   "matcher": "time only"
+  },
+  "B": {
+   "logic": "legacy",
+   "ppe_policy": "n/a (M2 logic)",
+   "matcher": "identity-aware"
+  },
+  "C": {
+   "logic": "current",
+   "ppe_policy": "camera-wide provisional (M2 assumption)",
+   "matcher": "identity-aware"
+  },
+  "D": {
+   "logic": "current",
+   "ppe_policy": "none (default)",
+   "matcher": "identity-aware"
+  }
+ },
+ "metrics": {
+  "A": {
+   "PPE.HEAD.MISSING / all": {
+    "alerts": 18,
+    "episodes": 8,
+    "true_positives": 5,
+    "missed": 3,
+    "false_alarms": 2,
+    "duplicates": 0,
+    "context_false_alarms": 6,
+    "unscorable": 4,
+    "late_detections": 2,
+    "optional_detected": 1,
+    "optional_episodes": 7,
+    "monitorable_hours": 0.2442,
+    "precision": 0.714,
+    "precision_wilson95": [
+     0.3589,
+     0.9178
+    ],
+    "recall": 0.625,
+    "recall_wilson95": [
+     0.3057,
+     0.8632
+    ],
+    "alert_precision": 0.385,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 8.19,
+    "false_alarms_per_hour_poisson95": [
+     0.92,
+     29.57
+    ],
+    "identity": {},
+    "sufficient": false
+   },
+   "PPE.HEAD.MISSING / held-out": {
+    "alerts": 14,
+    "episodes": 6,
+    "true_positives": 3,
+    "missed": 3,
+    "false_alarms": 2,
+    "duplicates": 0,
+    "context_false_alarms": 5,
+    "unscorable": 4,
+    "late_detections": 2,
+    "optional_detected": 0,
+    "optional_episodes": 3,
+    "monitorable_hours": 0.231,
+    "precision": 0.6,
+    "precision_wilson95": [
+     0.2307,
+     0.8824
+    ],
+    "recall": 0.5,
+    "recall_wilson95": [
+     0.1876,
+     0.8124
+    ],
+    "alert_precision": 0.3,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 8.66,
+    "false_alarms_per_hour_poisson95": [
+     0.97,
+     31.26
+    ],
+    "identity": {},
+    "sufficient": false
+   },
+   "PPE.HEAD.MISSING / development": {
+    "alerts": 4,
+    "episodes": 2,
+    "true_positives": 2,
+    "missed": 0,
+    "false_alarms": 0,
+    "duplicates": 0,
+    "context_false_alarms": 1,
+    "unscorable": 0,
+    "late_detections": 0,
+    "optional_detected": 1,
+    "optional_episodes": 4,
+    "monitorable_hours": 0.0132,
+    "precision": 1.0,
+    "precision_wilson95": [
+     0.3424,
+     1.0
+    ],
+    "recall": 1.0,
+    "recall_wilson95": [
+     0.3424,
+     1.0
+    ],
+    "alert_precision": 0.667,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 0.0,
+    "false_alarms_per_hour_poisson95": [
+     0.0,
+     279.81
+    ],
+    "identity": {},
+    "sufficient": false
+   },
+   "ZONE.ENTRY / all": {
+    "alerts": 4,
+    "episodes": 4,
+    "true_positives": 4,
+    "missed": 0,
+    "false_alarms": 0,
+    "duplicates": 0,
+    "context_false_alarms": 0,
+    "unscorable": 0,
+    "late_detections": 0,
+    "optional_detected": 0,
+    "optional_episodes": 0,
+    "monitorable_hours": 0.0055,
+    "precision": 1.0,
+    "precision_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "recall": 1.0,
+    "recall_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "alert_precision": 1.0,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 0.0,
+    "false_alarms_per_hour_poisson95": [
+     0.0,
+     667.0
+    ],
+    "identity": {},
+    "sufficient": false
+   },
+   "ZONE.ENTRY / development": {
+    "alerts": 4,
+    "episodes": 4,
+    "true_positives": 4,
+    "missed": 0,
+    "false_alarms": 0,
+    "duplicates": 0,
+    "context_false_alarms": 0,
+    "unscorable": 0,
+    "late_detections": 0,
+    "optional_detected": 0,
+    "optional_episodes": 0,
+    "monitorable_hours": 0.0055,
+    "precision": 1.0,
+    "precision_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "recall": 1.0,
+    "recall_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "alert_precision": 1.0,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 0.0,
+    "false_alarms_per_hour_poisson95": [
+     0.0,
+     667.0
+    ],
+    "identity": {},
+    "sufficient": false
+   },
+   "timing": {
+    "matched_required": 9,
+    "latency_median_s": 0.48,
+    "duration_abs_error_median_s": 7.38,
+    "duration_abs_error_max_s": 25.4
+   }
+  },
+  "B": {
+   "PPE.HEAD.MISSING / all": {
+    "alerts": 18,
+    "episodes": 8,
+    "true_positives": 5,
+    "missed": 3,
+    "false_alarms": 2,
+    "duplicates": 0,
+    "context_false_alarms": 6,
+    "unscorable": 4,
+    "late_detections": 2,
+    "optional_detected": 1,
+    "optional_episodes": 7,
+    "monitorable_hours": 0.2442,
+    "precision": 0.714,
+    "precision_wilson95": [
+     0.3589,
+     0.9178
+    ],
+    "recall": 0.625,
+    "recall_wilson95": [
+     0.3057,
+     0.8632
+    ],
+    "alert_precision": 0.385,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 8.19,
+    "false_alarms_per_hour_poisson95": [
+     0.92,
+     29.57
+    ],
+    "identity": {
+     "matched_consistent": 7,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 5
+    },
+    "sufficient": false
+   },
+   "PPE.HEAD.MISSING / held-out": {
+    "alerts": 14,
+    "episodes": 6,
+    "true_positives": 3,
+    "missed": 3,
+    "false_alarms": 2,
+    "duplicates": 0,
+    "context_false_alarms": 5,
+    "unscorable": 4,
+    "late_detections": 2,
+    "optional_detected": 0,
+    "optional_episodes": 3,
+    "monitorable_hours": 0.231,
+    "precision": 0.6,
+    "precision_wilson95": [
+     0.2307,
+     0.8824
+    ],
+    "recall": 0.5,
+    "recall_wilson95": [
+     0.1876,
+     0.8124
+    ],
+    "alert_precision": 0.3,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 8.66,
+    "false_alarms_per_hour_poisson95": [
+     0.97,
+     31.26
+    ],
+    "identity": {
+     "matched_consistent": 3,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 2
+    },
+    "sufficient": false
+   },
+   "PPE.HEAD.MISSING / development": {
+    "alerts": 4,
+    "episodes": 2,
+    "true_positives": 2,
+    "missed": 0,
+    "false_alarms": 0,
+    "duplicates": 0,
+    "context_false_alarms": 1,
+    "unscorable": 0,
+    "late_detections": 0,
+    "optional_detected": 1,
+    "optional_episodes": 4,
+    "monitorable_hours": 0.0132,
+    "precision": 1.0,
+    "precision_wilson95": [
+     0.3424,
+     1.0
+    ],
+    "recall": 1.0,
+    "recall_wilson95": [
+     0.3424,
+     1.0
+    ],
+    "alert_precision": 0.667,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 0.0,
+    "false_alarms_per_hour_poisson95": [
+     0.0,
+     279.81
+    ],
+    "identity": {
+     "matched_consistent": 4,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 3
+    },
+    "sufficient": false
+   },
+   "ZONE.ENTRY / all": {
+    "alerts": 4,
+    "episodes": 4,
+    "true_positives": 4,
+    "missed": 0,
+    "false_alarms": 0,
+    "duplicates": 0,
+    "context_false_alarms": 0,
+    "unscorable": 0,
+    "late_detections": 0,
+    "optional_detected": 0,
+    "optional_episodes": 0,
+    "monitorable_hours": 0.0055,
+    "precision": 1.0,
+    "precision_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "recall": 1.0,
+    "recall_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "alert_precision": 1.0,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 0.0,
+    "false_alarms_per_hour_poisson95": [
+     0.0,
+     667.0
+    ],
+    "identity": {
+     "matched_consistent": 4,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 6
+    },
+    "sufficient": false
+   },
+   "ZONE.ENTRY / development": {
+    "alerts": 4,
+    "episodes": 4,
+    "true_positives": 4,
+    "missed": 0,
+    "false_alarms": 0,
+    "duplicates": 0,
+    "context_false_alarms": 0,
+    "unscorable": 0,
+    "late_detections": 0,
+    "optional_detected": 0,
+    "optional_episodes": 0,
+    "monitorable_hours": 0.0055,
+    "precision": 1.0,
+    "precision_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "recall": 1.0,
+    "recall_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "alert_precision": 1.0,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 0.0,
+    "false_alarms_per_hour_poisson95": [
+     0.0,
+     667.0
+    ],
+    "identity": {
+     "matched_consistent": 4,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 6
+    },
+    "sufficient": false
+   },
+   "timing": {
+    "matched_required": 9,
+    "latency_median_s": 0.48,
+    "duration_abs_error_median_s": 0.6,
+    "duration_abs_error_max_s": 25.4
+   }
+  },
+  "C": {
+   "PPE.HEAD.MISSING / all": {
+    "alerts": 18,
+    "episodes": 8,
+    "true_positives": 5,
+    "missed": 3,
+    "false_alarms": 2,
+    "duplicates": 2,
+    "context_false_alarms": 6,
+    "unscorable": 2,
+    "late_detections": 2,
+    "optional_detected": 1,
+    "optional_episodes": 7,
+    "monitorable_hours": 0.2442,
+    "precision": 0.714,
+    "precision_wilson95": [
+     0.3589,
+     0.9178
+    ],
+    "recall": 0.625,
+    "recall_wilson95": [
+     0.3057,
+     0.8632
+    ],
+    "alert_precision": 0.333,
+    "duplicate_rate": 0.286,
+    "false_alarms_per_monitorable_hour": 8.19,
+    "false_alarms_per_hour_poisson95": [
+     0.92,
+     29.57
+    ],
+    "identity": {
+     "matched_consistent": 7,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 6
+    },
+    "sufficient": false
+   },
+   "PPE.HEAD.MISSING / held-out": {
+    "alerts": 14,
+    "episodes": 6,
+    "true_positives": 3,
+    "missed": 3,
+    "false_alarms": 2,
+    "duplicates": 2,
+    "context_false_alarms": 5,
+    "unscorable": 2,
+    "late_detections": 2,
+    "optional_detected": 0,
+    "optional_episodes": 3,
+    "monitorable_hours": 0.231,
+    "precision": 0.6,
+    "precision_wilson95": [
+     0.2307,
+     0.8824
+    ],
+    "recall": 0.5,
+    "recall_wilson95": [
+     0.1876,
+     0.8124
+    ],
+    "alert_precision": 0.25,
+    "duplicate_rate": 0.4,
+    "false_alarms_per_monitorable_hour": 8.66,
+    "false_alarms_per_hour_poisson95": [
+     0.97,
+     31.26
+    ],
+    "identity": {
+     "matched_consistent": 3,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 3
+    },
+    "sufficient": false
+   },
+   "PPE.HEAD.MISSING / development": {
+    "alerts": 4,
+    "episodes": 2,
+    "true_positives": 2,
+    "missed": 0,
+    "false_alarms": 0,
+    "duplicates": 0,
+    "context_false_alarms": 1,
+    "unscorable": 0,
+    "late_detections": 0,
+    "optional_detected": 1,
+    "optional_episodes": 4,
+    "monitorable_hours": 0.0132,
+    "precision": 1.0,
+    "precision_wilson95": [
+     0.3424,
+     1.0
+    ],
+    "recall": 1.0,
+    "recall_wilson95": [
+     0.3424,
+     1.0
+    ],
+    "alert_precision": 0.667,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 0.0,
+    "false_alarms_per_hour_poisson95": [
+     0.0,
+     279.81
+    ],
+    "identity": {
+     "matched_consistent": 4,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 3
+    },
+    "sufficient": false
+   },
+   "ZONE.ENTRY / all": {
+    "alerts": 4,
+    "episodes": 4,
+    "true_positives": 4,
+    "missed": 0,
+    "false_alarms": 0,
+    "duplicates": 0,
+    "context_false_alarms": 0,
+    "unscorable": 0,
+    "late_detections": 0,
+    "optional_detected": 0,
+    "optional_episodes": 0,
+    "monitorable_hours": 0.0055,
+    "precision": 1.0,
+    "precision_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "recall": 1.0,
+    "recall_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "alert_precision": 1.0,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 0.0,
+    "false_alarms_per_hour_poisson95": [
+     0.0,
+     667.0
+    ],
+    "identity": {
+     "matched_consistent": 4,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 6
+    },
+    "sufficient": false
+   },
+   "ZONE.ENTRY / development": {
+    "alerts": 4,
+    "episodes": 4,
+    "true_positives": 4,
+    "missed": 0,
+    "false_alarms": 0,
+    "duplicates": 0,
+    "context_false_alarms": 0,
+    "unscorable": 0,
+    "late_detections": 0,
+    "optional_detected": 0,
+    "optional_episodes": 0,
+    "monitorable_hours": 0.0055,
+    "precision": 1.0,
+    "precision_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "recall": 1.0,
+    "recall_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "alert_precision": 1.0,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 0.0,
+    "false_alarms_per_hour_poisson95": [
+     0.0,
+     667.0
+    ],
+    "identity": {
+     "matched_consistent": 4,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 6
+    },
+    "sufficient": false
+   },
+   "timing": {
+    "matched_required": 9,
+    "latency_median_s": 0.48,
+    "duration_abs_error_median_s": 0.7,
+    "duration_abs_error_max_s": 29.13
+   }
+  },
+  "D": {
+   "PPE.HEAD.MISSING / all": {
+    "alerts": 18,
+    "episodes": 8,
+    "true_positives": 5,
+    "missed": 3,
+    "false_alarms": 2,
+    "duplicates": 2,
+    "context_false_alarms": 6,
+    "unscorable": 2,
+    "late_detections": 2,
+    "optional_detected": 1,
+    "optional_episodes": 7,
+    "monitorable_hours": 0.2442,
+    "precision": 0.714,
+    "precision_wilson95": [
+     0.3589,
+     0.9178
+    ],
+    "recall": 0.625,
+    "recall_wilson95": [
+     0.3057,
+     0.8632
+    ],
+    "alert_precision": 0.333,
+    "duplicate_rate": 0.286,
+    "false_alarms_per_monitorable_hour": 8.19,
+    "false_alarms_per_hour_poisson95": [
+     0.92,
+     29.57
+    ],
+    "identity": {
+     "matched_consistent": 7,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 6
+    },
+    "sufficient": false
+   },
+   "PPE.HEAD.MISSING / held-out": {
+    "alerts": 14,
+    "episodes": 6,
+    "true_positives": 3,
+    "missed": 3,
+    "false_alarms": 2,
+    "duplicates": 2,
+    "context_false_alarms": 5,
+    "unscorable": 2,
+    "late_detections": 2,
+    "optional_detected": 0,
+    "optional_episodes": 3,
+    "monitorable_hours": 0.231,
+    "precision": 0.6,
+    "precision_wilson95": [
+     0.2307,
+     0.8824
+    ],
+    "recall": 0.5,
+    "recall_wilson95": [
+     0.1876,
+     0.8124
+    ],
+    "alert_precision": 0.25,
+    "duplicate_rate": 0.4,
+    "false_alarms_per_monitorable_hour": 8.66,
+    "false_alarms_per_hour_poisson95": [
+     0.97,
+     31.26
+    ],
+    "identity": {
+     "matched_consistent": 3,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 3
+    },
+    "sufficient": false
+   },
+   "PPE.HEAD.MISSING / development": {
+    "alerts": 4,
+    "episodes": 2,
+    "true_positives": 2,
+    "missed": 0,
+    "false_alarms": 0,
+    "duplicates": 0,
+    "context_false_alarms": 1,
+    "unscorable": 0,
+    "late_detections": 0,
+    "optional_detected": 1,
+    "optional_episodes": 4,
+    "monitorable_hours": 0.0132,
+    "precision": 1.0,
+    "precision_wilson95": [
+     0.3424,
+     1.0
+    ],
+    "recall": 1.0,
+    "recall_wilson95": [
+     0.3424,
+     1.0
+    ],
+    "alert_precision": 0.667,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 0.0,
+    "false_alarms_per_hour_poisson95": [
+     0.0,
+     279.81
+    ],
+    "identity": {
+     "matched_consistent": 4,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 3
+    },
+    "sufficient": false
+   },
+   "ZONE.ENTRY / all": {
+    "alerts": 4,
+    "episodes": 4,
+    "true_positives": 4,
+    "missed": 0,
+    "false_alarms": 0,
+    "duplicates": 0,
+    "context_false_alarms": 0,
+    "unscorable": 0,
+    "late_detections": 0,
+    "optional_detected": 0,
+    "optional_episodes": 0,
+    "monitorable_hours": 0.0055,
+    "precision": 1.0,
+    "precision_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "recall": 1.0,
+    "recall_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "alert_precision": 1.0,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 0.0,
+    "false_alarms_per_hour_poisson95": [
+     0.0,
+     667.0
+    ],
+    "identity": {
+     "matched_consistent": 4,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 6
+    },
+    "sufficient": false
+   },
+   "ZONE.ENTRY / development": {
+    "alerts": 4,
+    "episodes": 4,
+    "true_positives": 4,
+    "missed": 0,
+    "false_alarms": 0,
+    "duplicates": 0,
+    "context_false_alarms": 0,
+    "unscorable": 0,
+    "late_detections": 0,
+    "optional_detected": 0,
+    "optional_episodes": 0,
+    "monitorable_hours": 0.0055,
+    "precision": 1.0,
+    "precision_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "recall": 1.0,
+    "recall_wilson95": [
+     0.5101,
+     1.0
+    ],
+    "alert_precision": 1.0,
+    "duplicate_rate": 0.0,
+    "false_alarms_per_monitorable_hour": 0.0,
+    "false_alarms_per_hour_poisson95": [
+     0.0,
+     667.0
+    ],
+    "identity": {
+     "matched_consistent": 4,
+     "matched_unknown": 0,
+     "excluded_inconsistent_pairs": 6
+    },
+    "sufficient": false
+   },
+   "timing": {
+    "matched_required": 9,
+    "latency_median_s": 0.48,
+    "duration_abs_error_median_s": 0.7,
+    "duration_abs_error_max_s": 29.13
+   }
+  }
+ },
+ "incidents": {},
+ "lifecycle": {
+  "A": {
+   "NO_HELMET / None / None": 18,
+   "ZONE_INTRUSION / None / None": 4
+  },
+  "B": {
+   "NO_HELMET / None / None": 18,
+   "ZONE_INTRUSION / None / None": 4
+  },
+  "C": {
+   "NO_HELMET / violation / observation_lost": 9,
+   "NO_HELMET / violation / resolved": 5,
+   "NO_HELMET / violation / session_end": 4,
+   "ZONE_INTRUSION / violation / session_end": 4,
+   "groups": 22,
+   "notifications": 15,
+   "ppe_worker_seconds / confirmed_compliance": 1044.4,
+   "ppe_worker_seconds / confirmed_violation": 93.8,
+   "ppe_worker_seconds / not_applicable": 0.0,
+   "ppe_worker_seconds / not_observable": 369.7,
+   "ppe_worker_seconds / requirement_not_configured": 0.0,
+   "ppe_worker_seconds / uncertain": 328.6
+  },
+  "D": {
+   "NO_HELMET / requires_review / observation_lost": 9,
+   "NO_HELMET / requires_review / resolved": 5,
+   "NO_HELMET / requires_review / session_end": 4,
+   "ZONE_INTRUSION / violation / session_end": 4,
+   "groups": 22,
+   "notifications": 14,
+   "ppe_worker_seconds / confirmed_compliance": 0.0,
+   "ppe_worker_seconds / confirmed_violation": 0.0,
+   "ppe_worker_seconds / not_applicable": 0.0,
+   "ppe_worker_seconds / not_observable": 0.0,
+   "ppe_worker_seconds / requirement_not_configured": 1836.5,
+   "ppe_worker_seconds / uncertain": 0.0
+  }
+ }
+}

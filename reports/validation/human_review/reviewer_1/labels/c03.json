@@ -1,0 +1,23 @@
+{
+ "schema": "safesight.labels/1.1",
+ "label_set": "m2-human-r1",
+ "clip_id": "c03",
+ "file": "data/demo/candidates/c03.ogv",
+ "sha256": "C14F924CDB368F6634F086BD3B0B15905A8CAA68673DCD4C06DE296641F883DF",
+ "fps": 24.0,
+ "frames": 793,
+ "duration_s": 33.04,
+ "status": "provisional",
+ "annotators": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "not_applicable"
+ },
+ "zones": [],
+ "intervals": [],
+ "events": [],
+ "people": {},
+ "attributes": {},
+ "review_complete": false,
+ "reviewer_notes": ""
+}

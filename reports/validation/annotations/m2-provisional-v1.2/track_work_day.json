@@ -1,0 +1,126 @@
+{
+ "schema": "safesight.labels/1.1",
+ "label_set": "m2-provisional-v1.2",
+ "clip_id": "track_work_day",
+ "file": "data/demo/track_work_day.mp4",
+ "sha256": "D464E74C33A96522926AA122E999DAE3F7799AED06FC7ECBDFAC24D2B9C96C47",
+ "fps": 50.0,
+ "frames": 373,
+ "duration_s": 7.46,
+ "split": "development",
+ "source_group": "G03-geneve-track",
+ "status": "provisional",
+ "annotators": [
+  {
+   "id": "ai-first-pass (Claude Opus 5.5)",
+   "kind": "ai",
+   "role": "first-pass",
+   "date": "2026-11-05",
+   "blind_to_model_output": "partial",
+   "notes": "Model incidents on these clips were seen during M1 runtime testing before labelling. Labelled from contact sheets (about 30 frames per clip) and detail crops; boundaries carry the stated uncertainty."
+  }
+ ],
+ "reviews": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "evaluated"
+ },
+ "zones": [
+  {
+   "name": "Live rail",
+   "polygon": [
+    [
+     0.0,
+     0.62
+    ],
+    [
+     0.42,
+     0.62
+    ],
+    [
+     0.42,
+     1.0
+    ],
+    [
+     0.0,
+     1.0
+    ]
+   ],
+   "kind": "restricted",
+   "real_restriction": false,
+   "basis": "drawn for the demo; the people inside are doing their normal work there",
+   "authorization": "unknown"
+  }
+ ],
+ "intervals": [
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 0.0,
+   "end_s": 7.46,
+   "state": "monitorable",
+   "note": "three workers, orange hard hats, heads clear"
+  },
+  {
+   "hazard": "ZONE.ENTRY",
+   "start_s": 0.0,
+   "end_s": 7.46,
+   "state": "monitorable",
+   "note": "feet of all three workers visible"
+  }
+ ],
+ "events": [
+  {
+   "id": "track_work_day-E01",
+   "hazard": "ZONE.ENTRY",
+   "kind": "violation",
+   "start_s": 0.0,
+   "end_s": 7.46,
+   "start_unc_s": 0.0,
+   "end_unc_s": 0.0,
+   "zone": "Live rail",
+   "worker": "left worker, orange suit, shovel",
+   "observability": "clear",
+   "requirement": null,
+   "evidence_frames": [
+    0,
+    250,
+    362
+   ],
+   "status": "provisional",
+   "annotator": "ai-first-pass (Claude Opus 5.5)",
+   "reviews": [],
+   "note": "Feet inside the zone from the first to the last frame; one foot on the boundary at about 6.25-6.75 s.",
+   "anchors": [
+    {
+     "t": 2.0,
+     "x": 0.35,
+     "y": 0.55
+    },
+    {
+     "t": 6.0,
+     "x": 0.39,
+     "y": 0.55
+    }
+   ]
+  }
+ ],
+ "people": {
+  "distinct_workers": 3,
+  "basis": "static view, all three visible throughout"
+ },
+ "attributes": {
+  "lighting": "day",
+  "distance": "near",
+  "camera": "static",
+  "density": "3",
+  "image_quality": "good"
+ },
+ "derived_from": "m2-provisional-v1",
+ "changes": [
+  {
+   "event": "track_work_day-E01",
+   "added": "identity anchors",
+   "found_by": "plain frames with a coordinate grid; post hoc (after M2 error analysis), not blind"
+  }
+ ]
+}

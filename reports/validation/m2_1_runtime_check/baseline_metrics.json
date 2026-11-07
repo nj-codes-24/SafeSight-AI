@@ -1,0 +1,673 @@
+{
+ "label_set": "m2-provisional-v1.2",
+ "labels_sha256": "34F4633D356E7AA497C0225839CFC9241265F656B776814E4D3680460DD890AF",
+ "labels_status": [
+  "provisional"
+ ],
+ "ground_truth": false,
+ "run": "m2-provisional-v1.2_20261105-195803",
+ "model_sha256": "E9B2583DCAE39613FFD94B907FB216A07C7039C304AC026700BCC364CC3C7534",
+ "scored_utc": "2026-11-05T14:37:02+00:00",
+ "scoring_code_sha256": {
+  "intelligence/annotations.py": "8801ABF08377E623BD9E7196243683C5F281CBA47F4C548468BCB9749BE00A94",
+  "intelligence/event_metrics.py": "2186AA64BD02904EB15AD044C9946692148EB36A70667FC6A13477DCEDDB7BAC",
+  "scripts/validation/run_evaluation.py": "42726C7D10EB44973CB5614E40E5BE2EE1AAB47E2D6B4014E47CA18435F350B3"
+ },
+ "matcher": "identity-aware",
+ "WARNING": "PROVISIONAL: labels are an AI first pass without independent human review. These numbers are not a validated measurement.",
+ "metrics": {
+  "PPE.HEAD.MISSING": {
+   "all": {
+    "all": {
+     "episodes": 8,
+     "true_positives": 5,
+     "missed": 3,
+     "false_alarms": 2,
+     "duplicates": 2,
+     "context_false_alarms": 8,
+     "unscorable": 2,
+     "optional_episodes": 7,
+     "optional_detected": 1,
+     "late_detections": 2,
+     "monitorable_s": 878.9,
+     "context_s": 62.5,
+     "monitorable_hours": 0.2441,
+     "source_groups": 12,
+     "groups_with_positives": 4,
+     "precision": 0.7143,
+     "precision_wilson95": [
+      0.3589,
+      0.9178
+     ],
+     "precision_cluster_bootstrap95": [
+      0.6,
+      1.0
+     ],
+     "recall": 0.625,
+     "recall_wilson95": [
+      0.3057,
+      0.8632
+     ],
+     "recall_cluster_bootstrap95": [
+      0.0,
+      1.0
+     ],
+     "f1": 0.6667,
+     "alert_precision": 0.2941,
+     "false_alarms_per_monitorable_hour": 8.19,
+     "false_alarms_per_hour_poisson95": [
+      0.92,
+      29.58
+     ],
+     "false_alarms_per_hour_cluster_bootstrap95": [
+      0.0,
+      10.3374
+     ],
+     "context_false_alarms_per_context_hour": 460.8,
+     "sufficient_for_recall_estimate": false
+    },
+    "held-out": {
+     "episodes": 6,
+     "true_positives": 3,
+     "missed": 3,
+     "false_alarms": 2,
+     "duplicates": 2,
+     "context_false_alarms": 7,
+     "unscorable": 2,
+     "optional_episodes": 3,
+     "optional_detected": 0,
+     "late_detections": 2,
+     "monitorable_s": 831.5,
+     "context_s": 62.5,
+     "monitorable_hours": 0.231,
+     "source_groups": 7,
+     "groups_with_positives": 2,
+     "precision": 0.6,
+     "precision_wilson95": [
+      0.2307,
+      0.8824
+     ],
+     "precision_cluster_bootstrap95": [
+      0.6,
+      0.6
+     ],
+     "recall": 0.5,
+     "recall_wilson95": [
+      0.1876,
+      0.8124
+     ],
+     "recall_cluster_bootstrap95": [
+      0.0,
+      0.75
+     ],
+     "f1": 0.5455,
+     "alert_precision": 0.2143,
+     "false_alarms_per_monitorable_hour": 8.66,
+     "false_alarms_per_hour_poisson95": [
+      0.97,
+      31.26
+     ],
+     "false_alarms_per_hour_cluster_bootstrap95": [
+      0.0,
+      10.5773
+     ],
+     "context_false_alarms_per_context_hour": 403.2,
+     "sufficient_for_recall_estimate": false
+    },
+    "development": {
+     "episodes": 2,
+     "true_positives": 2,
+     "missed": 0,
+     "false_alarms": 0,
+     "duplicates": 0,
+     "context_false_alarms": 1,
+     "unscorable": 0,
+     "optional_episodes": 4,
+     "optional_detected": 1,
+     "late_detections": 0,
+     "monitorable_s": 47.4,
+     "context_s": 0,
+     "monitorable_hours": 0.0132,
+     "source_groups": 5,
+     "groups_with_positives": 2,
+     "precision": 1.0,
+     "precision_wilson95": [
+      0.3424,
+      1.0
+     ],
+     "precision_cluster_bootstrap95": [
+      1.0,
+      1.0
+     ],
+     "recall": 1.0,
+     "recall_wilson95": [
+      0.3424,
+      1.0
+     ],
+     "recall_cluster_bootstrap95": [
+      1.0,
+      1.0
+     ],
+     "f1": 1.0,
+     "alert_precision": 0.6667,
+     "false_alarms_per_monitorable_hour": 0.0,
+     "false_alarms_per_hour_poisson95": [
+      0.0,
+      280.17
+     ],
+     "false_alarms_per_hour_cluster_bootstrap95": [
+      0.0,
+      0.0
+     ],
+     "context_false_alarms_per_context_hour": null,
+     "sufficient_for_recall_estimate": false
+    }
+   },
+   "evident_only": {
+    "all": {
+     "episodes": 5,
+     "true_positives": 4,
+     "missed": 1,
+     "false_alarms": 2,
+     "duplicates": 3,
+     "context_false_alarms": 8,
+     "unscorable": 2,
+     "optional_episodes": 10,
+     "optional_detected": 1,
+     "late_detections": 2,
+     "monitorable_s": 878.9,
+     "context_s": 62.5,
+     "monitorable_hours": 0.2441,
+     "source_groups": 12,
+     "groups_with_positives": 2,
+     "precision": 0.6667,
+     "precision_wilson95": [
+      0.3,
+      0.9032
+     ],
+     "precision_cluster_bootstrap95": [
+      0.6,
+      1.0
+     ],
+     "recall": 0.8,
+     "recall_wilson95": [
+      0.3755,
+      0.9638
+     ],
+     "recall_cluster_bootstrap95": [
+      0.75,
+      1.0
+     ],
+     "f1": 0.7273,
+     "alert_precision": 0.2353,
+     "false_alarms_per_monitorable_hour": 8.19,
+     "false_alarms_per_hour_poisson95": [
+      0.92,
+      29.58
+     ],
+     "false_alarms_per_hour_cluster_bootstrap95": [
+      0.0,
+      10.3374
+     ],
+     "context_false_alarms_per_context_hour": 460.8,
+     "sufficient_for_recall_estimate": false
+    },
+    "held-out": {
+     "episodes": 4,
+     "true_positives": 3,
+     "missed": 1,
+     "false_alarms": 2,
+     "duplicates": 2,
+     "context_false_alarms": 7,
+     "unscorable": 2,
+     "optional_episodes": 5,
+     "optional_detected": 0,
+     "late_detections": 2,
+     "monitorable_s": 831.5,
+     "context_s": 62.5,
+     "monitorable_hours": 0.231,
+     "source_groups": 7,
+     "groups_with_positives": 1,
+     "precision": 0.6,
+     "precision_wilson95": [
+      0.2307,
+      0.8824
+     ],
+     "precision_cluster_bootstrap95": [
+      0.6,
+      0.6
+     ],
+     "recall": 0.75,
+     "recall_wilson95": [
+      0.3006,
+      0.9544
+     ],
+     "recall_cluster_bootstrap95": [
+      0.75,
+      0.75
+     ],
+     "f1": 0.6667,
+     "alert_precision": 0.2143,
+     "false_alarms_per_monitorable_hour": 8.66,
+     "false_alarms_per_hour_poisson95": [
+      0.97,
+      31.26
+     ],
+     "false_alarms_per_hour_cluster_bootstrap95": [
+      0.0,
+      10.5773
+     ],
+     "context_false_alarms_per_context_hour": 403.2,
+     "sufficient_for_recall_estimate": false
+    },
+    "development": {
+     "episodes": 1,
+     "true_positives": 1,
+     "missed": 0,
+     "false_alarms": 0,
+     "duplicates": 1,
+     "context_false_alarms": 1,
+     "unscorable": 0,
+     "optional_episodes": 5,
+     "optional_detected": 1,
+     "late_detections": 0,
+     "monitorable_s": 47.4,
+     "context_s": 0,
+     "monitorable_hours": 0.0132,
+     "source_groups": 5,
+     "groups_with_positives": 1,
+     "precision": 1.0,
+     "precision_wilson95": [
+      0.2065,
+      1.0
+     ],
+     "precision_cluster_bootstrap95": [
+      1.0,
+      1.0
+     ],
+     "recall": 1.0,
+     "recall_wilson95": [
+      0.2065,
+      1.0
+     ],
+     "recall_cluster_bootstrap95": [
+      1.0,
+      1.0
+     ],
+     "f1": 1.0,
+     "alert_precision": 0.3333,
+     "false_alarms_per_monitorable_hour": 0.0,
+     "false_alarms_per_hour_poisson95": [
+      0.0,
+      280.17
+     ],
+     "false_alarms_per_hour_cluster_bootstrap95": [
+      0.0,
+      0.0
+     ],
+     "context_false_alarms_per_context_hour": null,
+     "sufficient_for_recall_estimate": false
+    }
+   }
+  },
+  "ZONE.ENTRY": {
+   "all": {
+    "all": {
+     "episodes": 4,
+     "true_positives": 4,
+     "missed": 0,
+     "false_alarms": 0,
+     "duplicates": 0,
+     "context_false_alarms": 0,
+     "unscorable": 0,
+     "optional_episodes": 0,
+     "optional_detected": 0,
+     "late_detections": 0,
+     "monitorable_s": 19.9,
+     "context_s": 0,
+     "monitorable_hours": 0.0055,
+     "source_groups": 2,
+     "groups_with_positives": 2,
+     "precision": 1.0,
+     "precision_wilson95": [
+      0.5101,
+      1.0
+     ],
+     "precision_cluster_bootstrap95": [
+      1.0,
+      1.0
+     ],
+     "recall": 1.0,
+     "recall_wilson95": [
+      0.5101,
+      1.0
+     ],
+     "recall_cluster_bootstrap95": [
+      1.0,
+      1.0
+     ],
+     "f1": 1.0,
+     "alert_precision": 1.0,
+     "false_alarms_per_monitorable_hour": 0.0,
+     "false_alarms_per_hour_poisson95": [
+      0.0,
+      667.33
+     ],
+     "false_alarms_per_hour_cluster_bootstrap95": [
+      0.0,
+      0.0
+     ],
+     "context_false_alarms_per_context_hour": null,
+     "sufficient_for_recall_estimate": false
+    },
+    "development": {
+     "episodes": 4,
+     "true_positives": 4,
+     "missed": 0,
+     "false_alarms": 0,
+     "duplicates": 0,
+     "context_false_alarms": 0,
+     "unscorable": 0,
+     "optional_episodes": 0,
+     "optional_detected": 0,
+     "late_detections": 0,
+     "monitorable_s": 19.9,
+     "context_s": 0,
+     "monitorable_hours": 0.0055,
+     "source_groups": 2,
+     "groups_with_positives": 2,
+     "precision": 1.0,
+     "precision_wilson95": [
+      0.5101,
+      1.0
+     ],
+     "precision_cluster_bootstrap95": [
+      1.0,
+      1.0
+     ],
+     "recall": 1.0,
+     "recall_wilson95": [
+      0.5101,
+      1.0
+     ],
+     "recall_cluster_bootstrap95": [
+      1.0,
+      1.0
+     ],
+     "f1": 1.0,
+     "alert_precision": 1.0,
+     "false_alarms_per_monitorable_hour": 0.0,
+     "false_alarms_per_hour_poisson95": [
+      0.0,
+      667.33
+     ],
+     "false_alarms_per_hour_cluster_bootstrap95": [
+      0.0,
+      0.0
+     ],
+     "context_false_alarms_per_context_hour": null,
+     "sufficient_for_recall_estimate": false
+    }
+   }
+  }
+ },
+ "latency_required_episodes_s": {
+  "n": 9,
+  "median": 0.53,
+  "max": 22.59
+ },
+ "robustness": {
+  "note": "Every episode here comes from at most a few recordings, so slices are confounded with recording.",
+  "recall_by_observability": {
+   "PPE.HEAD.MISSING / partial": {
+    "episodes": 7,
+    "detected": 4,
+    "recall": "insufficient (n < 10)"
+   },
+   "PPE.HEAD.MISSING / low": {
+    "episodes": 2,
+    "detected": 0,
+    "recall": "insufficient (n < 10)"
+   },
+   "PPE.HEAD.MISSING / clear": {
+    "episodes": 1,
+    "detected": 1,
+    "recall": "insufficient (n < 10)"
+   },
+   "ZONE.ENTRY / clear": {
+    "episodes": 3,
+    "detected": 3,
+    "recall": "insufficient (n < 10)"
+   },
+   "ZONE.ENTRY / partial": {
+    "episodes": 1,
+    "detected": 1,
+    "recall": "insufficient (n < 10)"
+   }
+  },
+  "false_alarms_by_condition": {
+   "lighting": {
+    "PPE.HEAD.MISSING / daylight": {
+     "clips": 8,
+     "false_alarms": 0,
+     "monitorable_s": 127.3,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / bright daylight": {
+     "clips": 2,
+     "false_alarms": 1,
+     "monitorable_s": 402.9,
+     "false_alarms_per_hour": 8.9
+    },
+    "PPE.HEAD.MISSING / overcast daylight": {
+     "clips": 2,
+     "false_alarms": 1,
+     "monitorable_s": 274.3,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / indoor and outdoor": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 27.8,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / indoor": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 34.2,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / night": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 12.4,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "ZONE.ENTRY / night": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 12.4,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "ZONE.ENTRY / daylight": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 7.5,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    }
+   },
+   "distance": {
+    "PPE.HEAD.MISSING / medium to far": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 6.3,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / far to medium": {
+     "clips": 3,
+     "false_alarms": 2,
+     "monitorable_s": 647.2,
+     "false_alarms_per_hour": 11.1
+    },
+    "PPE.HEAD.MISSING / medium": {
+     "clips": 5,
+     "false_alarms": 0,
+     "monitorable_s": 109.0,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / far": {
+     "clips": 2,
+     "false_alarms": 0,
+     "monitorable_s": 13.0,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / near": {
+     "clips": 2,
+     "false_alarms": 0,
+     "monitorable_s": 82.0,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / near to medium": {
+     "clips": 2,
+     "false_alarms": 0,
+     "monitorable_s": 21.4,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "ZONE.ENTRY / near to medium": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 12.4,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "ZONE.ENTRY / medium": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 7.5,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    }
+   },
+   "camera_motion": {
+    "PPE.HEAD.MISSING / pan": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 6.3,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / pans and zooms": {
+     "clips": 3,
+     "false_alarms": 2,
+     "monitorable_s": 647.2,
+     "false_alarms_per_hour": 11.1
+    },
+    "PPE.HEAD.MISSING / zoom and tilt at the end": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 30.0,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / edited documentary with cuts": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 27.8,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / walking camera": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 9.5,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / handheld": {
+     "clips": 2,
+     "false_alarms": 0,
+     "monitorable_s": 12.4,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / handheld with zooms": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 13.0,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / edited film with cuts and black frames": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 34.2,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / static": {
+     "clips": 3,
+     "false_alarms": 0,
+     "monitorable_s": 91.0,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "ZONE.ENTRY / handheld": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 12.4,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "PPE.HEAD.MISSING / slight handheld": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 7.5,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    },
+    "ZONE.ENTRY / slight handheld": {
+     "clips": 1,
+     "false_alarms": 0,
+     "monitorable_s": 7.5,
+     "false_alarms_per_hour": "insufficient (< 0.1 h)"
+    }
+   }
+  }
+ },
+ "tracking_proxy": {
+  "note": "Proxy only: labelled distinct people vs track IDs issued. Identity ground truth does not exist, so ID switches, HOTA and IDF1 cannot be measured.",
+  "clips": [
+   {
+    "clip_id": "c03",
+    "people_labelled": 1,
+    "track_ids": 2,
+    "confirmed_tracks": 1,
+    "ids_per_person": 2.0
+   },
+   {
+    "clip_id": "c07",
+    "people_labelled": 1,
+    "track_ids": 3,
+    "confirmed_tracks": 3,
+    "ids_per_person": 3.0
+   },
+   {
+    "clip_id": "framing_bare_head",
+    "people_labelled": 2,
+    "track_ids": 2,
+    "confirmed_tracks": 2,
+    "ids_per_person": 1.0
+   },
+   {
+    "clip_id": "helmet_put_on",
+    "people_labelled": 1,
+    "track_ids": 1,
+    "confirmed_tracks": 1,
+    "ids_per_person": 1.0
+   },
+   {
+    "clip_id": "roadworks_night",
+    "people_labelled": 5,
+    "track_ids": 7,
+    "confirmed_tracks": 6,
+    "ids_per_person": 1.4
+   },
+   {
+    "clip_id": "track_work_day",
+    "people_labelled": 3,
+    "track_ids": 9,
+    "confirmed_tracks": 7,
+    "ids_per_person": 3.0
+   }
+  ]
+ },
+ "scope_note": "Only built hazards with a configuration that makes them evaluable: PPE.HEAD.MISSING on all clips; ZONE.ENTRY only on the two clips with configured (demo) zones, where it measures geometric zone-entry detection, not real restricted-area violations."
+}

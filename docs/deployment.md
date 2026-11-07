@@ -27,7 +27,7 @@ flowchart LR
 | Area | Required change |
 |---|---|
 | **Validation** | Evaluate on the site's own cameras, angles, lighting and headwear; re-tune thresholds and zones per camera; measure false-alarm and miss rates over full shifts |
-| **Video ingestion** | RTSP/ONVIF camera streams with reconnection, frame-drop handling and per-camera workers; the current single-run lock would become per-camera pipelines with their own trackers |
+| **Video ingestion** | **Started:** the headless runtime (`python -m runtime`, [runtime_getting_started.md](runtime_getting_started.md)) has per-camera workers and trackers, RTSP with reconnection, bounded frame dropping and camera health. Still needed: testing against real RTSP cameras, ONVIF discovery, service packaging and soak tests |
 | **Scale** | A separate inference service (batching several cameras per GPU), and a UI that only reads results |
 | **Storage** | A server database (e.g. PostgreSQL), object storage for evidence, backups, and **retention limits** |
 | **Security** | Authentication and roles, TLS, audit logs of who reviewed what, network segmentation of camera traffic |

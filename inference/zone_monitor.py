@@ -4,11 +4,17 @@ from dataclasses import dataclass, field
 import cv2
 import numpy as np
 
+from intelligence.taxonomy import validate_kind
+
 
 @dataclass
 class Zone:
     name: str
     polygon: list  # normalised [[x, y], ...] in 0-1, so a zone survives a change of resolution
+    kind: str = "restricted"  # intelligence/taxonomy.py ZONE_KINDS; decides the hazard and its severity
+
+    def __post_init__(self):
+        self.kind = validate_kind(self.kind)
 
     def pixels(self, w: int, h: int) -> np.ndarray:
         return (np.array(self.polygon, dtype=np.float32) * [w, h]).astype(np.int32)
@@ -56,6 +62,16 @@ class ZoneMonitor:
 
     def inside(self, track_id) -> list[str]:
         return [z.name for z in self.zones if self.state.get((track_id, z.name), {}).get("inside")]
+
+    def crossing(self, track_id) -> list[str]:
+        """Zones whose debounced state is about to change for this track (entering or leaving): membership is not yet
+        decided. Read-only; it does not change entry or exit behaviour."""
+        out = []
+        for z in self.zones:
+            s = self.state.get((track_id, z.name))
+            if s and ((s["inside"] and s["out"]) or (not s["inside"] and s["in"])):
+                out.append(z.name)
+        return out
 
     def drop(self, track_id) -> list[str]:
         """Forget a lost track; return zones it was still inside so the caller can close the intrusion."""

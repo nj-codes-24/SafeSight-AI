@@ -1,0 +1,92 @@
+{
+ "schema": "safesight.labels/1.0",
+ "label_set": "m2-provisional-v1.1",
+ "clip_id": "helmet_put_on",
+ "file": "data/demo/helmet_put_on.mp4",
+ "sha256": "68972CFF17D65EFDCCC21DFAB278BBCEF95D5DE3EA64FE0F79CCE50FE7771AED",
+ "fps": 24.0,
+ "frames": 294,
+ "duration_s": 12.25,
+ "split": "development",
+ "source_group": "G11-mixkit-1440",
+ "status": "provisional",
+ "annotators": [
+  {
+   "id": "ai-first-pass (Claude Opus 5.5)",
+   "kind": "ai",
+   "role": "first-pass",
+   "date": "2026-11-05",
+   "blind_to_model_output": "partial",
+   "notes": "Model incidents on these clips were seen during M1 runtime testing before labelling. Labelled from contact sheets (about 30 frames per clip) and detail crops; boundaries carry the stated uncertainty."
+  }
+ ],
+ "reviews": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "not evaluable: no zone configured for this clip"
+ },
+ "zones": [],
+ "intervals": [
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 0.0,
+   "end_s": 12.25,
+   "state": "monitorable",
+   "note": "close-up of one worker"
+  }
+ ],
+ "events": [
+  {
+   "id": "helmet_put_on-E01",
+   "hazard": "PPE.HEAD.MISSING",
+   "kind": "violation",
+   "start_s": 0.0,
+   "end_s": 1.4,
+   "start_unc_s": 0.0,
+   "end_unc_s": 0.15,
+   "zone": null,
+   "worker": "close-up worker in hi-vis",
+   "observability": "clear",
+   "requirement": "evident",
+   "evidence_frames": [
+    0,
+    24
+   ],
+   "status": "provisional",
+   "annotator": "ai-first-pass (Claude Opus 5.5)",
+   "reviews": [],
+   "note": "Bare head; the worker then puts on a hard hat, which shows it is expected."
+  },
+  {
+   "id": "helmet_put_on-E02",
+   "hazard": "PPE.HEAD.MISSING",
+   "kind": "uncertain",
+   "start_s": 1.4,
+   "end_s": 3.8,
+   "start_unc_s": 0.15,
+   "end_unc_s": 0.3,
+   "zone": null,
+   "worker": "close-up worker in hi-vis",
+   "observability": "partial",
+   "requirement": null,
+   "evidence_frames": [],
+   "status": "provisional",
+   "annotator": "ai-first-pass (Claude Opus 5.5)",
+   "reviews": [],
+   "note": "Hard hat being placed: held over the head, partly covering it."
+  }
+ ],
+ "people": {
+  "distinct_workers": 1,
+  "basis": "single person"
+ },
+ "attributes": {
+  "lighting": "day",
+  "distance": "near",
+  "camera": "static",
+  "density": "1",
+  "image_quality": "good"
+ },
+ "derived_from": "m2-provisional-v1",
+ "changes": []
+}

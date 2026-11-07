@@ -1,0 +1,116 @@
+# SafeSight headless runtime: template for a real site. Copy it to config/<site>.local.yaml (ignored by git) and edit.
+#
+# Credentials NEVER go in this file. Each RTSP camera names environment variables that hold its user name and
+# password; the runtime reads them when it connects and redacts them from every log line. URLs that contain
+# user:password@ or credential-like query parameters are rejected.
+#
+#   $env:SAFESIGHT_DOCK01_USER = "viewer"; $env:SAFESIGHT_DOCK01_PASS = "…"     (PowerShell, for this session only)
+#   python -m runtime validate --config config/plant01.local.yaml
+#   python -m runtime run --config config/plant01.local.yaml
+#
+# The addresses below are documentation addresses (192.0.2.0/24); they do not exist. Zones use the dashboard format:
+# polygon corners as fractions of frame width and height, and an optional kind (intelligence/taxonomy.py):
+# restricted (default), machine_exclusion, suspended_load, electrical, confined_space, hot_work, vehicle_only,
+# excavation, edge, pedestrian_only, keep_clear.
+#
+# The risk policy used for assessments is a DRAFT example until a competent person approves a site policy
+# (models/risk_policy.json or runtime.risk_policy). SafeSight is an additional monitoring layer: it never controls
+# machinery, and an absence of incidents is not evidence that an area is safe.
+
+runtime:
+  database: logs/runtime/incidents.db       # point at logs/incidents/incidents.db to share the dashboard's history
+  evidence_dir: logs/runtime/evidence
+  status_file: logs/runtime/status.json
+  log_file: logs/runtime/runtime.log
+  log_level: INFO
+  status_interval_s: 2
+  # risk_policy: config/plant01-risk-policy.json   (approved site policy; omit to use the draft example)
+  # ppe_policy: config/ppe_policy.json   where PPE is required (see config/ppe_policy.example.json). Default: that file if
+  #   present; without one every requirement is unconfigured and missing head protection is a review item, never a
+  #   confirmed violation. Requirements must be set by the site's competent safety personnel.
+
+inference:
+  backend: batched
+  weights: models/best.pt
+  device: auto
+  max_batch: 8
+  batch_wait_ms: 5
+
+sites:
+  - id: plant-01
+    name: Plant 1
+
+defaults:
+  processing: {max_fps: 10, queue_size: 2, annotate: false}
+  reconnect: {max_attempts: 0, initial_delay_s: 2, max_delay_s: 60}   # 0: keep retrying a live camera
+  health: {degraded_ratio: 0.8, max_drop_ratio: 0.2, stall_s: 5, window_s: 10, warmup_s: 5}
+  # Camera view monitoring (docs/product_research/21_CAMERA_VIEW_CHANGE_DETECTION.md). On by default for file and RTSP
+  # sources; the values shown are the defaults. Each camera keeps a reference view (revision) in the database:
+  #   - first start: the first steady view becomes revision 1 and the zones are "assumed" drawn for it;
+  #   - every later start: the stored reference is verified (init_s) before any frame is analysed;
+  #   - camera moved, re-aimed, zoomed, cut to another scene or covered for confirm_s / blocked_confirm_s: open incidents
+  #     end at the last reliable observation (reason camera_view_changed, camera_scene_switched or camera_blocked) and
+  #     analysis stops until the registered view returns for recover_s, or an operator accepts the new view:
+  #       python -m runtime view list --config <file>
+  #       python -m runtime view accept --config <file> --camera dock-01 --revision 2 --by "J. Shah" [--zones-reviewed]
+  #       python -m runtime view verify-zones --config <file> --camera dock-01 --by "J. Shah"
+  #     Without --zones-reviewed the zones stay unverified (no zone alerts) until verify-zones. Editing a camera's zones
+  #     after they were checked also needs verify-zones.
+  view_monitor: {check_interval_s: 0.5, init_s: 2, confirm_s: 5, blocked_confirm_s: 5, recover_s: 3,
+                 unverified_after_s: 10, max_shift: 0.02, min_inliers: 20}
+
+cameras:
+  - id: entrance-01
+    name: Warehouse entrance
+    site: plant-01
+    source:
+      type: rtsp
+      url: rtsp://192.0.2.11:554/Streaming/Channels/101
+      username_env: SAFESIGHT_ENTRANCE01_USER
+      password_env: SAFESIGHT_ENTRANCE01_PASS
+      transport: tcp
+      open_timeout_s: 10
+      read_timeout_s: 10
+    zones:
+      - name: Gate lane
+        kind: vehicle_only
+        polygon: [[0.05, 0.55], [0.45, 0.55], [0.45, 0.98], [0.05, 0.98]]
+
+  - id: dock-01
+    name: Loading dock 1
+    site: plant-01
+    source: {type: rtsp, url: "rtsp://192.0.2.12:554/stream1", username_env: SAFESIGHT_DOCK01_USER, password_env: SAFESIGHT_DOCK01_PASS}
+    zones:
+      - name: Dock edge
+        kind: edge
+        polygon: [[0.10, 0.80], [0.90, 0.80], [0.90, 0.95], [0.10, 0.95]]
+
+  - id: aisle-03
+    name: Forklift aisle 3
+    site: plant-01
+    source: {type: rtsp, url: "rtsp://192.0.2.13:554/stream1", username_env: SAFESIGHT_AISLE03_USER, password_env: SAFESIGHT_AISLE03_PASS}
+    processing: {max_fps: 15}
+    view_monitor: {confirm_s: 8}   # forklifts pass close to this camera: wait longer before calling it a view change
+    zones:
+      - name: Aisle 3 driving lane
+        kind: vehicle_only
+        polygon: [[0.30, 0.35], [0.70, 0.35], [0.85, 0.98], [0.15, 0.98]]
+
+  - id: press-02
+    name: Production floor, press 2
+    site: plant-01
+    enabled: false          # configured but not monitored; shown as DISABLED in the status
+    source: {type: rtsp, url: "rtsp://192.0.2.14:554/stream1", username_env: SAFESIGHT_PRESS02_USER, password_env: SAFESIGHT_PRESS02_PASS}
+    zones:
+      - name: Press 2 cell
+        kind: machine_exclusion
+        polygon: [[0.35, 0.30], [0.75, 0.30], [0.75, 0.90], [0.35, 0.90]]
+    overrides: {cooldown_seconds: 60}
+
+  - id: yard-ptz
+    name: Yard overview (PTZ patrol)
+    site: plant-01
+    source: {type: rtsp, url: "rtsp://192.0.2.15:554/stream1", username_env: SAFESIGHT_YARD_USER, password_env: SAFESIGHT_YARD_PASS}
+    # A camera whose view is meant to move: only blockage is checked. It cannot have zones (validation refuses it),
+    # because image coordinates of a moving view do not stay on the same place.
+    view_monitor: {geometry: false}

@@ -1,0 +1,101 @@
+{
+ "schema": "safesight.labels/1.0",
+ "label_set": "m2-provisional-v1.1",
+ "clip_id": "c07",
+ "file": "data/demo/candidates/c07.webm",
+ "sha256": "EEA986C3FC7DFE946EB52960CD356178064D619790BD3CC0F82A406B00255565",
+ "fps": 29.97002997002997,
+ "frames": 2662,
+ "duration_s": 88.82,
+ "split": "held-out",
+ "source_group": "G06-niosh-mast-climber",
+ "status": "provisional",
+ "annotators": [
+  {
+   "id": "ai-first-pass (Claude Opus 5.5)",
+   "kind": "ai",
+   "role": "first-pass",
+   "date": "2026-11-05",
+   "blind_to_model_output": "partial",
+   "notes": "No model output for these clips was viewed in this session; the repository's earlier unseen-footage notes (aggregate counts per clip) were known. Labelled from contact sheets (about 30 frames per clip) and detail crops; boundaries carry the stated uncertainty."
+  }
+ ],
+ "reviews": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "not evaluable: no zone configured for this clip"
+ },
+ "zones": [],
+ "intervals": [
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 0.0,
+   "end_s": 3.0,
+   "state": "unusable",
+   "note": "black, fade-in"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 3.0,
+   "end_s": 17.0,
+   "state": "monitorable",
+   "note": "title cards; no people"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 17.0,
+   "end_s": 35.0,
+   "state": "not_applicable",
+   "note": "studio interview: no head-protection requirement"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 35.0,
+   "end_s": 41.0,
+   "state": "uncertain",
+   "note": "outdoor mast-climber shot; any person is tiny"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 41.0,
+   "end_s": 64.5,
+   "state": "not_applicable",
+   "note": "studio interview"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 64.5,
+   "end_s": 68.0,
+   "state": "uncertain",
+   "note": "outdoor shot; small figure on the mast"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 68.0,
+   "end_s": 75.0,
+   "state": "not_applicable",
+   "note": "studio interview"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 75.0,
+   "end_s": 88.82,
+   "state": "monitorable",
+   "note": "credits; no people"
+  }
+ ],
+ "events": [],
+ "people": {
+  "distinct_workers": 1,
+  "basis": "one interviewee"
+ },
+ "attributes": {
+  "lighting": "studio",
+  "distance": "near",
+  "camera": "edited video",
+  "density": "1",
+  "image_quality": "good"
+ },
+ "derived_from": "m2-provisional-v1",
+ "changes": []
+}

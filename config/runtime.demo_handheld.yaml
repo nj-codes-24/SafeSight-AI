@@ -1,0 +1,68 @@
+# SafeSight headless runtime: HAND-HELD / MOVING footage demonstration. NOT a fixed-camera monitoring configuration.
+#
+# These four stock clips were filmed hand-held or from a moving vehicle. Measured against their own first steady view
+# they drift 2-5 % of the frame width, and track_work_day.mp4 no longer matches its own start by its end, so they are
+# unsuitable for fixed-camera view validation (docs/product_research/21_CAMERA_VIEW_CHANGE_DETECTION.md, section 12.1).
+#
+# What that means here:
+#   - view monitoring checks blockage only (geometry: false): the camera position is never validated;
+#   - therefore no zones: zone polygons in image coordinates are not valid on a moving view, and the configuration
+#     refuses zones on a blockage-only camera. (The dashboard's "Live rail" and roadworks zones are deliberately not
+#     used here.) No zone alert from this configuration could be a valid safety alert;
+#   - every camera reports monitoring "partial" with "camera position not validated" in its status;
+#   - PPE detections are shown for demonstration only.
+#
+# For a monitoring demonstration with full view validation use config/runtime.demo.yaml.
+#
+#   python -m runtime validate --config config/runtime.demo_handheld.yaml
+#   python -m runtime run --config config/runtime.demo_handheld.yaml          (Ctrl+C to stop)
+#   python -m runtime status --config config/runtime.demo_handheld.yaml       (from another terminal)
+#
+# Results go to logs/runtime_handheld/, apart from the fixed-camera demo's reference views and incidents.
+
+runtime:
+  database: logs/runtime_handheld/incidents.db
+  evidence_dir: logs/runtime_handheld/evidence
+  status_file: logs/runtime_handheld/status.json
+  log_file: logs/runtime_handheld/runtime.log
+  log_level: INFO
+  status_interval_s: 2
+  pipeline_config: models/runtime_config.json   # detection thresholds (read only); its zones are not used here
+
+inference:
+  backend: batched
+  weights: models/best.pt
+  imgsz: 640
+  device: auto
+  max_batch: 8
+  batch_wait_ms: 5
+
+sites:
+  - id: demo-handheld
+    name: Hand-held demonstration footage (not fixed cameras)
+
+defaults:
+  processing: {max_fps: 15, queue_size: 2, annotate: false}
+  reconnect: {max_attempts: 10, initial_delay_s: 1, max_delay_s: 30}
+  view_monitor: {geometry: false}     # blockage only: these views move, so their position cannot be validated
+
+cameras:
+  - id: track-day
+    name: Track maintenance (hand-held clip)
+    site: demo-handheld
+    source: {type: file, path: data/demo/track_work_day.mp4, loop: true, realtime: true}
+
+  - id: roadworks-night
+    name: Night roadworks (hand-held clip)
+    site: demo-handheld
+    source: {type: file, path: data/demo/roadworks_night.mp4, loop: true, realtime: true}
+
+  - id: ballast-train
+    name: Ballast train (moving-camera clip)
+    site: demo-handheld
+    source: {type: file, path: data/demo/ballast_train.mp4, loop: true, realtime: true}
+
+  - id: helmet-on
+    name: Worker puts helmet on (hand-held clip)
+    site: demo-handheld
+    source: {type: file, path: data/demo/helmet_put_on.mp4, loop: true, realtime: true}

@@ -1,0 +1,59 @@
+{
+ "schema": "safesight.labels/1.1",
+ "label_set": "m2-provisional-v1.2",
+ "clip_id": "ballast_train",
+ "file": "data/demo/ballast_train.mp4",
+ "sha256": "5A84B4CB35CC5592EE1DFDE73AC990C484D71DFDD1262A308573D03837D17A26",
+ "fps": 25.0,
+ "frames": 516,
+ "duration_s": 20.64,
+ "split": "development",
+ "source_group": "G04-lodz-track",
+ "status": "provisional",
+ "annotators": [
+  {
+   "id": "ai-first-pass (Claude Opus 5.5)",
+   "kind": "ai",
+   "role": "first-pass",
+   "date": "2026-11-05",
+   "blind_to_model_output": "partial",
+   "notes": "Model incidents on these clips were seen during M1 runtime testing before labelling. Labelled from contact sheets (about 30 frames per clip) and detail crops; boundaries carry the stated uncertainty."
+  }
+ ],
+ "reviews": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "not evaluable: no zone configured for this clip"
+ },
+ "zones": [],
+ "intervals": [
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 0.0,
+   "end_s": 6.3,
+   "state": "monitorable",
+   "note": "wagon wheels, no people"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 6.3,
+   "end_s": 20.64,
+   "state": "uncertain",
+   "note": "rider's head out of frame until about 11.9 s; small background workers from about 9 s with unclear headwear"
+  }
+ ],
+ "events": [],
+ "people": {
+  "distinct_workers": "3-4",
+  "basis": "one rider and two or three background workers"
+ },
+ "attributes": {
+  "lighting": "day",
+  "distance": "near and far",
+  "camera": "moving",
+  "density": "1-4",
+  "image_quality": "good"
+ },
+ "derived_from": "m2-provisional-v1",
+ "changes": []
+}

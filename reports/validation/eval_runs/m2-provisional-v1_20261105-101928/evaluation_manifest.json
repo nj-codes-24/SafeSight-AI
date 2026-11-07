@@ -1,0 +1,600 @@
+{
+ "created_utc": "2026-11-05T04:49:28+00:00",
+ "purpose": "M2 baseline: frozen M5 through the headless runtime, scored against a locked label set",
+ "git": {
+  "head": "6aa177eac2e937d087b7f670ecf79cd76e70225e",
+  "branch": "research/platform-foundations",
+  "working_tree": "uncommitted changes present (see code_sha256)"
+ },
+ "model": {
+  "file": "models/best.pt",
+  "sha256": "E9B2583DCAE39613FFD94B907FB216A07C7039C304AC026700BCC364CC3C7534",
+  "frozen_record": "models/model_config.yaml",
+  "licence": "research only: trained partly on SH17 (CC BY-NC-SA 4.0); Ultralytics AGPL-3.0"
+ },
+ "detector": {
+  "imgsz": 640,
+  "floor_confidence": 0.1,
+  "classes": [
+   "person",
+   "helmet",
+   "no_helmet"
+  ]
+ },
+ "thresholds": {
+  "person_conf": 0.35,
+  "ppe_conf": 0.3,
+  "no_helmet_conf": 0.6,
+  "confirm_seconds": 0.5,
+  "cooldown_seconds": 30.0,
+  "lost_track_seconds": 2.0
+ },
+ "tracker": {
+  "file": "inference/bytetrack_safesight.yaml",
+  "sha256": "0E1F26D707E71AA2B43B0DA25E2A0B05E8E553418150BA6E6FB2BD39676D4F2D"
+ },
+ "runtime_config": {
+  "file": "models/runtime_config.json",
+  "sha256": "C2A795ED43B61E63C19AF2C206C1AF7809442F00530DE7CD7359EADD70086A35",
+  "zones": {
+   "track_work_day": [
+    {
+     "name": "Live rail",
+     "polygon": [
+      [
+       0.0,
+       0.62
+      ],
+      [
+       0.42,
+       0.62
+      ],
+      [
+       0.42,
+       1.0
+      ],
+      [
+       0.0,
+       1.0
+      ]
+     ]
+    }
+   ],
+   "roadworks_night": [
+    {
+     "name": "Breaking area",
+     "polygon": [
+      [
+       0.42,
+       0.72
+      ],
+      [
+       0.82,
+       0.72
+      ],
+      [
+       0.82,
+       0.98
+      ],
+      [
+       0.42,
+       0.98
+      ]
+     ]
+    }
+   ]
+  }
+ },
+ "risk_policy": {
+  "version": "default-0.1",
+  "status": "draft"
+ },
+ "runtime": {
+  "backend": "batched",
+  "source_mode": "file, realtime false (every frame, media time)",
+  "max_fps": null,
+  "annotate": "evidence frames only",
+  "database": "reports\\validation\\eval_runs\\m2-provisional-v1_20261105-101928\\eval.db"
+ },
+ "incident_logic": {
+  "confirmation": "multi-frame vote (HelmetStateTracker) / debounced foot point (ZoneMonitor)",
+  "cooldown_s": 30.0,
+  "lost_track_dedup": "one box height"
+ },
+ "scoring": {
+  "tolerance_s": 2.0,
+  "late_after_s": 3.0,
+  "min_episode_s": 1.0,
+  "merge_gap_s": 30.0,
+  "bootstrap": {
+   "unit": "source_group",
+   "n": 4000,
+   "seed": 0
+  },
+  "rules": "docs/product_research/17_ANNOTATION_PROTOCOL.md section 10"
+ },
+ "labels": {
+  "set": "m2-provisional-v1",
+  "combined_sha256": "5FA81F00505093219FDBED3ED716F1E7B2F6417D9A8FA653CA428D79A084BAB2",
+  "statuses": [
+   "provisional"
+  ],
+  "ground_truth": false
+ },
+ "clips": [
+  {
+   "clip_id": "ballast_train",
+   "file": "data/demo/ballast_train.mp4",
+   "sha256": "5A84B4CB35CC5592EE1DFDE73AC990C484D71DFDD1262A308573D03837D17A26",
+   "split": "development",
+   "source_group": "G04-lodz-track"
+  },
+  {
+   "clip_id": "c00",
+   "file": "data/demo/candidates/c00.webm",
+   "sha256": "363C0DC47800D27A894A26BBBF570729D5E7C4A190F33FDD092A37AA546C6B46",
+   "split": "held-out",
+   "source_group": "G01-moira-close"
+  },
+  {
+   "clip_id": "c01",
+   "file": "data/demo/candidates/c01.webm",
+   "sha256": "EAA00F488604C2626637CB41577A74CB092FF34065EFC11EADFE643ECE5CEEA8",
+   "split": "held-out",
+   "source_group": "G01-moira-close"
+  },
+  {
+   "clip_id": "c02",
+   "file": "data/demo/candidates/c02.webm",
+   "sha256": "2D152EEF0A4E541695FBBC7C4784E177D824B6CCC020EA2C91C806BFAF71C5F8",
+   "split": "held-out",
+   "source_group": "G01-moira-close"
+  },
+  {
+   "clip_id": "c03",
+   "file": "data/demo/candidates/c03.ogv",
+   "sha256": "C14F924CDB368F6634F086BD3B0B15905A8CAA68673DCD4C06DE296641F883DF",
+   "split": "held-out",
+   "source_group": "G02-scaffold"
+  },
+  {
+   "clip_id": "c07",
+   "file": "data/demo/candidates/c07.webm",
+   "sha256": "EEA986C3FC7DFE946EB52960CD356178064D619790BD3CC0F82A406B00255565",
+   "split": "held-out",
+   "source_group": "G06-niosh-mast-climber"
+  },
+  {
+   "clip_id": "c08",
+   "file": "data/demo/candidates/c08.webm",
+   "sha256": "73B413E6B2D20D1E8748C1DC8CBD89864BEC2B2A01407178A0C747E8570B3A6D",
+   "split": "held-out",
+   "source_group": "G07-ljubljana-street"
+  },
+  {
+   "clip_id": "c09",
+   "file": "data/demo/candidates/c09.ogv",
+   "sha256": "55495A2361B15C1FFC109CCD2F934FC03503749BC1B1A3381EBEF32004438AD1",
+   "split": "held-out",
+   "source_group": "G08-concrete-pour"
+  },
+  {
+   "clip_id": "c10",
+   "file": "data/demo/candidates/c10.ogv",
+   "sha256": "D32EA7A4D58B4EBD9A115A99C9B87483BB5CF0EE0589743BCB0DD959F023F6D9",
+   "split": "held-out",
+   "source_group": "G08-concrete-pour"
+  },
+  {
+   "clip_id": "c11",
+   "file": "data/demo/candidates/c11.ogv",
+   "sha256": "D831084A5F3CBA736E60664CE69788E56BA937C082ADD8DA8C51F1EBE78F067B",
+   "split": "held-out",
+   "source_group": "G09-forklift-film"
+  },
+  {
+   "clip_id": "c12",
+   "file": "data/demo/candidates/c12.ogv",
+   "sha256": "94963768025524A06414182C44104A7486BB45EF4648F7C5C6EF0D4642C70BF7",
+   "split": "held-out",
+   "source_group": "G10-concrete-saw"
+  },
+  {
+   "clip_id": "framing_bare_head",
+   "file": "data/demo/framing_bare_head.mp4",
+   "sha256": "BA1768484E060213328ECAA964616DE5FCEEEC457508FBCEA891C30417B0DDC7",
+   "split": "development",
+   "source_group": "G12-mixkit-1459"
+  },
+  {
+   "clip_id": "helmet_put_on",
+   "file": "data/demo/helmet_put_on.mp4",
+   "sha256": "68972CFF17D65EFDCCC21DFAB278BBCEF95D5DE3EA64FE0F79CCE50FE7771AED",
+   "split": "development",
+   "source_group": "G11-mixkit-1440"
+  },
+  {
+   "clip_id": "roadworks_night",
+   "file": "data/demo/roadworks_night.mp4",
+   "sha256": "D51C814C654A0B383316505815456E941CD7CE6DCFDE0EFAC98F395DA9888CC7",
+   "split": "development",
+   "source_group": "G05-japan-roadworks"
+  },
+  {
+   "clip_id": "track_work_day",
+   "file": "data/demo/track_work_day.mp4",
+   "sha256": "D464E74C33A96522926AA122E999DAE3F7799AED06FC7ECBDFAC24D2B9C96C47",
+   "split": "development",
+   "source_group": "G03-geneve-track"
+  }
+ ],
+ "code_sha256": {
+  "inference/__init__.py": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "inference/config.py": "DE9C8D2406A22512A341FEBC064F66658FF3033FC72E450AD5D3E3E7AE52BAE5",
+  "inference/detector.py": "D7E57F76430F0958DF86136A1FDBA439D5F6725B8ADE0CBE6EC6E68D53D1F253",
+  "inference/incident_manager.py": "886D4758262A9C2755EED2AF155F9691A56924005B603531B098ED5A47E950D5",
+  "inference/ppe_association.py": "4A3F3C2B455EB4EFC5EAD49E453B2118469A40BAEB7D5A33D680BAC339C64662",
+  "inference/tracker.py": "834D015C0C24DDF90BAA16151489E0B4D945A3561BD9016CE4EBA36CD2C3B065",
+  "inference/zone_monitor.py": "A8A62375FBBBBF2D55ACD293CC60CCD5ACDA0BD75658DA854FEB60FBA6429291",
+  "intelligence/__init__.py": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "intelligence/annotations.py": "0854C90ECFBFBAE9E2D28E4196555AA301462EA9B48D48B014B5941269520D98",
+  "intelligence/event_metrics.py": "26ECD5AEA050124AE96D46C0E2281E584488358BCB7954486AB8072223069FAC",
+  "intelligence/risk.py": "C5BFFA67078C791CAED9AC21CCD54C5FECF1D9907E5D1E8C3C4498927853E09F",
+  "intelligence/taxonomy.py": "D7DE8E74C770BF4871D04ED51A71DE40BCD7973DA364D451B9390CC2012F747D",
+  "runtime/__init__.py": "77744F7433F519273DD2EF1F16A108FEFA8E19718AAE7E9CD679C2E02D4B8137",
+  "runtime/__main__.py": "8D21D71422E4B513A4B097D1565A7E8BAFDEFA2418DF7DAD5A47C478D652D44F",
+  "runtime/config.py": "9B5C56F21D45BB470041303EBA97A6270CA09434682AFCD7064C953FEBD23775",
+  "runtime/health.py": "A6BE2FEA3BDC1A9D35ABEA28ACF814607DBF501238664EC85A5E352FE99FAB58",
+  "runtime/inference.py": "1145A59A0383B90649D65E85751F82BF7BF4D3A2CAB6E3BFEE9B015F080A4958",
+  "runtime/logs.py": "1DCE0867B033CB54CDC7C46E76D0C3BAB43F08DF0C9ED51F012C7F083ABF675E",
+  "runtime/service.py": "C32FFF2AC1151C1A377813CA07C6EFCB22DB2F28F4B473756D08FF1FEAE6AB16",
+  "runtime/sources.py": "2601764BA01116CC859BAAFFB11D767F9731BE0A8069D07806692F758BC24D66",
+  "runtime/worker.py": "5B7C2B850DABC234A6C6F9DFEF3A7DE8128573EDCF861EAF293BD7AB0778C3E0",
+  "database/__init__.py": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "database/database.py": "3966D752417052BA069E9784195186BEF8EE9987FB8789B66F73E741127C7997"
+ },
+ "run": {
+  "started_utc": "2026-11-05T04:49:29+00:00",
+  "finished_utc": "2026-11-05T04:56:54+00:00",
+  "stuck_cameras": [],
+  "inference": {
+   "mode": "batched",
+   "calls": 46002,
+   "model_ms_p50": 8.91,
+   "model_ms_p95": 16.33,
+   "mean_batch": 1.95
+  },
+  "per_clip": {
+   "ballast_train": {
+    "session_id": "S20261105-101936-ballast_train-92e3",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 516,
+     "processed": 516,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 3,
+    "compliant": 2,
+    "violation": 0,
+    "uncertain": 1,
+    "track_ids": 4,
+    "confirmed_tracks": 3,
+    "compliance_rate": 100.0,
+    "fps": 7.4,
+    "incidents": 0,
+    "state": "STOPPED"
+   },
+   "c00": {
+    "session_id": "S20261105-101936-c00-ea91",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 11766,
+     "processed": 11766,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 0,
+    "compliant": 0,
+    "violation": 0,
+    "uncertain": 0,
+    "track_ids": 36,
+    "confirmed_tracks": 32,
+    "compliance_rate": null,
+    "fps": 79.9,
+    "incidents": 1,
+    "state": "STOPPED"
+   },
+   "c01": {
+    "session_id": "S20261105-101936-c01-3deb",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 10851,
+     "processed": 10851,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 0,
+    "compliant": 0,
+    "violation": 0,
+    "uncertain": 0,
+    "track_ids": 77,
+    "confirmed_tracks": 61,
+    "compliance_rate": null,
+    "fps": 54.9,
+    "incidents": 5,
+    "state": "STOPPED"
+   },
+   "c02": {
+    "session_id": "S20261105-101936-c02-9170",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 9990,
+     "processed": 9990,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 0,
+    "compliant": 0,
+    "violation": 0,
+    "uncertain": 0,
+    "track_ids": 54,
+    "confirmed_tracks": 38,
+    "compliance_rate": null,
+    "fps": 42.9,
+    "incidents": 2,
+    "state": "STOPPED"
+   },
+   "c03": {
+    "session_id": "S20261105-101936-c03-cc49",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 793,
+     "processed": 793,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 0,
+    "compliant": 0,
+    "violation": 0,
+    "uncertain": 0,
+    "track_ids": 2,
+    "confirmed_tracks": 1,
+    "compliance_rate": null,
+    "fps": 11.0,
+    "incidents": 0,
+    "state": "STOPPED"
+   },
+   "c07": {
+    "session_id": "S20261105-101936-c07-4d4a",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 2662,
+     "processed": 2662,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 0,
+    "compliant": 0,
+    "violation": 0,
+    "uncertain": 0,
+    "track_ids": 3,
+    "confirmed_tracks": 3,
+    "compliance_rate": null,
+    "fps": 26.5,
+    "incidents": 0,
+    "state": "STOPPED"
+   },
+   "c08": {
+    "session_id": "S20261105-101936-c08-581f",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 328,
+     "processed": 328,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 0,
+    "compliant": 0,
+    "violation": 0,
+    "uncertain": 0,
+    "track_ids": 5,
+    "confirmed_tracks": 5,
+    "compliance_rate": null,
+    "fps": 6.7,
+    "incidents": 0,
+    "state": "STOPPED"
+   },
+   "c09": {
+    "session_id": "S20261105-101936-c09-fd7f",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 390,
+     "processed": 390,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 0,
+    "compliant": 0,
+    "violation": 0,
+    "uncertain": 0,
+    "track_ids": 1,
+    "confirmed_tracks": 0,
+    "compliance_rate": null,
+    "fps": 7.5,
+    "incidents": 0,
+    "state": "STOPPED"
+   },
+   "c10": {
+    "session_id": "S20261105-101936-c10-1857",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 2759,
+     "processed": 2759,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 0,
+    "compliant": 0,
+    "violation": 0,
+    "uncertain": 0,
+    "track_ids": 2,
+    "confirmed_tracks": 1,
+    "compliance_rate": null,
+    "fps": 23.7,
+    "incidents": 0,
+    "state": "STOPPED"
+   },
+   "c11": {
+    "session_id": "S20261105-101936-c11-c666",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 2597,
+     "processed": 2597,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 0,
+    "compliant": 0,
+    "violation": 0,
+    "uncertain": 0,
+    "track_ids": 28,
+    "confirmed_tracks": 23,
+    "compliance_rate": null,
+    "fps": 29.4,
+    "incidents": 8,
+    "state": "STOPPED"
+   },
+   "c12": {
+    "session_id": "S20261105-101936-c12-e01d",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 2094,
+     "processed": 2094,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 0,
+    "compliant": 0,
+    "violation": 0,
+    "uncertain": 0,
+    "track_ids": 1,
+    "confirmed_tracks": 1,
+    "compliance_rate": null,
+    "fps": 23.6,
+    "incidents": 0,
+    "state": "STOPPED"
+   },
+   "framing_bare_head": {
+    "session_id": "S20261105-101936-framing_bare_head-b90d",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 216,
+     "processed": 216,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 2,
+    "compliant": 0,
+    "violation": 2,
+    "uncertain": 0,
+    "track_ids": 2,
+    "confirmed_tracks": 2,
+    "compliance_rate": 0.0,
+    "fps": 6.0,
+    "incidents": 2,
+    "state": "STOPPED"
+   },
+   "helmet_put_on": {
+    "session_id": "S20261105-101936-helmet_put_on-34e7",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 294,
+     "processed": 294,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 1,
+    "compliant": 1,
+    "violation": 0,
+    "uncertain": 0,
+    "track_ids": 1,
+    "confirmed_tracks": 1,
+    "compliance_rate": 100.0,
+    "fps": 6.4,
+    "incidents": 1,
+    "state": "STOPPED"
+   },
+   "roadworks_night": {
+    "session_id": "S20261105-101936-roadworks_night-082d",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 373,
+     "processed": 373,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 5,
+    "compliant": 3,
+    "violation": 1,
+    "uncertain": 1,
+    "track_ids": 7,
+    "confirmed_tracks": 6,
+    "compliance_rate": 75.0,
+    "fps": 6.5,
+    "incidents": 4,
+    "state": "STOPPED"
+   },
+   "track_work_day": {
+    "session_id": "S20261105-101936-track_work_day-f16f",
+    "end_reason": "end of stream",
+    "frames": {
+     "read": 373,
+     "processed": 373,
+     "skipped_by_rate": 0,
+     "dropped_backpressure": 0,
+     "queued": 0,
+     "queue_max": 4
+    },
+    "tracked_now": 4,
+    "compliant": 2,
+    "violation": 0,
+    "uncertain": 2,
+    "track_ids": 9,
+    "confirmed_tracks": 7,
+    "compliance_rate": 100.0,
+    "fps": 6.4,
+    "incidents": 1,
+    "state": "STOPPED"
+   }
+  }
+ }
+}

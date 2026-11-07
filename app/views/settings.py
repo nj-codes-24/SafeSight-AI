@@ -121,7 +121,8 @@ def render(prefix, current=None, disabled=False):
             if a.button("Save zone", type="primary", icon=":material/check:", width="stretch", key=f"{prefix}_zsave",
                         disabled=disabled or not valid):
                 keep = [z for z in zl if z["name"] not in (name, pick)]
-                cfg.setdefault("zones", {})[cam] = keep + [{"name": name.strip() or "Zone", "polygon": polygon}]
+                # Keep fields the editor does not show (such as the zone kind) when an existing zone is edited.
+                cfg.setdefault("zones", {})[cam] = keep + [{**(zone or {}), "name": name.strip() or "Zone", "polygon": polygon}]
                 save_config(cfg)
                 st.toast(f"Zone saved for {cam}.", icon=":material/check:")
                 st.rerun()

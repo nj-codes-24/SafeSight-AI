@@ -1,0 +1,61 @@
+# SafeSight headless runtime: fixed-camera demonstration configuration.
+#
+# Two "cameras" replay demo footage from a FIXED camera at its own frame rate (realtime: true) and loop, simulating
+# live cameras on one machine. This is a SIMULATION with video files: it is not evidence that any real camera, RTSP
+# stream or site works. Results go to logs/runtime/ (a separate database), never to the dashboard's history.
+#
+# Camera view monitoring runs with its default, fixed-camera thresholds: each camera's first steady view becomes its
+# reference, later starts verify it, and a moved, covered or switched view stops analysis (see
+# docs/product_research/21_CAMERA_VIEW_CHANGE_DETECTION.md). Only one demo scene comes from a fixed camera:
+# framing_bare_head.mp4; mixkit/mixkit-1459.mp4 is the same footage in another encoding, used as a second camera.
+# The other demo clips are hand-held or moving and are in config/runtime.demo_handheld.yaml instead.
+#
+#   python -m runtime validate --config config/runtime.demo.yaml
+#   python -m runtime run --config config/runtime.demo.yaml          (Ctrl+C to stop)
+#   python -m runtime status --config config/runtime.demo.yaml       (from another terminal)
+#   python -m runtime view list --config config/runtime.demo.yaml    (reference views and view events)
+#
+# Relative paths are resolved against the SafeSight project folder.
+
+runtime:
+  database: logs/runtime/incidents.db
+  evidence_dir: logs/runtime/evidence
+  status_file: logs/runtime/status.json
+  log_file: logs/runtime/runtime.log
+  log_level: INFO
+  status_interval_s: 2
+  pipeline_config: models/runtime_config.json   # detection thresholds and the dashboard's zones (read only)
+
+inference:
+  backend: batched      # batched | shared | per_camera | null
+  weights: models/best.pt
+  imgsz: 640
+  device: auto
+  max_batch: 8
+  batch_wait_ms: 5
+
+sites:
+  - id: demo-site
+    name: Demonstration footage
+
+defaults:
+  processing:
+    max_fps: 15         # analyse at most 15 frames per second per camera; the rest are skipped by design
+    queue_size: 2
+    annotate: false     # draw boxes only on evidence frames
+  reconnect:
+    max_attempts: 10
+    initial_delay_s: 1
+    max_delay_s: 30
+  # view_monitor: defaults (max_shift 0.02, confirm_s 5, ...); nothing is relaxed for the demo
+
+cameras:
+  - id: framing-a
+    name: Framing crew (fixed camera, demo clip)
+    site: demo-site
+    source: {type: file, path: data/demo/framing_bare_head.mp4, loop: true, realtime: true}
+
+  - id: framing-b
+    name: Framing crew, second encoding (fixed camera, demo clip)
+    site: demo-site
+    source: {type: file, path: data/demo/mixkit/mixkit-1459.mp4, loop: true, realtime: true}

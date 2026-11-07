@@ -19,14 +19,26 @@ LOW_CONF = 0.1  # ByteTrack uses low-score boxes to keep a track alive through b
 
 
 class Detector:
-    def __init__(self, weights=DEFAULT_WEIGHTS, imgsz=640, device=None):
-        self.model = YOLO(str(weights))
+    """The model plus one ByteTrack instance. Several cameras share one model by passing `model`, and a serialised or
+    batched model call by passing `predict` (runtime/inference.py); each camera still gets its own tracker."""
+
+    def __init__(self, weights=DEFAULT_WEIGHTS, imgsz=640, device=None, model=None, predict=None):
+        self.model = model if model is not None else YOLO(str(weights))
         self.names = self.model.names
         self.imgsz = imgsz
         self.device = device if device is not None else (0 if torch.cuda.is_available() else "cpu")
         self.person_id = next(k for k, v in self.names.items() if v == "person")
+        self._predict = predict or self.predict
         self.tracker = None
         self.reset()
+
+    def predict(self, frame):
+        """Model boxes for one frame (all classes, floor confidence), as a NumPy-backed Boxes object."""
+        return self.model.predict(frame, conf=LOW_CONF, imgsz=self.imgsz, device=self.device, verbose=False)[0].boxes.cpu().numpy()
+
+    def predict_batch(self, frames):
+        r = self.model.predict(list(frames), conf=LOW_CONF, imgsz=self.imgsz, device=self.device, verbose=False)
+        return [x.boxes.cpu().numpy() for x in r]
 
     def reset(self):
         cfg = YAML.load(TRACKER_CFG)
@@ -35,8 +47,7 @@ class Detector:
 
     def track(self, frame, person_conf=0.35, ppe_conf=0.3, no_helmet_conf=None):
         """Returns ([(track_id, xyxy, conf)], [Detection for helmet / no_helmet]). Only persons enter the tracker."""
-        r = self.model.predict(frame, conf=LOW_CONF, imgsz=self.imgsz, device=self.device, verbose=False)[0]
-        boxes = r.boxes.cpu().numpy()
+        boxes = self._predict(frame)
         is_person = boxes.cls.astype(int) == self.person_id
         self.tracker.args.track_high_thresh = person_conf
         self.tracker.args.new_track_thresh = max(self.new_track_conf, person_conf + 0.1)

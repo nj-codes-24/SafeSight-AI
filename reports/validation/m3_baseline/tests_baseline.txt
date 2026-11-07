@@ -1,0 +1,8 @@
+Baseline test run for milestone M3, 6 November 2026, before any M3 code change.
+Command: .venv\Scripts\python.exe -m pytest -q -rs -p no:cacheprovider   (weights, demo clips and processed data present)
+Working tree: the one recorded in baseline_record.json (HEAD 6aa177e plus the uncommitted M1-M2.1 and view-change work).
+
+211 passed, 4 warnings in 338.09s (0:05:38)
+Warnings: Pandas4Warning from streamlit data_editor (DataFrame.rename inplace deprecation), in
+tests/test_human_review.py::test_annotator_reviewer_mode_shows_only_the_package and
+tests/test_validation.py::test_annotator_app_starts_without_model_output. Not caused by SafeSight code.

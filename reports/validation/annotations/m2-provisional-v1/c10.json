@@ -1,0 +1,136 @@
+{
+ "schema": "safesight.labels/1.0",
+ "label_set": "m2-provisional-v1",
+ "clip_id": "c10",
+ "file": "data/demo/candidates/c10.ogv",
+ "sha256": "D32EA7A4D58B4EBD9A115A99C9B87483BB5CF0EE0589743BCB0DD959F023F6D9",
+ "fps": 30.00030000300003,
+ "frames": 2759,
+ "duration_s": 91.97,
+ "split": "held-out",
+ "source_group": "G08-concrete-pour",
+ "status": "provisional",
+ "annotators": [
+  {
+   "id": "ai-first-pass (Claude Opus 5.5)",
+   "kind": "ai",
+   "role": "first-pass",
+   "date": "2026-11-05",
+   "blind_to_model_output": "partial",
+   "notes": "No model output for these clips was viewed in this session; the repository's earlier unseen-footage notes (aggregate counts per clip) were known. Labelled from contact sheets (about 30 frames per clip) and detail crops; boundaries carry the stated uncertainty."
+  }
+ ],
+ "reviews": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "not evaluable: no zone configured for this clip"
+ },
+ "zones": [],
+ "intervals": [
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 0.0,
+   "end_s": 14.5,
+   "state": "uncertain",
+   "note": "distant roof crew"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 14.5,
+   "end_s": 27.5,
+   "state": "monitorable",
+   "note": "lorry, mixer and sky; no people visible"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 27.5,
+   "end_s": 43.5,
+   "state": "uncertain",
+   "note": "zoomed roof crew; heads about 8-10 px"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 43.5,
+   "end_s": 55.0,
+   "state": "uncertain",
+   "note": "lorry area; possible small figure"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 55.0,
+   "end_s": 91.97,
+   "state": "uncertain",
+   "note": "roof crew at mid and far distance"
+  }
+ ],
+ "events": [
+  {
+   "id": "c10-E01",
+   "hazard": "PPE.HEAD.MISSING",
+   "kind": "violation",
+   "start_s": 0.0,
+   "end_s": 14.5,
+   "start_unc_s": 0.0,
+   "end_unc_s": 1.0,
+   "zone": null,
+   "worker": "rooftop crew (group of 5-7)",
+   "observability": "low",
+   "requirement": "assumed",
+   "evidence_frames": [],
+   "status": "provisional",
+   "annotator": "ai-first-pass (Claude Opus 5.5)",
+   "reviews": [],
+   "note": ""
+  },
+  {
+   "id": "c10-E02",
+   "hazard": "PPE.HEAD.MISSING",
+   "kind": "violation",
+   "start_s": 27.5,
+   "end_s": 43.5,
+   "start_unc_s": 1.0,
+   "end_unc_s": 1.0,
+   "zone": null,
+   "worker": "rooftop crew (group of 5-7)",
+   "observability": "low",
+   "requirement": "assumed",
+   "evidence_frames": [
+    870,
+    930
+   ],
+   "status": "provisional",
+   "annotator": "ai-first-pass (Claude Opus 5.5)",
+   "reviews": [],
+   "note": ""
+  },
+  {
+   "id": "c10-E03",
+   "hazard": "PPE.HEAD.MISSING",
+   "kind": "violation",
+   "start_s": 55.0,
+   "end_s": 91.97,
+   "start_unc_s": 1.5,
+   "end_unc_s": 0.0,
+   "zone": null,
+   "worker": "rooftop crew (group of 5-7)",
+   "observability": "low",
+   "requirement": "assumed",
+   "evidence_frames": [],
+   "status": "provisional",
+   "annotator": "ai-first-pass (Claude Opus 5.5)",
+   "reviews": [],
+   "note": ""
+  }
+ ],
+ "people": {
+  "distinct_workers": "5-7",
+  "basis": "same crew as c09"
+ },
+ "attributes": {
+  "lighting": "day",
+  "distance": "far",
+  "camera": "hand-held, zooms and cuts",
+  "density": "5-7",
+  "image_quality": "low (640x480)"
+ }
+}

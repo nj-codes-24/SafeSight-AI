@@ -1,0 +1,11 @@
+clip_id,split,hazard,event_id,episode,onset_s,first_alert_s,latency_s,late,true_duration_s,duration_error_s,incident_id
+c01,held-out,PPE.HEAD.MISSING,c01-E01,required,41.0,46.88,5.88,True,17.0,-15.87,INC-20261105-1DB4CC1E
+c01,held-out,PPE.HEAD.MISSING,c01-E03,required,200.5,201.03,0.53,False,29.4,-25.4,INC-20261105-6948E475
+c01,held-out,PPE.HEAD.MISSING,c01-E04,required,200.5,211.31,10.81,True,29.4,-25.36,INC-20261105-B27FF1F0
+framing_bare_head,development,PPE.HEAD.MISSING,framing_bare_head-E01,required,0.0,0.54,0.54,False,9.0,-0.58,INC-20261105-0335856A
+framing_bare_head,development,PPE.HEAD.MISSING,framing_bare_head-E02,optional,0.0,0.71,0.71,False,9.0,-0.75,INC-20261105-00811F5C
+helmet_put_on,development,PPE.HEAD.MISSING,helmet_put_on-E01,required,0.0,0.46,0.46,False,1.4,0.52,INC-20261105-29711D05
+roadworks_night,development,ZONE.ENTRY,roadworks_night-E04,required,0.0,0.43,0.43,False,12.45,-7.44,INC-20261105-BA818852
+roadworks_night,development,ZONE.ENTRY,roadworks_night-E05,required,0.0,0.43,0.43,False,12.45,-0.47,INC-20261105-41EAD239
+roadworks_night,development,ZONE.ENTRY,roadworks_night-E06,required,0.0,0.67,0.67,False,4.4,7.35,INC-20261105-B373A230
+track_work_day,development,ZONE.ENTRY,track_work_day-E01,required,0.0,0.48,0.48,False,7.46,-0.5,INC-20261105-F518DEA9

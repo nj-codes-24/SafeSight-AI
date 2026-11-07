@@ -1,0 +1,23 @@
+{
+ "schema": "safesight.labels/1.1",
+ "label_set": "m2-human-r1",
+ "clip_id": "helmet_put_on",
+ "file": "data/demo/helmet_put_on.mp4",
+ "sha256": "68972CFF17D65EFDCCC21DFAB278BBCEF95D5DE3EA64FE0F79CCE50FE7771AED",
+ "fps": 24.0,
+ "frames": 294,
+ "duration_s": 12.25,
+ "status": "provisional",
+ "annotators": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "not_applicable"
+ },
+ "zones": [],
+ "intervals": [],
+ "events": [],
+ "people": {},
+ "attributes": {},
+ "review_complete": false,
+ "reviewer_notes": ""
+}

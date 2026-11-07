@@ -1,0 +1,23 @@
+{
+ "schema": "safesight.labels/1.1",
+ "label_set": "m2-human-r1",
+ "clip_id": "track_work_day",
+ "file": "data/demo/track_work_day.mp4",
+ "sha256": "D464E74C33A96522926AA122E999DAE3F7799AED06FC7ECBDFAC24D2B9C96C47",
+ "fps": 50.0,
+ "frames": 373,
+ "duration_s": 7.46,
+ "status": "provisional",
+ "annotators": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "evaluated"
+ },
+ "zones": [],
+ "intervals": [],
+ "events": [],
+ "people": {},
+ "attributes": {},
+ "review_complete": false,
+ "reviewer_notes": ""
+}
