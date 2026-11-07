@@ -1,0 +1,72 @@
+{
+ "schema": "safesight.labels/1.0",
+ "label_set": "m2-provisional-v1",
+ "clip_id": "c09",
+ "file": "data/demo/candidates/c09.ogv",
+ "sha256": "55495A2361B15C1FFC109CCD2F934FC03503749BC1B1A3381EBEF32004438AD1",
+ "fps": 30.00030000300003,
+ "frames": 390,
+ "duration_s": 13.0,
+ "split": "held-out",
+ "source_group": "G08-concrete-pour",
+ "status": "provisional",
+ "annotators": [
+  {
+   "id": "ai-first-pass (Claude Opus 5.5)",
+   "kind": "ai",
+   "role": "first-pass",
+   "date": "2026-11-05",
+   "blind_to_model_output": "partial",
+   "notes": "No model output for these clips was viewed in this session; the repository's earlier unseen-footage notes (aggregate counts per clip) were known. Labelled from contact sheets (about 30 frames per clip) and detail crops; boundaries carry the stated uncertainty."
+  }
+ ],
+ "reviews": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "not evaluable: no zone configured for this clip"
+ },
+ "zones": [],
+ "intervals": [
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 0.0,
+   "end_s": 13.0,
+   "state": "uncertain",
+   "note": "rooftop crew; heads under about 12 px; no hard hat visible on anyone"
+  }
+ ],
+ "events": [
+  {
+   "id": "c09-E01",
+   "hazard": "PPE.HEAD.MISSING",
+   "kind": "violation",
+   "start_s": 0.0,
+   "end_s": 13.0,
+   "start_unc_s": 0.0,
+   "end_unc_s": 0.0,
+   "zone": null,
+   "worker": "rooftop crew (group of 5-7)",
+   "observability": "low",
+   "requirement": "assumed",
+   "evidence_frames": [
+    0,
+    345
+   ],
+   "status": "provisional",
+   "annotator": "ai-first-pass (Claude Opus 5.5)",
+   "reviews": [],
+   "note": "Group episode: individual workers not separable at this resolution."
+  }
+ ],
+ "people": {
+  "distinct_workers": "5-7",
+  "basis": "rooftop crew"
+ },
+ "attributes": {
+  "lighting": "day",
+  "distance": "far",
+  "camera": "hand-held, zoom",
+  "density": "5-7",
+  "image_quality": "low (640x480)"
+ }
+}

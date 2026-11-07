@@ -1,0 +1,119 @@
+{
+ "package": "reviewer_B",
+ "label_set": "m2-human-B",
+ "reviewer_id": null,
+ "created": "2026-11-05",
+ "protocol": "docs/product_research/17_ANNOTATION_PROTOCOL.md",
+ "protocol_sha256": "25A7DBC0DF505D58CCC4364EE74039864FD8D2532F7E3191E96429C64A5BD95D",
+ "schema": "safesight.labels/1.1",
+ "order": [
+  "helmet_put_on",
+  "framing_bare_head",
+  "c09",
+  "track_work_day",
+  "c00",
+  "c03",
+  "ballast_train",
+  "c12",
+  "c07",
+  "roadworks_night",
+  "c11",
+  "c02",
+  "c08",
+  "c01",
+  "c10"
+ ],
+ "clips": [
+  {
+   "clip_id": "ballast_train",
+   "file": "data/demo/ballast_train.mp4",
+   "sha256": "5A84B4CB35CC5592EE1DFDE73AC990C484D71DFDD1262A308573D03837D17A26",
+   "duration_s": 20.64
+  },
+  {
+   "clip_id": "framing_bare_head",
+   "file": "data/demo/framing_bare_head.mp4",
+   "sha256": "BA1768484E060213328ECAA964616DE5FCEEEC457508FBCEA891C30417B0DDC7",
+   "duration_s": 9.0
+  },
+  {
+   "clip_id": "helmet_put_on",
+   "file": "data/demo/helmet_put_on.mp4",
+   "sha256": "68972CFF17D65EFDCCC21DFAB278BBCEF95D5DE3EA64FE0F79CCE50FE7771AED",
+   "duration_s": 12.25
+  },
+  {
+   "clip_id": "roadworks_night",
+   "file": "data/demo/roadworks_night.mp4",
+   "sha256": "D51C814C654A0B383316505815456E941CD7CE6DCFDE0EFAC98F395DA9888CC7",
+   "duration_s": 12.45
+  },
+  {
+   "clip_id": "track_work_day",
+   "file": "data/demo/track_work_day.mp4",
+   "sha256": "D464E74C33A96522926AA122E999DAE3F7799AED06FC7ECBDFAC24D2B9C96C47",
+   "duration_s": 7.46
+  },
+  {
+   "clip_id": "c00",
+   "file": "data/demo/candidates/c00.webm",
+   "sha256": "363C0DC47800D27A894A26BBBF570729D5E7C4A190F33FDD092A37AA546C6B46",
+   "duration_s": 392.59
+  },
+  {
+   "clip_id": "c01",
+   "file": "data/demo/candidates/c01.webm",
+   "sha256": "EAA00F488604C2626637CB41577A74CB092FF34065EFC11EADFE643ECE5CEEA8",
+   "duration_s": 362.06
+  },
+  {
+   "clip_id": "c02",
+   "file": "data/demo/candidates/c02.webm",
+   "sha256": "2D152EEF0A4E541695FBBC7C4784E177D824B6CCC020EA2C91C806BFAF71C5F8",
+   "duration_s": 333.33
+  },
+  {
+   "clip_id": "c03",
+   "file": "data/demo/candidates/c03.ogv",
+   "sha256": "C14F924CDB368F6634F086BD3B0B15905A8CAA68673DCD4C06DE296641F883DF",
+   "duration_s": 33.04
+  },
+  {
+   "clip_id": "c07",
+   "file": "data/demo/candidates/c07.webm",
+   "sha256": "EEA986C3FC7DFE946EB52960CD356178064D619790BD3CC0F82A406B00255565",
+   "duration_s": 88.82
+  },
+  {
+   "clip_id": "c08",
+   "file": "data/demo/candidates/c08.webm",
+   "sha256": "73B413E6B2D20D1E8748C1DC8CBD89864BEC2B2A01407178A0C747E8570B3A6D",
+   "duration_s": 13.12
+  },
+  {
+   "clip_id": "c09",
+   "file": "data/demo/candidates/c09.ogv",
+   "sha256": "55495A2361B15C1FFC109CCD2F934FC03503749BC1B1A3381EBEF32004438AD1",
+   "duration_s": 13.0
+  },
+  {
+   "clip_id": "c10",
+   "file": "data/demo/candidates/c10.ogv",
+   "sha256": "D32EA7A4D58B4EBD9A115A99C9B87483BB5CF0EE0589743BCB0DD959F023F6D9",
+   "duration_s": 91.97
+  },
+  {
+   "clip_id": "c11",
+   "file": "data/demo/candidates/c11.ogv",
+   "sha256": "D831084A5F3CBA736E60664CE69788E56BA937C082ADD8DA8C51F1EBE78F067B",
+   "duration_s": 103.16
+  },
+  {
+   "clip_id": "c12",
+   "file": "data/demo/candidates/c12.ogv",
+   "sha256": "94963768025524A06414182C44104A7486BB45EF4648F7C5C6EF0D4642C70BF7",
+   "duration_s": 69.8
+  }
+ ],
+ "blinding": "Contains no model output, no AI labels, no evaluation results and no development/held-out split. Label from the footage only, at native resolution where needed, following the protocol."
+}

@@ -14,6 +14,7 @@
 | [evaluation.md](evaluation.md) | Methodology, experiments, thresholds, unseen footage, runtime |
 | [datasets_and_licensing.md](datasets_and_licensing.md) | Provenance, derived labels, leakage prevention, licences |
 | [deployment.md](deployment.md) | Current deployment and what a real deployment would need |
+| [runtime_getting_started.md](runtime_getting_started.md) | Headless multi-camera runtime: run, configure, check health |
 | [limitations.md](limitations.md) | Known limitations, with evidence |
 
 | Design and history | |

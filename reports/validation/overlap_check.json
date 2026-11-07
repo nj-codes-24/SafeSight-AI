@@ -1,0 +1,30 @@
+{
+ "method": "dHash (256 bit) of one frame per second; pairs where more than 20 % of seconds have a match within 6 bits",
+ "pairs": [
+  {
+   "a": "ballast_train.mp4",
+   "b": "candidates/c05.webm",
+   "shared_seconds_ratio": 1.0
+  },
+  {
+   "a": "framing_bare_head.mp4",
+   "b": "mixkit/mixkit-1459.mp4",
+   "shared_seconds_ratio": 1.0
+  },
+  {
+   "a": "helmet_put_on.mp4",
+   "b": "mixkit/mixkit-1440.mp4",
+   "shared_seconds_ratio": 0.769
+  },
+  {
+   "a": "roadworks_night.mp4",
+   "b": "candidates/c06.ogv",
+   "shared_seconds_ratio": 1.0
+  },
+  {
+   "a": "track_work_day.mp4",
+   "b": "candidates/c04.webm",
+   "shared_seconds_ratio": 1.0
+  }
+ ]
+}

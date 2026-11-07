@@ -1,11 +1,28 @@
-"""Per-worker helmet state from frame detections. Missing evidence gives UNCERTAIN, never VIOLATION."""
+"""Per-worker helmet state from frame detections. Missing evidence gives UNCERTAIN, never VIOLATION.
+
+Visibility: a head cut off by the image border can look bare because the helmet is outside the frame, so a "no helmet"
+detection on a truncated head is not counted as evidence of a missing helmet (a helmet seen on a truncated head still
+counts). When the recent window holds no usable head evidence at all, the worker is NOT_OBSERVABLE (reported apart
+from UNCERTAIN, where evidence exists but disagrees or is too thin).
+"""
 from collections import deque
 from dataclasses import dataclass, field
 
 import numpy as np
 
 COMPLIANT, VIOLATION, UNCERTAIN = "COMPLIANT", "VIOLATION", "UNCERTAIN"
+NOT_OBSERVABLE = "NOT_OBSERVABLE"  # detail only: state() still returns UNCERTAIN for it, as before
 HEAD_REGION = 0.40  # top fraction of the person box where a head may be
+EDGE = "edge"  # vote kind for a "no helmet" box on a head cut off by the image border
+
+
+def head_truncated(head: "Detection | None", w: int, margin: float = 2.0) -> bool:
+    """True if the head box touches the top, left or right border (boxes are clipped to the image). The bottom border
+    is not a head problem."""
+    if head is None:
+        return False
+    x1, y1, x2, _ = head.xyxy
+    return bool(y1 <= margin or x1 <= margin or x2 >= w - margin)
 
 
 @dataclass
@@ -44,10 +61,21 @@ class HelmetStateTracker:
     ratio: float = 0.7
     votes: dict = field(default_factory=dict)
 
-    def update(self, track_id: int, head: Detection | None) -> tuple[str, float]:
+    def update(self, track_id: int, head: Detection | None, truncated: bool = False) -> tuple[str, float]:
         v = self.votes.setdefault(track_id, deque(maxlen=self.window))
-        v.append((head.cls, head.conf) if head else (None, 0.0))
+        if head is not None and truncated and head.cls == "no_helmet":
+            v.append((EDGE, head.conf))  # neither "no" nor "yes": the helmet may be outside the frame
+        else:
+            v.append((head.cls, head.conf) if head else (None, 0.0))
         return self.state(track_id)
+
+    def detail(self, track_id: int) -> str:
+        """state() plus NOT_OBSERVABLE: UNCERTAIN with no usable head evidence in the window."""
+        s = self.state(track_id)[0]
+        if s != UNCERTAIN:
+            return s
+        v = self.votes.get(track_id) or ()
+        return NOT_OBSERVABLE if not any(k in ("helmet", "no_helmet") for k, _ in v) else UNCERTAIN
 
     def state(self, track_id: int) -> tuple[str, float]:
         v = self.votes.get(track_id)

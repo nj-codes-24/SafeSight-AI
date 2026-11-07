@@ -1,0 +1,203 @@
+{
+ "schema": "safesight.labels/1.0",
+ "label_set": "m2-provisional-v1",
+ "clip_id": "roadworks_night",
+ "file": "data/demo/roadworks_night.mp4",
+ "sha256": "D51C814C654A0B383316505815456E941CD7CE6DCFDE0EFAC98F395DA9888CC7",
+ "fps": 29.97,
+ "frames": 373,
+ "duration_s": 12.45,
+ "split": "development",
+ "source_group": "G05-japan-roadworks",
+ "status": "provisional",
+ "annotators": [
+  {
+   "id": "ai-first-pass (Claude Opus 5.5)",
+   "kind": "ai",
+   "role": "first-pass",
+   "date": "2026-11-05",
+   "blind_to_model_output": "partial",
+   "notes": "Model incidents on these clips were seen during M1 runtime testing before labelling. Labelled from contact sheets (about 30 frames per clip) and detail crops; boundaries carry the stated uncertainty."
+  }
+ ],
+ "reviews": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "evaluated"
+ },
+ "zones": [
+  {
+   "name": "Breaking area",
+   "polygon": [
+    [
+     0.42,
+     0.72
+    ],
+    [
+     0.82,
+     0.72
+    ],
+    [
+     0.82,
+     0.98
+    ],
+    [
+     0.42,
+     0.98
+    ]
+   ],
+   "kind": "restricted",
+   "real_restriction": false,
+   "basis": "drawn for the demo; the people inside are doing their normal work there",
+   "authorization": "unknown"
+  }
+ ],
+ "intervals": [
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 0.0,
+   "end_s": 12.45,
+   "state": "monitorable",
+   "note": "three workers in white hard hats; two transient people at the end"
+  },
+  {
+   "hazard": "ZONE.ENTRY",
+   "start_s": 0.0,
+   "end_s": 12.45,
+   "state": "monitorable",
+   "note": ""
+  }
+ ],
+ "events": [
+  {
+   "id": "roadworks_night-E01",
+   "hazard": "PPE.HEAD.MISSING",
+   "kind": "uncertain",
+   "start_s": 5.2,
+   "end_s": 8.0,
+   "start_unc_s": 0.5,
+   "end_unc_s": 0.5,
+   "zone": null,
+   "worker": "right worker, blue clothes, yellow vest",
+   "observability": "partial",
+   "requirement": null,
+   "evidence_frames": [],
+   "status": "provisional",
+   "annotator": "ai-first-pass (Claude Opus 5.5)",
+   "reviews": [],
+   "note": "Turned away into shadow; headwear not identifiable; leaves frame right."
+  },
+  {
+   "id": "roadworks_night-E02",
+   "hazard": "PPE.HEAD.MISSING",
+   "kind": "not_applicable",
+   "start_s": 10.3,
+   "end_s": 12.45,
+   "start_unc_s": 0.3,
+   "end_unc_s": 0.0,
+   "zone": null,
+   "worker": "pedestrian walking past on the left",
+   "observability": "partial",
+   "requirement": null,
+   "evidence_frames": [],
+   "status": "provisional",
+   "annotator": "ai-first-pass (Claude Opus 5.5)",
+   "reviews": [],
+   "note": "Member of the public on the street, not a worker: head protection does not apply."
+  },
+  {
+   "id": "roadworks_night-E03",
+   "hazard": "PPE.HEAD.MISSING",
+   "kind": "uncertain",
+   "start_s": 10.3,
+   "end_s": 12.45,
+   "start_unc_s": 0.3,
+   "end_unc_s": 0.0,
+   "zone": null,
+   "worker": "traffic guard entering on the right",
+   "observability": "partial",
+   "requirement": null,
+   "evidence_frames": [],
+   "status": "provisional",
+   "annotator": "ai-first-pass (Claude Opus 5.5)",
+   "reviews": [],
+   "note": "Dark helmet-like headwear, not clearly identifiable."
+  },
+  {
+   "id": "roadworks_night-E04",
+   "hazard": "ZONE.ENTRY",
+   "kind": "violation",
+   "start_s": 0.0,
+   "end_s": 12.45,
+   "start_unc_s": 0.0,
+   "end_unc_s": 0.0,
+   "zone": "Breaking area",
+   "worker": "left worker, jackhammer, red vest",
+   "observability": "clear",
+   "requirement": null,
+   "evidence_frames": [
+    0,
+    192,
+    360
+   ],
+   "status": "provisional",
+   "annotator": "ai-first-pass (Claude Opus 5.5)",
+   "reviews": [],
+   "note": ""
+  },
+  {
+   "id": "roadworks_night-E05",
+   "hazard": "ZONE.ENTRY",
+   "kind": "violation",
+   "start_s": 0.0,
+   "end_s": 12.45,
+   "start_unc_s": 0.0,
+   "end_unc_s": 0.0,
+   "zone": "Breaking area",
+   "worker": "middle worker, light suit, yellow vest",
+   "observability": "clear",
+   "requirement": null,
+   "evidence_frames": [
+    0,
+    192,
+    360
+   ],
+   "status": "provisional",
+   "annotator": "ai-first-pass (Claude Opus 5.5)",
+   "reviews": [],
+   "note": ""
+  },
+  {
+   "id": "roadworks_night-E06",
+   "hazard": "ZONE.ENTRY",
+   "kind": "violation",
+   "start_s": 0.0,
+   "end_s": 4.4,
+   "start_unc_s": 0.0,
+   "end_unc_s": 0.8,
+   "zone": "Breaking area",
+   "worker": "right worker, blue clothes, yellow vest",
+   "observability": "partial",
+   "requirement": null,
+   "evidence_frames": [
+    0,
+    96
+   ],
+   "status": "provisional",
+   "annotator": "ai-first-pass (Claude Opus 5.5)",
+   "reviews": [],
+   "note": "Feet hidden behind equipment; exit judged from body position, about 4.4 s."
+  }
+ ],
+ "people": {
+  "distinct_workers": 5,
+  "basis": "three workers throughout, a traffic guard and a pedestrian from 10.3 s"
+ },
+ "attributes": {
+  "lighting": "night, floodlit",
+  "distance": "near",
+  "camera": "static",
+  "density": "3-5",
+  "image_quality": "good"
+ }
+}

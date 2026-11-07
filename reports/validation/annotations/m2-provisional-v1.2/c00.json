@@ -1,0 +1,80 @@
+{
+ "schema": "safesight.labels/1.1",
+ "label_set": "m2-provisional-v1.2",
+ "clip_id": "c00",
+ "file": "data/demo/candidates/c00.webm",
+ "sha256": "363C0DC47800D27A894A26BBBF570729D5E7C4A190F33FDD092A37AA546C6B46",
+ "fps": 29.97002997002997,
+ "frames": 11766,
+ "duration_s": 392.59,
+ "split": "held-out",
+ "source_group": "G01-moira-close",
+ "status": "provisional",
+ "annotators": [
+  {
+   "id": "ai-first-pass (Claude Opus 5.5)",
+   "kind": "ai",
+   "role": "first-pass",
+   "date": "2026-11-05",
+   "blind_to_model_output": "partial",
+   "notes": "No model output for these clips was viewed in this session; the repository's earlier unseen-footage notes (aggregate counts per clip) were known. Labelled from contact sheets (about 30 frames per clip) and detail crops; boundaries carry the stated uncertainty."
+  }
+ ],
+ "reviews": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "not evaluable: no zone configured for this clip"
+ },
+ "zones": [],
+ "intervals": [
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 0.0,
+   "end_s": 59.0,
+   "state": "unobservable",
+   "note": "distant site views and a suspended panel lift; workers tiny"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 59.0,
+   "end_s": 137.0,
+   "state": "monitorable",
+   "note": "mid and close shots; all identifiable heads wear white hard hats"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 137.0,
+   "end_s": 203.0,
+   "state": "unobservable",
+   "note": "distant views through trees; workers tiny"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 203.0,
+   "end_s": 255.0,
+   "state": "monitorable",
+   "note": "mid and close shots; white hard hats"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 255.0,
+   "end_s": 392.59,
+   "state": "monitorable",
+   "note": "crane close-ups and stadium views; no people visible"
+  }
+ ],
+ "events": [],
+ "people": {
+  "distinct_workers": null,
+  "basis": "hand-held telephoto with zooms and cuts: not countable"
+ },
+ "attributes": {
+  "lighting": "day",
+  "distance": "mixed, mostly far",
+  "camera": "hand-held telephoto, zooms and cuts",
+  "density": "0-4",
+  "image_quality": "good"
+ },
+ "derived_from": "m2-provisional-v1",
+ "changes": []
+}

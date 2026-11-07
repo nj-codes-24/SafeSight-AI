@@ -1,0 +1,1182 @@
+{
+ "date_utc": "2026-11-05T04:07:31+00:00",
+ "machine": {
+  "gpu": "NVIDIA RTX 2000 Ada Generation",
+  "cpu": "Intel64 Family 6 Model 143 Stepping 8, GenuineIntel",
+  "python": "3.11.18",
+  "torch": "2.14.1+cu126"
+ },
+ "method": [
+  "Multi-camera benchmark of the headless runtime, with the real M5 model on the demo clips.",
+  "",
+  "Each configuration runs in its own process (clean GPU memory and CUDA state): N cameras replay demo clips in a loop,",
+  "either as fast as possible with every frame processed (\"throughput\", offline files) or paced at their own frame rate",
+  "with max_fps analysis (\"live\", simulating cameras with frame dropping). Rates are measured over a window after a",
+  "warm-up, from the runtime's own counters. GPU utilisation and clocks come from nvidia-smi samples."
+ ],
+ "clips": [
+  "track_work_day",
+  "roadworks_night",
+  "ballast_train",
+  "helmet_put_on"
+ ],
+ "baseline": {
+  "baseline_process_video_fps": [
+   37.0,
+   54.8,
+   54.4
+  ],
+  "clip": "track_work_day"
+ },
+ "runs": [
+  {
+   "backend": "shared",
+   "cameras": 1,
+   "mode": "throughput",
+   "max_fps": null,
+   "window_s": 20.0,
+   "startup_s": 2.9,
+   "aggregate_fps": 65.3,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 65.3,
+     "source_fps": 50.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 13.64,
+     "inference_ms_p95": 19.17,
+     "end_to_end_ms_p50": 85.05,
+     "end_to_end_ms_p95": 100.48,
+     "incident_latency_ms_max": 131.8,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 144.1,
+   "rss_mb_max": 1426.0,
+   "torch_cuda_peak_mb": 87.3,
+   "model": {
+    "mode": "shared",
+    "calls": 1669,
+    "model_ms_p50": 14.29,
+    "model_ms_p95": 19.98
+   },
+   "gpu_util_pct_mean": 36.2,
+   "gpu_mem_used_mb_max": 804.0,
+   "gpu_sm_clock_mhz_mean": 1789,
+   "all_streaming": true
+  },
+  {
+   "backend": "shared",
+   "cameras": 2,
+   "mode": "throughput",
+   "max_fps": null,
+   "window_s": 20.0,
+   "startup_s": 2.9,
+   "aggregate_fps": 63.0,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 31.57,
+     "source_fps": 50.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 29.64,
+     "inference_ms_p95": 38.37,
+     "end_to_end_ms_p50": 183.24,
+     "end_to_end_ms_p95": 207.87,
+     "incident_latency_ms_max": 209.59,
+     "state": "STREAMING"
+    },
+    "cam2": {
+     "processed_fps": 31.42,
+     "source_fps": 29.97,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 29.39,
+     "inference_ms_p95": 37.56,
+     "end_to_end_ms_p50": 183.78,
+     "end_to_end_ms_p95": 210.28,
+     "incident_latency_ms_max": 255.14,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 147.5,
+   "rss_mb_max": 1525.8,
+   "torch_cuda_peak_mb": 119.3,
+   "model": {
+    "mode": "shared",
+    "calls": 1628,
+    "model_ms_p50": 29.79,
+    "model_ms_p95": 38.73
+   },
+   "gpu_util_pct_mean": 32.7,
+   "gpu_mem_used_mb_max": 843.0,
+   "gpu_sm_clock_mhz_mean": 1762,
+   "all_streaming": true
+  },
+  {
+   "backend": "shared",
+   "cameras": 4,
+   "mode": "throughput",
+   "max_fps": null,
+   "window_s": 20.0,
+   "startup_s": 3.0,
+   "aggregate_fps": 62.4,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 15.59,
+     "source_fps": 50.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 62.4,
+     "inference_ms_p95": 73.8,
+     "end_to_end_ms_p50": 378.96,
+     "end_to_end_ms_p95": 410.56,
+     "incident_latency_ms_max": 409.46,
+     "state": "STREAMING"
+    },
+    "cam2": {
+     "processed_fps": 15.64,
+     "source_fps": 29.97,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 61.63,
+     "inference_ms_p95": 74.59,
+     "end_to_end_ms_p50": 378.37,
+     "end_to_end_ms_p95": 410.68,
+     "incident_latency_ms_max": 424.18,
+     "state": "STREAMING"
+    },
+    "cam3": {
+     "processed_fps": 15.59,
+     "source_fps": 25.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 62.5,
+     "inference_ms_p95": 76.0,
+     "end_to_end_ms_p50": 377.93,
+     "end_to_end_ms_p95": 410.58,
+     "incident_latency_ms_max": null,
+     "state": "STREAMING"
+    },
+    "cam4": {
+     "processed_fps": 15.59,
+     "source_fps": 24.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 62.32,
+     "inference_ms_p95": 74.82,
+     "end_to_end_ms_p50": 378.83,
+     "end_to_end_ms_p95": 411.15,
+     "incident_latency_ms_max": 426.67,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 130.7,
+   "rss_mb_max": 1729.8,
+   "torch_cuda_peak_mb": 183.3,
+   "model": {
+    "mode": "shared",
+    "calls": 1623,
+    "model_ms_p50": 62.27,
+    "model_ms_p95": 74.63
+   },
+   "gpu_util_pct_mean": 32.1,
+   "gpu_mem_used_mb_max": 927.0,
+   "gpu_sm_clock_mhz_mean": 1731,
+   "all_streaming": true
+  },
+  {
+   "backend": "batched",
+   "cameras": 1,
+   "mode": "throughput",
+   "max_fps": null,
+   "window_s": 20.0,
+   "startup_s": 2.9,
+   "aggregate_fps": 65.6,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 65.6,
+     "source_fps": 50.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 13.45,
+     "inference_ms_p95": 19.89,
+     "end_to_end_ms_p50": 86.5,
+     "end_to_end_ms_p95": 106.07,
+     "incident_latency_ms_max": 138.6,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 137.4,
+   "rss_mb_max": 1413.8,
+   "torch_cuda_peak_mb": 87.3,
+   "model": {
+    "mode": "batched",
+    "calls": 1686,
+    "model_ms_p50": 13.41,
+    "model_ms_p95": 19.77,
+    "mean_batch": 1.0
+   },
+   "gpu_util_pct_mean": 31.8,
+   "gpu_mem_used_mb_max": 794.0,
+   "gpu_sm_clock_mhz_mean": 1512,
+   "all_streaming": true
+  },
+  {
+   "backend": "batched",
+   "cameras": 2,
+   "mode": "throughput",
+   "max_fps": null,
+   "window_s": 20.0,
+   "startup_s": 3.0,
+   "aggregate_fps": 91.8,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 46.07,
+     "source_fps": 50.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 18.52,
+     "inference_ms_p95": 28.52,
+     "end_to_end_ms_p50": 124.35,
+     "end_to_end_ms_p95": 159.86,
+     "incident_latency_ms_max": 175.44,
+     "state": "STREAMING"
+    },
+    "cam2": {
+     "processed_fps": 45.77,
+     "source_fps": 29.97,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 18.03,
+     "inference_ms_p95": 27.14,
+     "end_to_end_ms_p50": 125.1,
+     "end_to_end_ms_p95": 174.65,
+     "incident_latency_ms_max": 188.27,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 172.1,
+   "rss_mb_max": 1536.0,
+   "torch_cuda_peak_mb": 101.9,
+   "model": {
+    "mode": "batched",
+    "calls": 2385,
+    "model_ms_p50": 8.38,
+    "model_ms_p95": 12.67,
+    "mean_batch": 1.99
+   },
+   "gpu_util_pct_mean": 34.1,
+   "gpu_mem_used_mb_max": 783.0,
+   "gpu_sm_clock_mhz_mean": 1362,
+   "all_streaming": true
+  },
+  {
+   "backend": "batched",
+   "cameras": 4,
+   "mode": "throughput",
+   "max_fps": null,
+   "window_s": 20.0,
+   "startup_s": 2.7,
+   "aggregate_fps": 118.1,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 29.38,
+     "source_fps": 50.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 26.48,
+     "inference_ms_p95": 43.54,
+     "end_to_end_ms_p50": 194.23,
+     "end_to_end_ms_p95": 264.19,
+     "incident_latency_ms_max": 222.29,
+     "state": "STREAMING"
+    },
+    "cam2": {
+     "processed_fps": 28.93,
+     "source_fps": 29.97,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 26.32,
+     "inference_ms_p95": 44.5,
+     "end_to_end_ms_p50": 196.27,
+     "end_to_end_ms_p95": 274.36,
+     "incident_latency_ms_max": 270.81,
+     "state": "STREAMING"
+    },
+    "cam3": {
+     "processed_fps": 30.23,
+     "source_fps": 25.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 28.18,
+     "inference_ms_p95": 41.97,
+     "end_to_end_ms_p50": 192.66,
+     "end_to_end_ms_p95": 235.72,
+     "incident_latency_ms_max": null,
+     "state": "STREAMING"
+    },
+    "cam4": {
+     "processed_fps": 29.58,
+     "source_fps": 24.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 28.35,
+     "inference_ms_p95": 45.65,
+     "end_to_end_ms_p50": 195.02,
+     "end_to_end_ms_p95": 250.47,
+     "incident_latency_ms_max": 194.78,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 203.8,
+   "rss_mb_max": 1729.0,
+   "torch_cuda_peak_mb": 130.6,
+   "model": {
+    "mode": "batched",
+    "calls": 3189,
+    "model_ms_p50": 6.14,
+    "model_ms_p95": 10.11,
+    "mean_batch": 3.87
+   },
+   "gpu_util_pct_mean": 32.8,
+   "gpu_mem_used_mb_max": 813.0,
+   "gpu_sm_clock_mhz_mean": 1094,
+   "all_streaming": true
+  },
+  {
+   "backend": "per_camera",
+   "cameras": 1,
+   "mode": "throughput",
+   "max_fps": null,
+   "window_s": 20.0,
+   "startup_s": 3.5,
+   "aggregate_fps": 63.3,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 63.3,
+     "source_fps": 50.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 13.55,
+     "inference_ms_p95": 19.49,
+     "end_to_end_ms_p50": 88.95,
+     "end_to_end_ms_p95": 108.12,
+     "incident_latency_ms_max": 178.31,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 143.0,
+   "rss_mb_max": 1469.9,
+   "torch_cuda_peak_mb": 87.3,
+   "model": {
+    "mode": "per_camera",
+    "calls": 1525,
+    "model_ms_p50": 14.3,
+    "model_ms_p95": 23.8
+   },
+   "gpu_util_pct_mean": 36.6,
+   "gpu_mem_used_mb_max": 781.0,
+   "gpu_sm_clock_mhz_mean": 1298,
+   "all_streaming": true
+  },
+  {
+   "backend": "per_camera",
+   "cameras": 2,
+   "mode": "throughput",
+   "max_fps": null,
+   "window_s": 20.0,
+   "startup_s": 3.4,
+   "aggregate_fps": 56.8,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 28.63,
+     "source_fps": 50.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 31.74,
+     "inference_ms_p95": 45.93,
+     "end_to_end_ms_p50": 205.12,
+     "end_to_end_ms_p95": 233.45,
+     "incident_latency_ms_max": 327.68,
+     "state": "STREAMING"
+    },
+    "cam2": {
+     "processed_fps": 28.18,
+     "source_fps": 29.97,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 31.91,
+     "inference_ms_p95": 45.93,
+     "end_to_end_ms_p50": 206.68,
+     "end_to_end_ms_p95": 242.5,
+     "incident_latency_ms_max": 392.14,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 185.2,
+   "rss_mb_max": 1625.1,
+   "torch_cuda_peak_mb": 144.6,
+   "model": {
+    "mode": "per_camera",
+    "calls": 1373,
+    "model_ms_p50": 32.26,
+    "model_ms_p95": 48.82
+   },
+   "gpu_util_pct_mean": 37.2,
+   "gpu_mem_used_mb_max": 835.0,
+   "gpu_sm_clock_mhz_mean": 1217,
+   "all_streaming": true
+  },
+  {
+   "backend": "per_camera",
+   "cameras": 4,
+   "mode": "throughput",
+   "max_fps": null,
+   "window_s": 20.0,
+   "startup_s": 3.2,
+   "aggregate_fps": 68.1,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 16.65,
+     "source_fps": 50.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 57.35,
+     "inference_ms_p95": 71.84,
+     "end_to_end_ms_p50": 359.06,
+     "end_to_end_ms_p95": 413.06,
+     "incident_latency_ms_max": 424.6,
+     "state": "STREAMING"
+    },
+    "cam2": {
+     "processed_fps": 16.9,
+     "source_fps": 29.97,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 55.53,
+     "inference_ms_p95": 68.59,
+     "end_to_end_ms_p50": 351.63,
+     "end_to_end_ms_p95": 408.37,
+     "incident_latency_ms_max": 435.35,
+     "state": "STREAMING"
+    },
+    "cam3": {
+     "processed_fps": 17.35,
+     "source_fps": 25.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 55.85,
+     "inference_ms_p95": 69.09,
+     "end_to_end_ms_p50": 344.45,
+     "end_to_end_ms_p95": 378.88,
+     "incident_latency_ms_max": null,
+     "state": "STREAMING"
+    },
+    "cam4": {
+     "processed_fps": 17.2,
+     "source_fps": 24.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 55.74,
+     "inference_ms_p95": 67.82,
+     "end_to_end_ms_p50": 346.58,
+     "end_to_end_ms_p95": 380.24,
+     "incident_latency_ms_max": 375.27,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 255.2,
+   "rss_mb_max": 1936.9,
+   "torch_cuda_peak_mb": 247.6,
+   "model": {
+    "mode": "per_camera",
+    "calls": 1648,
+    "model_ms_p50": 56.15,
+    "model_ms_p95": 68.9
+   },
+   "gpu_util_pct_mean": 30.8,
+   "gpu_mem_used_mb_max": 963.0,
+   "gpu_sm_clock_mhz_mean": 1367,
+   "all_streaming": true
+  },
+  {
+   "backend": "batched",
+   "cameras": 8,
+   "mode": "throughput",
+   "max_fps": null,
+   "window_s": 20.0,
+   "startup_s": 3.5,
+   "aggregate_fps": 90.3,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 10.34,
+     "source_fps": 50.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 89.4,
+     "inference_ms_p95": 119.46,
+     "end_to_end_ms_p50": 565.03,
+     "end_to_end_ms_p95": 681.87,
+     "incident_latency_ms_max": 758.9,
+     "state": "STREAMING"
+    },
+    "cam2": {
+     "processed_fps": 10.39,
+     "source_fps": 29.97,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 87.23,
+     "inference_ms_p95": 120.64,
+     "end_to_end_ms_p50": 549.44,
+     "end_to_end_ms_p95": 682.16,
+     "incident_latency_ms_max": 527.41,
+     "state": "STREAMING"
+    },
+    "cam3": {
+     "processed_fps": 11.89,
+     "source_fps": 25.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 59.19,
+     "inference_ms_p95": 120.68,
+     "end_to_end_ms_p50": 398.26,
+     "end_to_end_ms_p95": 669.09,
+     "incident_latency_ms_max": null,
+     "state": "STREAMING"
+    },
+    "cam4": {
+     "processed_fps": 12.34,
+     "source_fps": 24.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 69.26,
+     "inference_ms_p95": 120.7,
+     "end_to_end_ms_p50": 479.85,
+     "end_to_end_ms_p95": 640.19,
+     "incident_latency_ms_max": 497.08,
+     "state": "STREAMING"
+    },
+    "cam5": {
+     "processed_fps": 10.39,
+     "source_fps": 50.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 87.97,
+     "inference_ms_p95": 120.1,
+     "end_to_end_ms_p50": 559.28,
+     "end_to_end_ms_p95": 675.93,
+     "incident_latency_ms_max": 578.13,
+     "state": "STREAMING"
+    },
+    "cam6": {
+     "processed_fps": 10.44,
+     "source_fps": 29.97,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 85.19,
+     "inference_ms_p95": 126.49,
+     "end_to_end_ms_p50": 527.33,
+     "end_to_end_ms_p95": 716.16,
+     "incident_latency_ms_max": 557.27,
+     "state": "STREAMING"
+    },
+    "cam7": {
+     "processed_fps": 12.34,
+     "source_fps": 25.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 57.02,
+     "inference_ms_p95": 118.08,
+     "end_to_end_ms_p50": 386.44,
+     "end_to_end_ms_p95": 634.59,
+     "incident_latency_ms_max": null,
+     "state": "STREAMING"
+    },
+    "cam8": {
+     "processed_fps": 12.19,
+     "source_fps": 24.0,
+     "target_fps": null,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 69.06,
+     "inference_ms_p95": 119.73,
+     "end_to_end_ms_p50": 486.42,
+     "end_to_end_ms_p95": 640.13,
+     "incident_latency_ms_max": 541.19,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 205.8,
+   "rss_mb_max": 2177.2,
+   "torch_cuda_peak_mb": 185.7,
+   "model": {
+    "mode": "batched",
+    "calls": 2424,
+    "model_ms_p50": 8.28,
+    "model_ms_p95": 15.94,
+    "mean_batch": 5.42
+   },
+   "gpu_util_pct_mean": 35.4,
+   "gpu_mem_used_mb_max": 888.0,
+   "gpu_sm_clock_mhz_mean": 782,
+   "all_streaming": true
+  },
+  {
+   "backend": "shared",
+   "cameras": 1,
+   "mode": "live",
+   "max_fps": 15.0,
+   "window_s": 20.0,
+   "startup_s": 3.9,
+   "aggregate_fps": 15.0,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 15.0,
+     "source_fps": 50.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 25.48,
+     "inference_ms_p95": 37.66,
+     "end_to_end_ms_p50": 27.23,
+     "end_to_end_ms_p95": 39.52,
+     "incident_latency_ms_max": 90.16,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 68.5,
+   "rss_mb_max": 1412.4,
+   "torch_cuda_peak_mb": 87.3,
+   "model": {
+    "mode": "shared",
+    "calls": 390,
+    "model_ms_p50": 25.47,
+    "model_ms_p95": 37.11
+   },
+   "gpu_util_pct_mean": 29.1,
+   "gpu_mem_used_mb_max": 780.0,
+   "gpu_sm_clock_mhz_mean": 598,
+   "all_streaming": true
+  },
+  {
+   "backend": "shared",
+   "cameras": 2,
+   "mode": "live",
+   "max_fps": 15.0,
+   "window_s": 20.0,
+   "startup_s": 3.7,
+   "aggregate_fps": 29.9,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 14.95,
+     "source_fps": 50.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 32.93,
+     "inference_ms_p95": 56.11,
+     "end_to_end_ms_p50": 35.19,
+     "end_to_end_ms_p95": 60.49,
+     "incident_latency_ms_max": 87.74,
+     "state": "STREAMING"
+    },
+    "cam2": {
+     "processed_fps": 15.0,
+     "source_fps": 29.97,
+     "target_fps": 15.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 26.39,
+     "inference_ms_p95": 52.16,
+     "end_to_end_ms_p50": 30.53,
+     "end_to_end_ms_p95": 56.44,
+     "incident_latency_ms_max": 133.02,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 117.5,
+   "rss_mb_max": 1506.1,
+   "torch_cuda_peak_mb": 119.3,
+   "model": {
+    "mode": "shared",
+    "calls": 780,
+    "model_ms_p50": 29.61,
+    "model_ms_p95": 54.28
+   },
+   "gpu_util_pct_mean": 41.9,
+   "gpu_mem_used_mb_max": 826.0,
+   "gpu_sm_clock_mhz_mean": 407,
+   "all_streaming": true
+  },
+  {
+   "backend": "shared",
+   "cameras": 4,
+   "mode": "live",
+   "max_fps": 15.0,
+   "window_s": 20.0,
+   "startup_s": 4.4,
+   "aggregate_fps": 55.8,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 14.0,
+     "source_fps": 50.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.0667,
+     "inference_ms_p50": 69.0,
+     "inference_ms_p95": 99.93,
+     "end_to_end_ms_p50": 166.72,
+     "end_to_end_ms_p95": 215.16,
+     "incident_latency_ms_max": 302.81,
+     "state": "STREAMING"
+    },
+    "cam2": {
+     "processed_fps": 13.9,
+     "source_fps": 29.97,
+     "target_fps": 15.0,
+     "drop_ratio": 0.0733,
+     "inference_ms_p50": 68.86,
+     "inference_ms_p95": 103.08,
+     "end_to_end_ms_p50": 167.13,
+     "end_to_end_ms_p95": 216.67,
+     "incident_latency_ms_max": 257.38,
+     "state": "STREAMING"
+    },
+    "cam3": {
+     "processed_fps": 13.95,
+     "source_fps": 25.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.0669,
+     "inference_ms_p50": 70.24,
+     "inference_ms_p95": 101.12,
+     "end_to_end_ms_p50": 166.61,
+     "end_to_end_ms_p95": 219.22,
+     "incident_latency_ms_max": null,
+     "state": "STREAMING"
+    },
+    "cam4": {
+     "processed_fps": 14.0,
+     "source_fps": 24.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.0635,
+     "inference_ms_p50": 69.53,
+     "inference_ms_p95": 100.03,
+     "end_to_end_ms_p50": 155.42,
+     "end_to_end_ms_p95": 216.15,
+     "incident_latency_ms_max": 256.56,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 161.2,
+   "rss_mb_max": 1687.8,
+   "torch_cuda_peak_mb": 183.3,
+   "model": {
+    "mode": "shared",
+    "calls": 1382,
+    "model_ms_p50": 69.58,
+    "model_ms_p95": 100.91
+   },
+   "gpu_util_pct_mean": 35.5,
+   "gpu_mem_used_mb_max": 902.0,
+   "gpu_sm_clock_mhz_mean": 1254,
+   "all_streaming": true
+  },
+  {
+   "backend": "batched",
+   "cameras": 1,
+   "mode": "live",
+   "max_fps": 15.0,
+   "window_s": 20.0,
+   "startup_s": 3.0,
+   "aggregate_fps": 15.0,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 14.99,
+     "source_fps": 50.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 26.57,
+     "inference_ms_p95": 34.53,
+     "end_to_end_ms_p50": 28.55,
+     "end_to_end_ms_p95": 37.95,
+     "incident_latency_ms_max": 67.44,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 79.2,
+   "rss_mb_max": 1401.2,
+   "torch_cuda_peak_mb": 87.3,
+   "model": {
+    "mode": "batched",
+    "calls": 390,
+    "model_ms_p50": 26.41,
+    "model_ms_p95": 34.02,
+    "mean_batch": 1.0
+   },
+   "gpu_util_pct_mean": 24.9,
+   "gpu_mem_used_mb_max": 786.0,
+   "gpu_sm_clock_mhz_mean": 786,
+   "all_streaming": true
+  },
+  {
+   "backend": "batched",
+   "cameras": 2,
+   "mode": "live",
+   "max_fps": 15.0,
+   "window_s": 20.0,
+   "startup_s": 4.2,
+   "aggregate_fps": 29.9,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 14.99,
+     "source_fps": 50.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 40.72,
+     "inference_ms_p95": 68.57,
+     "end_to_end_ms_p50": 44.4,
+     "end_to_end_ms_p95": 74.21,
+     "incident_latency_ms_max": 122.87,
+     "state": "STREAMING"
+    },
+    "cam2": {
+     "processed_fps": 14.94,
+     "source_fps": 29.97,
+     "target_fps": 15.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 42.88,
+     "inference_ms_p95": 75.31,
+     "end_to_end_ms_p50": 48.81,
+     "end_to_end_ms_p95": 83.94,
+     "incident_latency_ms_max": 148.55,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 115.5,
+   "rss_mb_max": 1508.4,
+   "torch_cuda_peak_mb": 101.9,
+   "model": {
+    "mode": "batched",
+    "calls": 779,
+    "model_ms_p50": 19.73,
+    "model_ms_p95": 33.03,
+    "mean_batch": 1.38
+   },
+   "gpu_util_pct_mean": 41.9,
+   "gpu_mem_used_mb_max": 782.0,
+   "gpu_sm_clock_mhz_mean": 574,
+   "all_streaming": true
+  },
+  {
+   "backend": "batched",
+   "cameras": 4,
+   "mode": "live",
+   "max_fps": 15.0,
+   "window_s": 20.0,
+   "startup_s": 3.6,
+   "aggregate_fps": 59.9,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 14.99,
+     "source_fps": 50.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 47.18,
+     "inference_ms_p95": 81.62,
+     "end_to_end_ms_p50": 59.76,
+     "end_to_end_ms_p95": 94.15,
+     "incident_latency_ms_max": 149.63,
+     "state": "STREAMING"
+    },
+    "cam2": {
+     "processed_fps": 14.99,
+     "source_fps": 29.97,
+     "target_fps": 15.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 48.97,
+     "inference_ms_p95": 83.4,
+     "end_to_end_ms_p50": 61.44,
+     "end_to_end_ms_p95": 115.43,
+     "incident_latency_ms_max": 134.73,
+     "state": "STREAMING"
+    },
+    "cam3": {
+     "processed_fps": 14.99,
+     "source_fps": 25.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 48.61,
+     "inference_ms_p95": 83.92,
+     "end_to_end_ms_p50": 61.42,
+     "end_to_end_ms_p95": 108.94,
+     "incident_latency_ms_max": null,
+     "state": "STREAMING"
+    },
+    "cam4": {
+     "processed_fps": 14.89,
+     "source_fps": 24.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.0033,
+     "inference_ms_p50": 49.54,
+     "inference_ms_p95": 82.88,
+     "end_to_end_ms_p50": 63.98,
+     "end_to_end_ms_p95": 109.13,
+     "incident_latency_ms_max": 129.0,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 161.6,
+   "rss_mb_max": 1699.9,
+   "torch_cuda_peak_mb": 129.5,
+   "model": {
+    "mode": "batched",
+    "calls": 1558,
+    "model_ms_p50": 11.57,
+    "model_ms_p95": 19.34,
+    "mean_batch": 2.74
+   },
+   "gpu_util_pct_mean": 32.2,
+   "gpu_mem_used_mb_max": 827.0,
+   "gpu_sm_clock_mhz_mean": 1178,
+   "all_streaming": true
+  },
+  {
+   "backend": "batched",
+   "cameras": 8,
+   "mode": "live",
+   "max_fps": 15.0,
+   "window_s": 20.0,
+   "startup_s": 3.9,
+   "aggregate_fps": 92.6,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 10.58,
+     "source_fps": 50.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.291,
+     "inference_ms_p50": 90.08,
+     "inference_ms_p95": 125.8,
+     "end_to_end_ms_p50": 193.35,
+     "end_to_end_ms_p95": 252.54,
+     "incident_latency_ms_max": 296.48,
+     "state": "DEGRADED"
+    },
+    "cam2": {
+     "processed_fps": 10.83,
+     "source_fps": 29.97,
+     "target_fps": 15.0,
+     "drop_ratio": 0.2767,
+     "inference_ms_p50": 83.71,
+     "inference_ms_p95": 122.43,
+     "end_to_end_ms_p50": 185.02,
+     "end_to_end_ms_p95": 252.09,
+     "incident_latency_ms_max": 310.74,
+     "state": "DEGRADED"
+    },
+    "cam3": {
+     "processed_fps": 12.88,
+     "source_fps": 25.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.1371,
+     "inference_ms_p50": 62.3,
+     "inference_ms_p95": 116.58,
+     "end_to_end_ms_p50": 128.8,
+     "end_to_end_ms_p95": 223.68,
+     "incident_latency_ms_max": null,
+     "state": "STREAMING"
+    },
+    "cam4": {
+     "processed_fps": 12.23,
+     "source_fps": 24.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.1806,
+     "inference_ms_p50": 66.17,
+     "inference_ms_p95": 123.97,
+     "end_to_end_ms_p50": 164.57,
+     "end_to_end_ms_p95": 235.03,
+     "incident_latency_ms_max": 209.03,
+     "state": "STREAMING"
+    },
+    "cam5": {
+     "processed_fps": 10.18,
+     "source_fps": 50.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.32,
+     "inference_ms_p50": 92.59,
+     "inference_ms_p95": 126.05,
+     "end_to_end_ms_p50": 194.81,
+     "end_to_end_ms_p95": 254.05,
+     "incident_latency_ms_max": 285.39,
+     "state": "DEGRADED"
+    },
+    "cam6": {
+     "processed_fps": 11.03,
+     "source_fps": 29.97,
+     "target_fps": 15.0,
+     "drop_ratio": 0.2633,
+     "inference_ms_p50": 72.81,
+     "inference_ms_p95": 123.51,
+     "end_to_end_ms_p50": 182.15,
+     "end_to_end_ms_p95": 245.58,
+     "incident_latency_ms_max": 188.17,
+     "state": "DEGRADED"
+    },
+    "cam7": {
+     "processed_fps": 12.48,
+     "source_fps": 25.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.1639,
+     "inference_ms_p50": 63.2,
+     "inference_ms_p95": 114.33,
+     "end_to_end_ms_p50": 127.91,
+     "end_to_end_ms_p95": 226.73,
+     "incident_latency_ms_max": null,
+     "state": "STREAMING"
+    },
+    "cam8": {
+     "processed_fps": 12.38,
+     "source_fps": 24.0,
+     "target_fps": 15.0,
+     "drop_ratio": 0.1733,
+     "inference_ms_p50": 66.34,
+     "inference_ms_p95": 120.89,
+     "end_to_end_ms_p50": 156.77,
+     "end_to_end_ms_p95": 235.34,
+     "incident_latency_ms_max": 233.0,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 248.4,
+   "rss_mb_max": 2121.3,
+   "torch_cuda_peak_mb": 185.7,
+   "model": {
+    "mode": "batched",
+    "calls": 2447,
+    "model_ms_p50": 8.39,
+    "model_ms_p95": 14.59,
+    "mean_batch": 5.68
+   },
+   "gpu_util_pct_mean": 33.3,
+   "gpu_mem_used_mb_max": 887.0,
+   "gpu_sm_clock_mhz_mean": 812,
+   "all_streaming": false
+  },
+  {
+   "backend": "batched",
+   "cameras": 8,
+   "mode": "live",
+   "max_fps": 10.0,
+   "window_s": 20.0,
+   "startup_s": 4.7,
+   "aggregate_fps": 79.9,
+   "per_camera": {
+    "cam1": {
+     "processed_fps": 10.09,
+     "source_fps": 50.0,
+     "target_fps": 10.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 74.64,
+     "inference_ms_p95": 111.83,
+     "end_to_end_ms_p50": 87.03,
+     "end_to_end_ms_p95": 185.71,
+     "incident_latency_ms_max": 236.8,
+     "state": "STREAMING"
+    },
+    "cam2": {
+     "processed_fps": 9.99,
+     "source_fps": 29.97,
+     "target_fps": 10.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 77.58,
+     "inference_ms_p95": 119.37,
+     "end_to_end_ms_p50": 92.84,
+     "end_to_end_ms_p95": 188.1,
+     "incident_latency_ms_max": 166.07,
+     "state": "STREAMING"
+    },
+    "cam3": {
+     "processed_fps": 9.94,
+     "source_fps": 25.0,
+     "target_fps": 10.0,
+     "drop_ratio": 0.005,
+     "inference_ms_p50": 69.88,
+     "inference_ms_p95": 119.69,
+     "end_to_end_ms_p50": 80.71,
+     "end_to_end_ms_p95": 142.17,
+     "incident_latency_ms_max": null,
+     "state": "STREAMING"
+    },
+    "cam4": {
+     "processed_fps": 9.99,
+     "source_fps": 24.0,
+     "target_fps": 10.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 78.01,
+     "inference_ms_p95": 116.09,
+     "end_to_end_ms_p50": 89.56,
+     "end_to_end_ms_p95": 159.24,
+     "incident_latency_ms_max": 225.87,
+     "state": "STREAMING"
+    },
+    "cam5": {
+     "processed_fps": 10.04,
+     "source_fps": 50.0,
+     "target_fps": 10.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 78.81,
+     "inference_ms_p95": 117.3,
+     "end_to_end_ms_p50": 89.68,
+     "end_to_end_ms_p95": 200.84,
+     "incident_latency_ms_max": 252.16,
+     "state": "STREAMING"
+    },
+    "cam6": {
+     "processed_fps": 9.89,
+     "source_fps": 29.97,
+     "target_fps": 10.0,
+     "drop_ratio": 0.005,
+     "inference_ms_p50": 80.77,
+     "inference_ms_p95": 124.4,
+     "end_to_end_ms_p50": 99.36,
+     "end_to_end_ms_p95": 224.71,
+     "incident_latency_ms_max": 348.2,
+     "state": "STREAMING"
+    },
+    "cam7": {
+     "processed_fps": 9.94,
+     "source_fps": 25.0,
+     "target_fps": 10.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 71.8,
+     "inference_ms_p95": 113.97,
+     "end_to_end_ms_p50": 82.74,
+     "end_to_end_ms_p95": 166.72,
+     "incident_latency_ms_max": null,
+     "state": "STREAMING"
+    },
+    "cam8": {
+     "processed_fps": 10.04,
+     "source_fps": 24.0,
+     "target_fps": 10.0,
+     "drop_ratio": 0.0,
+     "inference_ms_p50": 75.4,
+     "inference_ms_p95": 118.16,
+     "end_to_end_ms_p50": 89.03,
+     "end_to_end_ms_p95": 150.99,
+     "incident_latency_ms_max": 274.62,
+     "state": "STREAMING"
+    }
+   },
+   "process_cpu_pct": 229.7,
+   "rss_mb_max": 2084.4,
+   "torch_cuda_peak_mb": 185.7,
+   "model": {
+    "mode": "batched",
+    "calls": 2079,
+    "model_ms_p50": 9.21,
+    "model_ms_p95": 15.49,
+    "mean_batch": 4.4
+   },
+   "gpu_util_pct_mean": 29.7,
+   "gpu_mem_used_mb_max": 892.0,
+   "gpu_sm_clock_mhz_mean": 940,
+   "all_streaming": true
+  }
+ ]
+}

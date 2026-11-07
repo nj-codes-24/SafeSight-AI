@@ -378,6 +378,8 @@ def empty(text, title=None, target=None):
 def alert_html(a):
     nh = a["type"] == "NO_HELMET"
     kind = "No helmet" if nh else f"Zone · {a['zone']}"
+    if a.get("classification") == "requires_review":  # no PPE requirement configured here: an observation, not a violation
+        kind += " · review (no PPE rule configured)"
     return (f'<div class="ss-alert" style="--c:{BAD if nh else ZONE}">{type_badge(a["type"])}'
             f'<span class="w">W{esc(a["worker_id"])}</span><span style="color:var(--ink-2)">{esc(kind)}</span>'
             f'<span class="t">{a["video_t"]} s · {esc(a["incident_id"])}</span></div>')

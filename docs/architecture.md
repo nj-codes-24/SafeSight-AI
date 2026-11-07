@@ -140,11 +140,36 @@ sequenceDiagram
 - **Broken-track suppression.** If a track that is no longer visible raised the same type of incident within the cooldown, and the new ID is within one box height of it, the new alert is treated as the same worker under a new ID.
 - **Evidence** is the annotated frame at the moment of confirmation, so it shows the boxes, IDs and zone that led to the decision.
 
+### 5.1 Hazard typing and risk assessment (`intelligence/`)
+
+Every incident is also typed and risk-assessed. This does not change when incidents open or close.
+
+```mermaid
+flowchart LR
+    I["Incident raised<br/>NO_HELMET · ZONE_INTRUSION"] --> H["Hazard code<br/>taxonomy + zone kind"]
+    H --> R["RiskEngine.assess<br/>severity × exposure band"]
+    P[("Policy<br/>models/risk_policy.json<br/>or the draft default")] --> R
+    R --> A[("risk_assessments<br/>level, factors, policy version")]
+    T["Every frame: exposure grows"] --> R
+```
+
+- **Hazard code.** `NO_HELMET` maps to `PPE.HEAD.MISSING`. `ZONE_INTRUSION` maps by the zone's optional `kind`: `restricted` (the default) to `ZONE.ENTRY`, `machine_exclusion` to `MACH.ZONE.ENTRY`, and so on (`intelligence/taxonomy.py`). Zones of kind `pedestrian_only` and `keep_clear` do not raise person-entry incidents.
+- **Risk level** is read from the policy's severity × exposure matrix. Exposure starts at the confirmation time and grows while the incident is open; a rise in level is recorded as an escalation.
+- **Model confidence never lowers risk.** It only sets the evidence quality (strong, moderate, weak), and weak evidence is marked for human review.
+- **Unknown context never lowers risk,** and a draft policy never applies reductions. The shipped policy is a draft example; a competent person must approve a site policy.
+- **Validation** of incidents against labelled episodes: `scripts/evaluation/event_metrics.py` (see `docs/product_research/09_SAFETY_VALIDATION_FRAMEWORK.md`).
+
+### 5.2 Headless multi-camera runtime (`runtime/`)
+
+The same pipeline can also run without the dashboard, for several cameras at once (`python -m runtime run --config …`). Each camera has a capture thread, a bounded frame queue and a processing thread with its own `Pipeline`, tracker and database connection; one model is shared through a batched inference thread. Design: [product_research/15](product_research/15_HEADLESS_RUNTIME_ARCHITECTURE.md); operation and measurements: [product_research/16](product_research/16_HEADLESS_RUNTIME_IMPLEMENTATION.md); commands: [runtime_getting_started.md](runtime_getting_started.md).
+
+**Camera view monitoring.** Before a frame reaches the pipeline, the camera's view guard (`runtime/view.py`, using `inference/view_monitor.py`) checks every 0.5 s that the camera still shows its registered reference view. A confirmed move, cut or blockage ends open incidents at the last reliable observation (`camera_view_changed`, `camera_scene_switched`, `camera_blocked`), resets tracks and suspends analysis until the registered view returns or an operator accepts a new one; zones of an unverified view raise nothing. The view state is reported beside the connection state. Details: [product_research/21_CAMERA_VIEW_CHANGE_DETECTION.md](product_research/21_CAMERA_VIEW_CHANGE_DETECTION.md).
+
 ## 6. Storage
 
 | Store | Location | Contents |
 |---|---|---|
-| Incidents database | `logs/incidents/incidents.db` (SQLite, WAL) | `sessions`: id, time, source, frames, confirmed tracks, final compliant/violation/uncertain counts, average FPS. `incidents`: id, start and end, type, worker ID, confidence, camera, session, zone, video time, evidence path, status. |
+| Incidents database | `logs/incidents/incidents.db` (SQLite, WAL) | `sessions`: id, time, source, frames, confirmed tracks, final compliant/violation/uncertain counts, average FPS. `incidents`: id, start and end, type, worker ID, confidence, camera, session, zone, video time, evidence path, status. `risk_assessments`: one row per incident with hazard code, severity, exposure, risk level, evidence quality, factors, actions, policy version and status, escalation time. `incident_reviews` (milestone M3): append-only operator decisions, one row per status change, with the previous status, reviewer, reason, source (dashboard or runtime CLI) and UTC time. |
 | Evidence | `logs/incidents/evidence/<session>/<incident>.jpg` | One annotated frame per incident; never overwritten |
 | Runtime configuration | `models/runtime_config.json` | Zones, plus thresholds and alert timing once saved. Defaults live in `inference/config.py`. |
 | Model record | `models/model_config.yaml` | Frozen model identity, checksum, thresholds, licence note |

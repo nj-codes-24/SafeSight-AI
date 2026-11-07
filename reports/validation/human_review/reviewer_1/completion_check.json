@@ -1,0 +1,198 @@
+{
+ "package": "reviewer_1",
+ "package_id": "SSV-M3-R1-5266E182",
+ "checked": "2026-11-06",
+ "ready": false,
+ "clips_ready": 0,
+ "clips": 15,
+ "reviewer_ids": [],
+ "problems": [
+  "ballast_train: not marked complete",
+  "ballast_train: needs a named human annotator",
+  "ballast_train: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "c00: not marked complete",
+  "c00: needs a named human annotator",
+  "c00: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "c01: not marked complete",
+  "c01: needs a named human annotator",
+  "c01: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "c02: not marked complete",
+  "c02: needs a named human annotator",
+  "c02: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "c03: not marked complete",
+  "c03: needs a named human annotator",
+  "c03: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "c07: not marked complete",
+  "c07: needs a named human annotator",
+  "c07: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "c08: not marked complete",
+  "c08: needs a named human annotator",
+  "c08: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "c09: not marked complete",
+  "c09: needs a named human annotator",
+  "c09: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "c10: not marked complete",
+  "c10: needs a named human annotator",
+  "c10: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "c11: not marked complete",
+  "c11: needs a named human annotator",
+  "c11: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "c12: not marked complete",
+  "c12: needs a named human annotator",
+  "c12: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "framing_bare_head: not marked complete",
+  "framing_bare_head: needs a named human annotator",
+  "framing_bare_head: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "helmet_put_on: not marked complete",
+  "helmet_put_on: needs a named human annotator",
+  "helmet_put_on: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "roadworks_night: not marked complete",
+  "roadworks_night: needs a named human annotator",
+  "roadworks_night: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "roadworks_night: ZONE.ENTRY intervals cover 0% of the clip (needs the whole clip)",
+  "track_work_day: not marked complete",
+  "track_work_day: needs a named human annotator",
+  "track_work_day: PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+  "track_work_day: ZONE.ENTRY intervals cover 0% of the clip (needs the whole clip)"
+ ],
+ "warnings": [],
+ "per_clip": {
+  "ballast_train": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  },
+  "c00": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  },
+  "c01": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  },
+  "c02": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  },
+  "c03": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  },
+  "c07": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  },
+  "c08": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  },
+  "c09": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  },
+  "c10": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  },
+  "c11": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  },
+  "c12": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  },
+  "framing_bare_head": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  },
+  "helmet_put_on": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  },
+  "roadworks_night": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+    "ZONE.ENTRY intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  },
+  "track_work_day": {
+   "ok": false,
+   "problems": [
+    "not marked complete",
+    "needs a named human annotator",
+    "PPE.HEAD.MISSING intervals cover 0% of the clip (needs the whole clip)",
+    "ZONE.ENTRY intervals cover 0% of the clip (needs the whole clip)"
+   ],
+   "warnings": []
+  }
+ }
+}

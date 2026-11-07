@@ -1,0 +1,66 @@
+{
+ "schema": "safesight.labels/1.0",
+ "label_set": "m2-provisional-v1.1",
+ "clip_id": "c03",
+ "file": "data/demo/candidates/c03.ogv",
+ "sha256": "C14F924CDB368F6634F086BD3B0B15905A8CAA68673DCD4C06DE296641F883DF",
+ "fps": 24.0,
+ "frames": 793,
+ "duration_s": 33.04,
+ "split": "held-out",
+ "source_group": "G02-scaffold",
+ "status": "provisional",
+ "annotators": [
+  {
+   "id": "ai-first-pass (Claude Opus 5.5)",
+   "kind": "ai",
+   "role": "first-pass",
+   "date": "2026-11-05",
+   "blind_to_model_output": "partial",
+   "notes": "No model output for these clips was viewed in this session; the repository's earlier unseen-footage notes (aggregate counts per clip) were known. Labelled from contact sheets (about 30 frames per clip) and detail crops; boundaries carry the stated uncertainty."
+  }
+ ],
+ "reviews": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "not evaluable: no zone configured for this clip"
+ },
+ "zones": [],
+ "intervals": [
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 0.0,
+   "end_s": 24.5,
+   "state": "monitorable",
+   "note": "one scaffolder in a yellow hard hat and harness"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 24.5,
+   "end_s": 27.5,
+   "state": "unobservable",
+   "note": "wide shot; the worker is tiny"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 27.5,
+   "end_s": 33.04,
+   "state": "monitorable",
+   "note": "city view; no people"
+  }
+ ],
+ "events": [],
+ "people": {
+  "distinct_workers": 1,
+  "basis": "single worker"
+ },
+ "attributes": {
+  "lighting": "day",
+  "distance": "near to far",
+  "camera": "hand-held, pans at the end",
+  "density": "1",
+  "image_quality": "good"
+ },
+ "derived_from": "m2-provisional-v1",
+ "changes": []
+}

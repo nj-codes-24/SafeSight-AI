@@ -40,7 +40,7 @@ jobs:
         run: ruff check .
 
       - name: Byte-compile all sources
-        run: python -m compileall -q app inference database training watchdog_svc scripts tests launch.py
+        run: python -m compileall -q app inference intelligence runtime database training watchdog_svc scripts tests launch.py
 
       - name: Tests (unit tests, watchdog drills; integration tests skip without weights)
         run: python -m pytest -rs

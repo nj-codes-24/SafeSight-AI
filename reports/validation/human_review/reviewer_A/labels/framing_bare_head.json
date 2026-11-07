@@ -1,0 +1,22 @@
+{
+ "schema": "safesight.labels/1.1",
+ "label_set": "m2-human-A",
+ "clip_id": "framing_bare_head",
+ "file": "data/demo/framing_bare_head.mp4",
+ "sha256": "BA1768484E060213328ECAA964616DE5FCEEEC457508FBCEA891C30417B0DDC7",
+ "fps": 24.0,
+ "frames": 216,
+ "duration_s": 9.0,
+ "status": "provisional",
+ "annotators": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "not_applicable"
+ },
+ "zones": [],
+ "intervals": [],
+ "events": [],
+ "people": {},
+ "attributes": {},
+ "review_complete": false
+}

@@ -1,0 +1,52 @@
+{
+ "schema": "safesight.labels/1.0",
+ "label_set": "m2-provisional-v1.1",
+ "clip_id": "c12",
+ "file": "data/demo/candidates/c12.ogv",
+ "sha256": "94963768025524A06414182C44104A7486BB45EF4648F7C5C6EF0D4642C70BF7",
+ "fps": 30.0,
+ "frames": 2094,
+ "duration_s": 69.8,
+ "split": "held-out",
+ "source_group": "G10-concrete-saw",
+ "status": "provisional",
+ "annotators": [
+  {
+   "id": "ai-first-pass (Claude Opus 5.5)",
+   "kind": "ai",
+   "role": "first-pass",
+   "date": "2026-11-05",
+   "blind_to_model_output": "partial",
+   "notes": "No model output for these clips was viewed in this session; the repository's earlier unseen-footage notes (aggregate counts per clip) were known. Labelled from contact sheets (about 30 frames per clip) and detail crops; boundaries carry the stated uncertainty."
+  }
+ ],
+ "reviews": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "not evaluable: no zone configured for this clip"
+ },
+ "zones": [],
+ "intervals": [
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 0.0,
+   "end_s": 69.8,
+   "state": "monitorable",
+   "note": "concrete saw close-up; no people; compression artefacts around 36.8 s and 50.6 s"
+  }
+ ],
+ "events": [],
+ "people": {
+  "distinct_workers": 0,
+  "basis": "no people"
+ },
+ "attributes": {
+  "lighting": "day, overcast",
+  "distance": "near",
+  "camera": "static",
+  "density": "0",
+  "image_quality": "good"
+ },
+ "derived_from": "m2-provisional-v1",
+ "changes": []
+}

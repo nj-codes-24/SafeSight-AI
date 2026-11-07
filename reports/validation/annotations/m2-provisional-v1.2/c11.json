@@ -1,0 +1,157 @@
+{
+ "schema": "safesight.labels/1.1",
+ "label_set": "m2-provisional-v1.2",
+ "clip_id": "c11",
+ "file": "data/demo/candidates/c11.ogv",
+ "sha256": "D831084A5F3CBA736E60664CE69788E56BA937C082ADD8DA8C51F1EBE78F067B",
+ "fps": 25.0,
+ "frames": 2579,
+ "duration_s": 103.16,
+ "split": "held-out",
+ "source_group": "G09-forklift-film",
+ "status": "provisional",
+ "annotators": [
+  {
+   "id": "ai-first-pass (Claude Opus 5.5)",
+   "kind": "ai",
+   "role": "first-pass",
+   "date": "2026-11-05",
+   "blind_to_model_output": "partial",
+   "notes": "No model output for these clips was viewed in this session; the repository's earlier unseen-footage notes (aggregate counts per clip) were known. Labelled from contact sheets (about 30 frames per clip) and detail crops; boundaries carry the stated uncertainty."
+  }
+ ],
+ "reviews": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "not evaluable: no zone configured for this clip"
+ },
+ "zones": [],
+ "intervals": [
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 0.0,
+   "end_s": 6.0,
+   "state": "unusable",
+   "note": "black, then a blurred pan"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 6.0,
+   "end_s": 13.0,
+   "state": "uncertain",
+   "note": "forklift with a small driver"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 13.0,
+   "end_s": 16.0,
+   "state": "monitorable",
+   "note": "hands and a model forklift; no heads"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 16.0,
+   "end_s": 30.0,
+   "state": "not_applicable",
+   "note": "office and classroom scenes"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 30.0,
+   "end_s": 31.5,
+   "state": "monitorable",
+   "note": "wheel and shoes; no heads"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 31.5,
+   "end_s": 38.0,
+   "state": "uncertain",
+   "note": "instructors or visitors without hard hats beside a forklift, one holding a hard hat; requirement for them unknown"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 38.0,
+   "end_s": 39.0,
+   "state": "monitorable",
+   "note": "close-up of a white hard hat"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 39.0,
+   "end_s": 50.0,
+   "state": "uncertain",
+   "note": "bare-headed reach-truck driver (requirement unknown) and a walker in a hard hat"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 50.0,
+   "end_s": 59.0,
+   "state": "uncertain",
+   "note": "overhead view of aisles; people small"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 59.0,
+   "end_s": 69.0,
+   "state": "uncertain",
+   "note": "bare-headed instructor with megaphone; requirement unknown"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 69.0,
+   "end_s": 75.0,
+   "state": "monitorable",
+   "note": "trainee in a white hard hat; structure close-up"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 75.0,
+   "end_s": 78.5,
+   "state": "uncertain",
+   "note": "bare-headed instructor with megaphone"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 78.5,
+   "end_s": 88.0,
+   "state": "monitorable",
+   "note": "trainees in numbered hard hats"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 88.0,
+   "end_s": 90.0,
+   "state": "unusable",
+   "note": "dark frames"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 90.0,
+   "end_s": 94.0,
+   "state": "monitorable",
+   "note": "trainee in a numbered hard hat"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 94.0,
+   "end_s": 103.16,
+   "state": "monitorable",
+   "note": "fork close-ups; no heads"
+  }
+ ],
+ "events": [],
+ "people": {
+  "distinct_workers": null,
+  "basis": "edited film: not countable"
+ },
+ "attributes": {
+  "lighting": "indoor, black and white",
+  "distance": "mixed",
+  "camera": "edited film",
+  "density": "1-6",
+  "image_quality": "archival (720x576)"
+ },
+ "derived_from": "m2-provisional-v1",
+ "changes": []
+}

@@ -1,0 +1,18 @@
+{
+ "schema": "safesight.ppe_policy/1.0",
+ "version": "example-1",
+ "status": "draft",
+ "approved_by": null,
+ "approved_on": null,
+ "note": "EXAMPLE ONLY. Copy to config/ppe_policy.json and replace every entry with requirements set by the site's competent safety personnel under the rules and procedures that apply to the site. SafeSight never infers a PPE requirement from the image. Without this file every requirement is unconfigured: missing head protection is reported for review, never as a confirmed violation.",
+ "entries": [
+  {"id": "DOCK-HEAD", "site": "site-a", "camera": "dock-1", "zone": "Loading area", "ppe": ["head"], "required": true,
+   "status": "provisional", "active": true, "effective_from": "2026-11-01T00:00:00+00:00", "effective_to": null,
+   "basis": "example: hard hats required in the loading area (to be confirmed by the site safety lead)"},
+  {"id": "DOCK-OFFICE", "site": "site-a", "camera": "dock-1", "zone": "Dock office", "ppe": ["head"], "required": false,
+   "status": "provisional", "basis": "example: no head protection required inside the dock office"},
+  {"id": "PIT-ALL", "site": "site-b", "camera": "pit-*", "ppe": ["head", "hi_vis", "footwear"], "required": true,
+   "status": "provisional", "basis": "example: construction work zone; hi_vis and footwear are listed for completeness, SafeSight can observe only head protection today",
+   "note": "camera ids are exact or '*'; 'pit-*' here is just a label and matches no camera until replaced"}
+ ]
+}

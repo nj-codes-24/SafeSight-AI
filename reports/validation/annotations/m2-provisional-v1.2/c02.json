@@ -1,0 +1,94 @@
+{
+ "schema": "safesight.labels/1.1",
+ "label_set": "m2-provisional-v1.2",
+ "clip_id": "c02",
+ "file": "data/demo/candidates/c02.webm",
+ "sha256": "2D152EEF0A4E541695FBBC7C4784E177D824B6CCC020EA2C91C806BFAF71C5F8",
+ "fps": 29.97002997002997,
+ "frames": 9990,
+ "duration_s": 333.33,
+ "split": "held-out",
+ "source_group": "G01-moira-close",
+ "status": "provisional",
+ "annotators": [
+  {
+   "id": "ai-first-pass (Claude Opus 5.5)",
+   "kind": "ai",
+   "role": "first-pass",
+   "date": "2026-11-05",
+   "blind_to_model_output": "partial",
+   "notes": "No model output for these clips was viewed in this session; the repository's earlier unseen-footage notes (aggregate counts per clip) were known. Labelled from contact sheets (about 30 frames per clip) and detail crops; boundaries carry the stated uncertainty."
+  }
+ ],
+ "reviews": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "not evaluable: no zone configured for this clip"
+ },
+ "zones": [],
+ "intervals": [
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 0.0,
+   "end_s": 50.0,
+   "state": "monitorable",
+   "note": "workers in white hard hats, then building details with no people"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 50.0,
+   "end_s": 106.0,
+   "state": "uncertain",
+   "note": "telehandler; operator in the cab and partly hidden workers"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 106.0,
+   "end_s": 183.0,
+   "state": "monitorable",
+   "note": "concrete skip on the crane; no people visible"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 183.0,
+   "end_s": 195.0,
+   "state": "unusable",
+   "note": "cross-dissolve"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 195.0,
+   "end_s": 216.0,
+   "state": "uncertain",
+   "note": "upper-right worker's headwear unclear"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 216.0,
+   "end_s": 239.0,
+   "state": "monitorable",
+   "note": "suspended pallets; no people"
+  },
+  {
+   "hazard": "PPE.HEAD.MISSING",
+   "start_s": 239.0,
+   "end_s": 333.33,
+   "state": "monitorable",
+   "note": "crew through foliage; all identifiable heads wear white hard hats"
+  }
+ ],
+ "events": [],
+ "people": {
+  "distinct_workers": null,
+  "basis": "hand-held, cuts: not countable"
+ },
+ "attributes": {
+  "lighting": "day, overcast",
+  "distance": "mid",
+  "camera": "hand-held telephoto, cuts",
+  "density": "0-6",
+  "image_quality": "good"
+ },
+ "derived_from": "m2-provisional-v1",
+ "changes": []
+}

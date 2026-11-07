@@ -285,6 +285,16 @@ Then open **http://localhost:8501**.
 
 The **gear icon** inside the player opens the settings: detection thresholds, alert confirmation time and cooldown, restricted-zone polygons, and model information. Saved settings apply from the next run.
 
+**Headless multi-camera runtime (no browser).** To monitor several cameras or video files continuously in a background process, independent of the dashboard:
+
+```powershell
+python -m runtime run --config config/runtime.demo.yaml
+```
+
+See **[docs/runtime_getting_started.md](docs/runtime_getting_started.md)**. RTSP support is implemented but has not been tested against a real camera stream.
+
+The runtime also checks that each camera still shows its registered view: if a camera is moved, zoomed, switched to another scene or covered, its open incidents end at the last reliable observation (never as "resolved"), the camera stops analysing, and zones need an operator to revalidate a new view ([details](docs/product_research/21_CAMERA_VIEW_CHANGE_DETECTION.md)). This has been tested with simulated camera movements only.
+
 A scripted 4-minute demonstration is in **[docs/demo_guide.md](docs/demo_guide.md)**.
 
 ## Repository layout
@@ -292,6 +302,9 @@ A scripted 4-minute demonstration is in **[docs/demo_guide.md](docs/demo_guide.m
 ```
 app/                 Streamlit app: gallery and player views, settings, analytics, design system
 inference/           Runtime pipeline: detector, tracking, PPE association, zones, incidents, config
+intelligence/        Hazard taxonomy, risk policy engine, event-level validation metrics
+runtime/             Headless multi-camera service: sources, camera workers, shared inference, health, CLI
+config/              Runtime configurations: a runnable demo and a documented site template
 database/            SQLite incident and session store
 training/            Data preparation, audits, training entry point, evaluation, experiment configs
 watchdog_svc/        Training watchdog, supervisor and health checks
@@ -370,6 +383,8 @@ The analysis, the official sources it relies on, and the open questions for Ultr
 | [docs/demo_guide.md](docs/demo_guide.md) | Reproducible demonstration |
 | [docs/limitations.md](docs/limitations.md) | Known limitations |
 | [docs/troubleshooting.md](docs/troubleshooting.md) | CUDA, weights, footage, Streamlit |
+| [docs/product_research/](docs/product_research/README.md) | Product research and strategy: industries, hazards, competitors, papers, datasets, architecture, validation, compliance, roadmap |
+| [docs/runtime_getting_started.md](docs/runtime_getting_started.md) | Headless multi-camera runtime: commands, configuration, credentials, status |
 
 ## Citation
 

@@ -1,0 +1,16 @@
+clip_id,r1_status,r1_reviewer,r1_events,r1_ppe_coverage,r2_status,r2_reviewer,r2_events,r2_ppe_coverage
+ballast_train,not started,,0,0.0,not started,,0,0.0
+c00,not started,,0,0.0,not started,,0,0.0
+c01,not started,,0,0.0,not started,,0,0.0
+c02,not started,,0,0.0,not started,,0,0.0
+c03,not started,,0,0.0,not started,,0,0.0
+c07,not started,,0,0.0,not started,,0,0.0
+c08,not started,,0,0.0,not started,,0,0.0
+c09,not started,,0,0.0,not started,,0,0.0
+c10,not started,,0,0.0,not started,,0,0.0
+c11,not started,,0,0.0,not started,,0,0.0
+c12,not started,,0,0.0,not started,,0,0.0
+framing_bare_head,not started,,0,0.0,not started,,0,0.0
+helmet_put_on,not started,,0,0.0,not started,,0,0.0
+roadworks_night,not started,,0,0.0,not started,,0,0.0
+track_work_day,not started,,0,0.0,not started,,0,0.0

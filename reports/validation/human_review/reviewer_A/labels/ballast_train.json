@@ -1,0 +1,22 @@
+{
+ "schema": "safesight.labels/1.1",
+ "label_set": "m2-human-A",
+ "clip_id": "ballast_train",
+ "file": "data/demo/ballast_train.mp4",
+ "sha256": "5A84B4CB35CC5592EE1DFDE73AC990C484D71DFDD1262A308573D03837D17A26",
+ "fps": 25.0,
+ "frames": 516,
+ "duration_s": 20.64,
+ "status": "provisional",
+ "annotators": [],
+ "scope": {
+  "PPE.HEAD.MISSING": "evaluated",
+  "ZONE.ENTRY": "not_applicable"
+ },
+ "zones": [],
+ "intervals": [],
+ "events": [],
+ "people": {},
+ "attributes": {},
+ "review_complete": false
+}
